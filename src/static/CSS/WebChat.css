@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 1em;
+}
+
+.wrapper > div{
+    background: cadetblue;
+    padding: 1em;
+}
+
+.wrapper > div:nth-child(odd){
+    background: lightblue;
+}
