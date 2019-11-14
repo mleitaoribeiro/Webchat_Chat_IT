@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Title</title>
     <link type="text/css" rel="stylesheet" href="static/CSS/WebChat.css"/>
+    <!--Library with icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
 </head>
+
 <body bgcolor=#8fbc8f>
 
 <header>
@@ -12,43 +17,88 @@
     <img id="imageHeader" src="https://icon-library.net/images/coding-icon/coding-icon-2.jpg" alt="logo of the chat">
 </header>
 
-<div class="wrapper">
+    <div class="wrapper">
 
-    <div id="ChatRooms">
-    </div>
+        <div class="chatrooms_sidebar" id="ChatRooms">
 
-    <!-- div associada ao chat : -->
-    <div id="Chat">
-        <!-- caixa do chat: -->
-        <div id="chatBox">
-            <!-- sair do chat (X): -->
-            <input id="exitButton" type="button" value="Exit">
-        </div>
-        <!-- emojis, icons, e várias utilidades: -->
-        <div id="Misc">
-        </div>
-        <!-- inputs do user: -->
-        <div id="userInput">
-            <!-- Scanner de texto: -->
-            <input id="userTextInput" type="text" maxlength="140">
-            <!-- Botão de enviar: -->
-            <input id="sendButton" type="submit" class="button" value="Send">
-        </div>
-    </div>
+                <div class="chatrooms_sidebar_header">
+                    <h1><i class="far fa-comment-alt"></i> Chat Rooms</h1>
+                </div>
+                <!--SideNav depende de cada user... vai ter que ser flexivel-->
+                <div class="User_Available_Rooms">
+                    <br>
+                    <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> <i class="far fa-star"></i></i> Main Room</button>
+                    <br>
+                    <button class="chatrooms_sidenav" onclick="openPage('Talk to us!', this, 'black')">Talk to us! </button>
+                    <br>
+                    <button class="chatrooms_sidenav" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
+                </div>
 
-    <div id="CurrentOnlineUsers">
-        <div>RoomName
+                <div class="chatrooms_sidebar_footer">
+                    <br>
+                    <!--Para introduzir sala disponivel-->
+                    <form action ="/action_page.php">
+
+                        <input type="text" placeholder="Join a Private Chat Room" id="join_chatroom" min="1" maxlengt="10" required>
+                        <button type="submit"><i class="fas fa-sign-in-alt"></i> Join! </button>
+                    </form>
+
+                    <!--Para criar uma nova sala-->
+                    <form action ="/action_page.php">
+                        <br>
+                        <input type="text" placeholder="Create a New Chat Room" id="create_new_chatroom" min="1" maxlengt="10" required>
+                        <button type="submit"><i class="fas fa-plus-circle"></i> Create! </button>
+                    </form>
+                </div>
+
+                <!--Conteudo das Salas-->
+                <div id="Main Room" class="tabcontent">
+                </div>
+
+                <div id="Talk to us!" class="tabcontent">
+                </div>
+
+                <div id="Just For Fun" class="tabcontent">
+                </div>
+            <!--Fontes-->
+            <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_vertical_tabs-->
+            <!--https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp-->
+            <!--https://www.w3schools.com/howto/howto_css_navbar_icon.asp-->
+
         </div>
-        <div>
-            <ul>
-                <li id="user1" class="user">User1</li>
-                <li id="user2" class="user">User2</li>
-                <li id="user3" class="user">User3</li>
-            </ul>
+
+        <!-- div associada ao chat : -->
+        <div id="Chat">
+            <!-- caixa do chat: -->
+            <div id="chatBox">
+                <!-- sair do chat (X): -->
+                <input id="exitButton" type="button" value="Exit">
+            </div>
+            <!-- emojis, icons, e várias utilidades: -->
+            <div id="Misc">
+            </div>
+            <!-- inputs do user: -->
+            <div id="userInput">
+                <!-- Scanner de texto: -->
+                <input id="userTextInput" placeholder="Introduce new message" type="text" maxlength="140">
+                <!-- Botão de enviar: -->
+                <input id="sendButton" type="submit" class="button" value="Send">
+            </div>
         </div>
-        <div id="userLimit"><p>3/10</p>
+
+        <div id="CurrentOnlineUsers">
+            <div>RoomName
+            </div>
+            <div>
+                <ul>
+                    <li id="user1" class="user">User1</li>
+                    <li id="user2" class="user">User2</li>
+                    <li id="user3" class="user">User3</li>
+                </ul>
+            </div>
+            <div id="userLimit"><p>3/10</p>
+            </div>
         </div>
-    </div>
 
 </div>
 
