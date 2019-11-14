@@ -1,3 +1,14 @@
+head, body {
+    background-color: darkgrey;
+}
+
+.welcomePageWrapper {
+    margin: 3%;
+    padding: 3%;
+    max-height: 80%;
+    background-color: white;
+    text-align: center;
+}
 
 .insideWrapper {
     display: grid;
@@ -52,4 +63,8 @@ img, #subjectName, #chatTitle {
 #imageHeader {
     max-height: 30px;
     max-width: 30px;
+}
+
+#logoGrande {
+    max-width: 25%;
 }
