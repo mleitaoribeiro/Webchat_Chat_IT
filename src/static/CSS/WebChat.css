@@ -68,3 +68,30 @@ img, #subjectName, #chatTitle {
 #logoGrande {
     max-width: 25%;
 }
+
+#exitButton {
+    position:absolute;
+    bottom: 87.7%;
+    left: 76%;
+}
+
+#userInput {
+    background-color:dimgrey;
+    position:relative;
+    top: 98%;
+}
+
+#userTextInput {
+    padding-right:75%;
+    float:left;
+    margin-right: 5px;
+    position:relative;
+}
+
+#sendButton{
+    float:right;
+    padding-right: 1%;
+    position: absolute;
+    margin-bottom: 5px;
+
+}
