@@ -12,3 +12,40 @@
 .wrapper > div:nth-child(odd){
     background: lightblue;
 }
+
+header {
+    display: flex;
+    position: fixed;
+    max-height: 5%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    text-align: center;
+}
+
+img, #subjectName, #chatTitle {
+    flex: 20%;
+    padding: 5px;
+    margin: auto;
+    max-width: 10%;
+}
+
+#subjectName, #chatTitle {
+    font-size: large;
+}
+
+#imageHeader {
+    max-height: 30px;
+    max-width: 30px;
+}
