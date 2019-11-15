@@ -78,7 +78,6 @@ img, #subjectName, #chatTitle {
 }
 
 #exitButton {
-    display: inline-block;
     margin-top: 0.1%;
     position: relative;
     margin-left: 97%;
@@ -86,7 +85,7 @@ img, #subjectName, #chatTitle {
     color: white;
     background-color: red;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 2px solid black;
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 2px;
@@ -97,6 +96,8 @@ img, #subjectName, #chatTitle {
 
 #Chat {
     padding:1%;
+    background-color: #932D2D;
+    opacity: 0.8;
 }
 
 #chatBox {
@@ -109,6 +110,7 @@ img, #subjectName, #chatTitle {
     border: solid 1px;
     margin-top:1%;
     padding-bottom: 60%;
+    background-color:white;
 }
 
 
@@ -136,5 +138,9 @@ img, #subjectName, #chatTitle {
     position: absolute;
     padding-bottom: 5px;
     border-radius: 10px;
-    border: solid 1px;
+    border: solid 1px black;
+    color: white;
+    background-color: #932D2D;
+    font-family: sans-serif;
+    cursor: pointer;
 }
