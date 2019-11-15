@@ -2,12 +2,19 @@ head, body {
     background-color: darkgrey;
 }
 
+.welcomePageWrapper {
+    margin: 3%;
+    padding: 3%;
+    max-height: 80%;
+    background-color: white;
+    text-align: center;
+}
+
 .Wrapper {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 12fr 1fr;
-    grid-auto-rows: minmax(560px, auto);
-    grid-gap: 6px;
+    grid-gap: 5px;
     justify-items: stretch;
     align-items: stretch;
 }
@@ -59,15 +66,23 @@ img, #subjectName, #chatTitle {
 }
 
 #exitButton {
-    position:relative;
-    bottom: 87.7%;
-    left: 95%;
+    margin-top: 0.1%;
+    position: relative;
+    margin-left:95.5%;
 }
+
+#outputBox {
+    text-align: left;
+    border: solid 1px;
+    margin-top:1%;
+    padding-bottom: 60%;
+}
+
+
 
 #userInput {
     position:relative;
-    top: 95%;
-    margin-top :65%;
+    margin-top :1%;
 }
 
 #userTextInput {
