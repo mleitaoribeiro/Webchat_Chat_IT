@@ -51,7 +51,6 @@ footer {
     grid-template-columns: repeat(4, 1fr);
 }
 
-
 img, #subjectName, #chatTitle {
     margin: auto;
     max-width: 30%;
@@ -66,12 +65,8 @@ img, #subjectName, #chatTitle {
     max-width: 30px;
 }
 
-#logoGrande {
-    max-width: 25%;
-}
-
 #exitButton {
-    margin-bottom: 0.1%;
+    margin-top: 0.1%;
     position: relative;
     margin-left:95.5%;
 }
@@ -91,6 +86,8 @@ img, #subjectName, #chatTitle {
     margin-top:1%;
     padding-bottom: 60%;
 }
+
+
 
 #userInput {
     position:relative;
