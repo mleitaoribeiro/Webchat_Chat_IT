@@ -9,7 +9,6 @@ head{
 }
 body {
     background-color: white;
-    background-image: url("https://imgur.com/2gYG1a9.jpg");
     text-align: center;
     font-family:Trebuchet MS, sans-serif;
 }
@@ -59,9 +58,13 @@ footer {
     align-items: stretch;
 }
 
+.ChatInfo {
+    background-color:whitesmoke;
+}
+
 /* Create three equal columns that floats next to each other */
 .chatInfoAnime {
-    background-color:lightgrey;
+    background-color:whitesmoke;
     float: left;
     width: 33.33%;
     padding: 10px;
