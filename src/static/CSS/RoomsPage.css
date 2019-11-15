@@ -13,9 +13,9 @@ head, body {
 .Wrapper {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 13fr 1fr;
+    grid-template-rows: 1fr 12fr 1fr;
     grid-auto-rows: minmax(560px, auto);
-    grid-gap: 1em;
+    grid-gap: 6px;
     justify-items: stretch;
     align-items: stretch;
 }
@@ -72,28 +72,29 @@ img, #subjectName, #chatTitle {
 }
 
 #exitButton {
-    position:absolute;
+    position:relative;
     bottom: 87.7%;
-    left: 76%;
+    left: 95%;
 }
 
 #userInput {
-    background-color:dimgrey;
     position:relative;
-    top: 98%;
+    top: 95%;
+    margin-top :65%;
+
 }
 
 #userTextInput {
     padding-right:75%;
-    float:left;
     margin-right: 5px;
     position:relative;
 }
 
 #sendButton{
     float:right;
-    padding-right: 1%;
+    padding-right: 7px;
     position: absolute;
     margin-bottom: 5px;
+
 
 }
