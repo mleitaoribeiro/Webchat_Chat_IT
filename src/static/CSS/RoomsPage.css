@@ -2,14 +2,6 @@ head, body {
     background-color: darkgrey;
 }
 
-.welcomePageWrapper {
-    margin: 3%;
-    padding: 3%;
-    max-height: 80%;
-    background-color: white;
-    text-align: center;
-}
-
 .Wrapper {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -52,7 +44,6 @@ footer {
     grid-template-columns: repeat(4, 1fr);
 }
 
-
 img, #subjectName, #chatTitle {
     margin: auto;
     max-width: 30%;
@@ -67,10 +58,6 @@ img, #subjectName, #chatTitle {
     max-width: 30px;
 }
 
-#logoGrande {
-    max-width: 25%;
-}
-
 #exitButton {
     position:relative;
     bottom: 87.7%;
@@ -81,7 +68,6 @@ img, #subjectName, #chatTitle {
     position:relative;
     top: 95%;
     margin-top :65%;
-
 }
 
 #userTextInput {
@@ -95,6 +81,4 @@ img, #subjectName, #chatTitle {
     padding-right: 7px;
     position: absolute;
     margin-bottom: 5px;
-
-
 }

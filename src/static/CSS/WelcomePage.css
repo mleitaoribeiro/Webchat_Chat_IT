@@ -1,0 +1,31 @@
+head, body {
+    background-color: darkgrey;
+    text-align: center;
+}
+
+img, #subjectName, #chatTitle {
+    margin: auto;
+    max-width: 7%;
+}
+
+#logoGrande {
+    max-width: 25%;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 13fr 1fr;
+    grid-gap: 6px;
+    justify-items: stretch;
+    align-items: stretch;
+}
