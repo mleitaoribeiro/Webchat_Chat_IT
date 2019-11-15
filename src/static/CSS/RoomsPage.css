@@ -124,10 +124,10 @@ img, #subjectName, #chatTitle {
     padding-right:65%;
     margin-right: 1%;
     position:relative;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     border-radius: 10px;
     font-size: 15px;
-    border: solid 1px;
+    border: solid 2px #5f0d0c;
 }
 
 #sendButton{
