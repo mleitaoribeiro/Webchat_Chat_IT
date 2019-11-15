@@ -54,10 +54,8 @@ footer {
 
 
 img, #subjectName, #chatTitle {
-    flex: 20%;
-    padding: 5px;
     margin: auto;
-    max-width: 10%;
+    max-width: 30%;
 }
 
 #subjectName, #chatTitle {
