@@ -11,6 +11,7 @@
 
     <title>Chat IT</title>
     <link type="text/css" rel="stylesheet" href="static/CSS/WelcomePage.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body>
 <div id="wrapper" >
@@ -21,7 +22,7 @@
         </div>
         <div id="login">
             <form action ="RoomsPage.html">
-                <input class ="loginButtonStyle" type="text" placeholder="Choose your nickname:" id="nickname" size="40" min="2" maxlength="8" required>
+                <input class ="nickNameButtonStyle" type="text" placeholder="Choose your nickname:" id="nickname" size="40" min="2" maxlength="8" required>
                 <button class ="loginButtonStyle loginButton" type="submit" id="loginButton">Login</button>
             </form>
             </div>
@@ -34,15 +35,15 @@
         <br>
         <br>
         <div class="chatInfoAnime" style="background-color:whitesmoke;">
-            <img id="alert.gif" src="https://imgur.com/qkkbVMw.gif" alt="alert.gif">
+          <i id="gif1" class="fas fa-exclamation-circle" style=font-size:30px;"></i>
             <p id="chatRoomAlert">Please be mindful that when you exit Chat IT,<br>your nickname will be deleted and <br> may be used by another client.</p>
         </div>
         <div class="chatInfoAnime" style="background-color:whitesmoke;">
-            <img id="check.gif" src="https://imgur.com/cvrKOMj.gif" alt="check.gif">
-            <p id="chatDefaultInfo">If your nickname is not in use <br> you will be logged into the Lobby Room by default. </p>
+           <i class="fas fa-user-check" style=font-size:30px;"></i>
+           <p id="chatDefaultInfo">If your nickname is not in use <br> you will be logged into the Lobby Room by default. </p>
         </div>
         <div class="chatInfoAnime" style="background-color:whitesmoke;">
-            <img id="chat.gif" src="https://imgur.com/hrQkTHM.gif" alt="chat.gif">
+         <i class="fas fa-plus-circle" style=font-size:30px;"></i>
             <p id="chatFunctionDescription">If you wish to join or create a room,<br> you can do so on the left-side menu.</p>
         </div>
     </div>

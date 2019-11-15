@@ -22,7 +22,7 @@ img, #subjectName, #chatTitle {
     max-width: 25%;
 }
 
-.loginButtonStyle {
+.nickNameButtonStyle {
 
     background-color: transparent;
     padding: 10px 10px;
@@ -35,10 +35,35 @@ img, #subjectName, #chatTitle {
     border: 2px solid #B61919;
 }
 
-.loginButton:hover {
-    background-color: #B61919;
+.loginButtonStyle {
+
+    background-color:  #B61919;
     color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family:Trebuchet MS, sans-serif;
+    border-radius: 25px;
+    border: 2px solid #B61919;
 }
+
+.loginButton:hover {
+    background-color: transparent;
+    color: #B61919;
+}
+
+.fa-exclamation-circle:hover {
+   color:#B61919 ;
+}
+.fa-plus-circle:hover {
+    color:#B61919 ;
+}
+.fa-user-check:hover {
+    color:#B61919;
+}
+
 
 footer {
     display: flex;
