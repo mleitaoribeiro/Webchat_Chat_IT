@@ -1,3 +1,15 @@
+/*PALETE DE CORES*/
+/*.color-primary-0 { color: #B61919 } -> VERMELHO PRINCIPAL */
+
+/* possiveis cores na mesma escala de vermelhos
+.color-primary-1 { color: #932D2D }
+.color-primary-2 { color: #A62323 }
+.color-primary-3 { color: #F81111 }
+.color-primary-4 { color: #FF2626 } */
+
+/*.color-primary-0 { color: #717377 } ->CINZENTO PRINCIPAL */
+
+
 head, body {
     background-color: darkgrey;
 }
