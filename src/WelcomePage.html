@@ -15,8 +15,10 @@
         </div>
         <div id="login">
             <div id="nicknameIndicator">Nickname: </div>
-            <input name="nickname" type="text" id="nickname" size="40" minlength="2" maxlength="8" required>
-            <button onclick="location.href = 'RoomsPage.html'" id="loginButton">Login</button>
+            <form action ="RoomsPage.html">
+                <input type="text" placeholder="Choose your nickname:" id="nickname" size="40" min="2" maxlength="8" required>
+                <button type="submit" id="loginButton">Login</button>
+            </form>
             <p id="chatRoomInfo">If your nickname is not in use you will be logged into the Lobby Room by default. <br>
                 If you wish to join or create a room, you can do so on the left-side menu.</p>
         </div>
