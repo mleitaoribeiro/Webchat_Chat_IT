@@ -71,35 +71,49 @@ img, #subjectName, #chatTitle {
 }
 
 #exitButton {
-    margin-top: 0.1%;
+    margin-bottom: 0.1%;
     position: relative;
     margin-left:95.5%;
 }
 
+#Chat {
+    padding:1%;
+}
+
+#chatBox {
+    padding:0%;
+}
+
 #outputBox {
     text-align: left;
+    border-radius: 5px;
     border: solid 1px;
     margin-top:1%;
     padding-bottom: 60%;
 }
 
-
-
 #userInput {
     position:relative;
     margin-top :1%;
+    margin-bottom:0.5%;
 }
 
 #userTextInput {
-    padding-right:75%;
-    margin-right: 5px;
+    padding-right:69%;
+    margin-right: 1%;
     position:relative;
+    padding-bottom: 4px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: solid 1px;
 }
 
 #sendButton{
     float:right;
-    padding-right: 7px;
+    padding-right: 3%;
+    padding-left: 3%;
     position: absolute;
-    margin-bottom: 5px;
-
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: solid 1px;
 }
