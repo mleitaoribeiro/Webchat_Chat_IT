@@ -78,10 +78,22 @@ img, #subjectName, #chatTitle {
 }
 
 #exitButton {
+    display: inline-block;
     margin-top: 0.1%;
     position: relative;
-    margin-left:95.5%;
+    margin-left: 97%;
+    font-family: sans-serif;
+    color: white;
+    background-color: red;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    opacity: 0.6;
+    transition: 0.3s;
 }
+#exitButton:hover {opacity: 1}
 
 #Chat {
     padding:1%;
