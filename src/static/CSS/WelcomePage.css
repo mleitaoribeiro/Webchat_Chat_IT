@@ -1,5 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 head, body {
-    background-color: darkgrey;
+    background-color: white;
     text-align: center;
 }
 
@@ -28,5 +32,25 @@ footer {
     grid-gap: 6px;
     justify-items: stretch;
     align-items: stretch;
-    
+}
+
+/* Create three equal columns that floats next to each other */
+.chatInfoAnime {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.ChatInfo:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .chatInfoAnime {
+        width: 100%;
+    }
 }
