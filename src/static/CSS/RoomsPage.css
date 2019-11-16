@@ -68,6 +68,114 @@ img, #subjectName, #chatTitle {
     margin: auto;
     max-width: 30%;
 }
+/*elsa*/
+#ChatRooms {
+    background: whitesmoke;
+    color: #B61919;
+}
+#chatroomsquadrado{
+    color:black;
+}
+#i.fa-comment-alt{
+    border: #5f0d0c;
+    color:black;
+    filter: none;
+    -webkit-transform: scale(1.39);
+}
+
+.User_Available_Rooms{
+    display:inline-block;
+    font-family:Trebuchet MS, sans-serif;
+}
+
+#defaultOpen:hover{
+    border: #932D2D;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #e7e7e7; color: black;
+    font-size: 15px;
+    padding: 3px 10px;
+    border-radius: 12px;
+
+}
+
+.chatRooms_sidebar {
+    border: #932D2D;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #e7e7e7;
+    color: black;
+    font-size: 15px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-family:Trebuchet MS, sans-serif;
+}
+.chatrooms_sidenav{
+    font-family:Trebuchet MS, sans-serif;
+    background-color: white; /* Green */
+    color: black;
+    border: 2px solid #B61919;
+    border-radius: 8px;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+   -webkit-transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.chatrooms_sidebar_footer{
+    display: block;
+    position:static;
+    text-align: center;
+    text-decoration: none;
+}
+#join_chatroom{
+    color:black;
+    position: static;
+    background-color: transparent;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family:Trebuchet MS, sans-serif;
+    border-radius: 25px;
+    border: 2px solid #B61919;
+}
+
+#create_new_chatroom{
+    color:black;
+    position: static;
+    background-color: transparent;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family:Trebuchet MS, sans-serif;
+    border-radius: 25px;
+    border: 2px solid #B61919;
+}
+.fa-plus-circles {
+    color: black;
+}
+
+#joinbutton {
+    color: black;
+}
+#createbutton{
+    color:black;
+    display:inline-block;
+
+}
+
+/*elsa finish*/
+
 
 #subjectName, #chatTitle {
     font-size: large;
