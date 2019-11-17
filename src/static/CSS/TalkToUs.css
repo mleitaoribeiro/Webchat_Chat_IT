@@ -1,0 +1,53 @@
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    font-max-size: large;
+    font-family: Verdana;
+}
+
+h3 {
+    text-align: center;
+}
+
+input[type=submit] {
+    align-content: center;
+    width: 10%;
+    background-color: #B61919;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: #B61919;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #717377;
+    }
+
+div {
+    border-radius: 5px;
+    background-color: #717377;
+    padding: 20px;
+}
+img, #subjectName {
+    margin: auto;
+    max-width: 7%;
+}
+
+
+footer {
+    position: absolute;
+    width: 100%;
+}
+
+
