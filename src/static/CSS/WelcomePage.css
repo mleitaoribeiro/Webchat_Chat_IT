@@ -22,7 +22,7 @@ img, #subjectName, #chatTitle {
     max-width: 25%;
 }
 
-.loginButtonStyle {
+.nickNameButtonStyle {
 
     background-color: transparent;
     padding: 10px 10px;
@@ -35,10 +35,28 @@ img, #subjectName, #chatTitle {
     border: 2px solid #B61919;
 }
 
-.loginButton:hover {
-    background-color: #B61919;
+.loginButtonStyle {
+
+    background-color:  #B61919;
     color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family:Trebuchet MS, sans-serif;
+    border-radius: 25px;
+    border: 2px solid #B61919;
+    -webkit-transition: all .8s ease-in-out;
 }
+
+.loginButton:hover {
+    background-color: transparent;
+    color: #B61919;
+    filter: none;
+    -webkit-transform: scale(1.05);
+}
+
 
 footer {
     display: flex;
@@ -70,12 +88,25 @@ footer {
     padding: 10px;
 }
 
+
 /* Clear floats after the columns */
 .ChatInfo:after {
     background-color: lightgrey;
     content: "";
     display: table;
     clear: both;
+}
+
+/*Efeito de zoom nos icons */
+
+.fa-exclamation-circle, .fa-plus-circle, .fa-user-check   {
+    -webkit-transition: all .8s ease-in-out;
+}
+
+.fa-exclamation-circle:hover, .fa-plus-circle:hover, .fa-user-check:hover  {
+    color:#B61919;
+    filter: none;
+    -webkit-transform: scale(1.39);
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
