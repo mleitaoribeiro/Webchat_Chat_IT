@@ -19,5 +19,8 @@ function reloadMessage() {
 }
 
 function sendMessage () {
-
+    var userTextInput = document.getElementById("userTextInput").value;
+    var request = new XMLHttpRequest();
+    request.open("POST", "https://vs280.dei.isep.ipp.pt/cgi-bin/outputBox", true);
+    request.send(userTextInput);
 }
