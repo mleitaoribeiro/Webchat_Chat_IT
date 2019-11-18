@@ -52,6 +52,10 @@ footer {
 .nestedHeader {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    font-size:24px;
+    font-family:Trebuchet MS, sans-serif;
+    color:#B61919;
+
 }
 
 .nestedFooter {
@@ -126,7 +130,7 @@ img, #subjectName, #chatTitle {
     display: inline-block;
     background-color: #e7e7e7;
     color: black;
-    font-size: 15px;
+    font-size: 18px;
     padding: 3px 10px;
     border-radius: 12px;
     font-family:Trebuchet MS, sans-serif;
@@ -275,7 +279,7 @@ img, #subjectName, #chatTitle {
     margin-left: 97%;
     font-family: sans-serif;
     color: white;
-    background-color: red;
+    background-color: #B61919;
     border-radius: 8px;
     border: 2px solid #B61919;
     padding-left: 7px;
@@ -288,7 +292,7 @@ img, #subjectName, #chatTitle {
 
 #Chat {
     padding:1%;
-    background-color: whitesmoke;
+    background-color: white;
     opacity: 1;
 }
 

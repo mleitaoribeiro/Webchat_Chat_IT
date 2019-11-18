@@ -21,109 +21,105 @@
 
 <body bgcolor=#8fbc8f onload="reloadMessage()">
 
-    <div class="Wrapper">
+<div class="Wrapper">
 
-        <header class="nestedHeader">
-            <div id="chatTitle">Nome do Chat</div>
-            <img id="imageHeader" src="https://imgur.com/vdfJJqq.jpg" alt="logo of the chat">
-        </header>
+    <header class="nestedHeader">
+        <div id="chatTitle">Nome do Chat</div>
+        <img id="imageHeader" src="https://imgur.com/vdfJJqq.jpg" alt="logo of the chat">
+    </header>
 
-        <div class="chatRooms_sidebar" id="ChatRooms">
+    <div class="chatRooms_sidebar" id="ChatRooms">
 
-            <div class="chatrooms_sidebar_header">
-                <h1><i class="far fa-comment-alt" id="chatroomsquadrado" ></i> Chat Rooms</h1>
+        <div class="chatrooms_sidebar_header">
+            <h1>Chat Rooms</h1>
+        </div>
+        <div class="User_Available_Rooms">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <br>
+            <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> <i class="far fa-star"></i></i> Main Room</button>
+            <br>
+            <br>
+            <button class="chatrooms_sidenav" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
+            <br>
+            <br>
+        </div>
+
+        <div class="chatrooms_sidebar_footer">
+            <div class="join chatroom">
+                <button type="submit" id="joinRoomButton" ><i class="fas fa-sign-in-alt"></i></button>
+                <input type="text" placeholder="Join a Private Chat Room" id="join_chatroom" min="1" maxlength="10" required>
             </div>
-            <!--SideNav depende de cada user... vai ter que ser flexivel-->
-            <div class="User_Available_Rooms">
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+            <div class="create new chatroom ">
+                <button type="submit" id="createRoomButton"><i class="fas fa-plus-circle"></i></button>
+                <input type="text" placeholder="Create a New Chat Room" id="create_new_chatroom" min="1" maxlength="10" required>
                 <br>
-                <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> <i class="far fa-star"></i></i> Main Room</button>
                 <br>
-                <form action ="TalkToUs.html">
-                <button class="chatrooms_sidenav" onclick="openPage('Talk to us!', this, 'black')" id="Talktous"> <i class="glyphicon glyphicon-envelope"></i></i> Talk to us!</button>
-                </form>
-                <button class="chatrooms_sidenav" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
             </div>
 
-            <div class="chatrooms_sidebar_footer">
+            <div class="talk to us">
+                <button onclick="openPage('Talk to us!', this, 'black')" id="Talktous"> <i class="glyphicon glyphicon-envelope"></i></i> Talk to us!</button>
                 <br>
-                <!--Para introduzir sala disponivel-->
-                <form action ="ErrorMessage.html">
-
-                    <input type="text" placeholder="Join a Private Chat Room" id="join_chatroom" min="1" maxlength="10" required>
-                    <button type="submit" id="joinbutton" ><i class="fas fa-sign-in-alt"></i> Join! </button>
-
-                </form>
-
-                <!--Para criar uma nova sala-->
-                <form action ="ErrorMessage.html">
-                    <br>
-                    <input type="text" placeholder="Create a New Chat Room" id="create_new_chatroom" min="1" maxlength="10" required>
-                    <button type="submit" id="createbutton"><i class="fas fa-plus-circle"></i> Create! </button>
-                </form>
             </div>
-
-            <!--Conteudo das Salas-->
-            <div id="Main Room" class="tabcontent">
-            </div>
-
-            <div id="Talk to us!" class="tabcontent">
-            </div>
-
-            <div id="Just For Fun" class="tabcontent">
-            </div>
-            <!--Fontes-->
-            <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_vertical_tabs-->
-            <!--https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp-->
-            <!--https://www.w3schools.com/howto/howto_css_navbar_icon.asp-->
 
         </div>
 
-        <!-- div associada ao chat : -->
-        <div class="Chat" id="Chat">
-            <!-- caixa do chat: -->
-            <div id="chatBox">
-                <!-- sair do chat (X): -->
-                <form action ="WelcomePage.html">
-                <input id="exitButton" type="submit" value="X" >
-                </form>
-                <!-- output do chat: -->
-                <div id="outputBox">Please wait ...</div>
-                <!-- inputs do user: -->
-                <div id="userInput">
-                    <!-- Scanner de texto: -->
-                    <input id="userTextInput" placeholder="Introduce new message" type="text" maxlength="140">
-                    <!-- Botão de enviar: -->
-                    <input id="sendButton" type="submit" class="button" value="Send" onclick="sendMessage()">
-                </div>
-            </div>
-            <!-- emojis, icons, e várias utilidades: -->
-            <div id="Misc">
-            </div>
+        <!--Conteudo das Salas-->
+        <div id="Main Room" class="tabcontent">
         </div>
 
-        <div class="CurrentOnlineUsers" id="CurrentOnlineUsers">
-            <div><h1>RoomName</h1>
-            </div>
-            <div>
-                <ul>
-                    <li id="user1" class="user">User1</li>
-                    <li id="user2" class="user">User2</li>
-                    <li id="user3" class="user">User3</li>
-                </ul>
-            </div>
-            <div id="userLimit"><p><b>3/10</b></p>
-            </div>
+        <div id="Talk to us!" class="tabcontent">
         </div>
-
-        <footer class="nestedFooter">
-            <div id="subjectName">SCOMRED</div>
-            <img id="switchLogo" src="https://portotechhub.com/wp-content/themes/pth/images/brand.svg" alt="Switch Logo">
-            <img id="isepLogo" src="http://www.isep.ipp.pt/images/ISEP_marca_cor.png" alt="Isep Logo">
-            <img id="portoTechHubLogo" src="https://pontosdevista.pt/static/uploads/2019/06/primage-38128.png" alt="Porto Tech Hub Logo">
-        </footer>
+        <!--Fontes-->
+        <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_vertical_tabs-->
+        <!--https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp-->
+        <!--https://www.w3schools.com/howto/howto_css_navbar_icon.asp-->
 
     </div>
+
+    <!-- div associada ao chat : -->
+    <div class="Chat" id="Chat">
+        <!-- caixa do chat: -->
+        <div id="chatBox">
+            <!-- sair do chat (X): -->
+            <input id="exitButton" type="button" value="X">
+            <!-- output do chat: -->
+            <div id="outputBox">Please wait...</div>
+            <!-- inputs do user: -->
+            <div id="userInput">
+                <!-- Scanner de texto: -->
+                <input id="userTextInput" placeholder="Introduce new message" type="text" maxlength="140">
+                <!-- Botão de enviar: -->
+                <input id="sendButton" type="submit" class="button" value="Send" onclick="sendMessage()">
+            </div>
+        </div>
+        <!-- emojis, icons, e várias utilidades: -->
+        <div id="Misc">
+        </div>
+    </div>
+
+    <div class="CurrentOnlineUsers" id="CurrentOnlineUsers">
+        <div><h1>RoomName</h1>
+        </div>
+        <div>
+            <ul>
+                <li id="user1" class="user">User1</li>
+                <li id="user2" class="user">User2</li>
+                <li id="user3" class="user">User3</li>
+            </ul>
+        </div>
+        <div id="userLimit"><p><b>3/10</b></p>
+        </div>
+    </div>
+
+    <footer class="nestedFooter">
+        <div id="subjectName">SCOMRED</div>
+        <img id="switchLogo" src="https://portotechhub.com/wp-content/themes/pth/images/brand.svg" alt="Switch Logo">
+        <img id="isepLogo" src="http://www.isep.ipp.pt/images/ISEP_marca_cor.png" alt="Isep Logo">
+        <img id="portoTechHubLogo" src="https://pontosdevista.pt/static/uploads/2019/06/primage-38128.png" alt="Porto Tech Hub Logo">
+    </footer>
+
+</div>
 
 </body>
 </html>
