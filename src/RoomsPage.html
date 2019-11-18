@@ -18,7 +18,7 @@
 
 </head>
 
-<body bgcolor=#8fbc8f>
+<body bgcolor=#8fbc8f onload="reloadMessage()">
 
     <div class="Wrapper">
 
@@ -89,7 +89,7 @@
                     <!-- Scanner de texto: -->
                     <input id="userTextInput" placeholder="Introduce new message" type="text" maxlength="140">
                     <!-- Botão de enviar: -->
-                    <input id="sendButton" type="submit" class="button" value="Send">
+                    <input id="sendButton" type="submit" class="button" value="Send" onclick="sendMessage()">
                 </div>
             </div>
             <!-- emojis, icons, e várias utilidades: -->
