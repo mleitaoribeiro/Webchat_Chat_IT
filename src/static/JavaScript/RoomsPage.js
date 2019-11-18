@@ -3,7 +3,7 @@ function reloadMessage() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
         document.getElementById("outputBox").innerHTML = this.responseText;
-        setTimeout(reloadMessage, 1500);
+        setTimeout(reloadMessage, 500);
     };
     request.ontimeout = function timeoutCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
