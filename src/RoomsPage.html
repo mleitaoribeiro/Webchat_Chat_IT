@@ -12,13 +12,14 @@
 
     <title>ChatRooms</title>
     <link type="text/css" rel="stylesheet" href="static/CSS/RoomsPage.css"/>
+    <script src="static/JavaScript/RoomsPage.js"></script>
 
     <!--Library with icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
 </head>
 
-<body bgcolor=#8fbc8f>
+<body bgcolor=#8fbc8f onload="reloadMessage()">
 
     <div class="Wrapper">
 
@@ -84,13 +85,13 @@
                 <!-- sair do chat (X): -->
                 <input id="exitButton" type="button" value="X">
                 <!-- output do chat: -->
-                <div id="outputBox"></div>
+                <div id="outputBox">Please wait ...</div>
                 <!-- inputs do user: -->
                 <div id="userInput">
                     <!-- Scanner de texto: -->
                     <input id="userTextInput" placeholder="Introduce new message" type="text" maxlength="140">
                     <!-- Botão de enviar: -->
-                    <input id="sendButton" type="submit" class="button" value="Send">
+                    <input id="sendButton" type="submit" class="button" value="Send" onclick="sendMessage()">
                 </div>
             </div>
             <!-- emojis, icons, e várias utilidades: -->
