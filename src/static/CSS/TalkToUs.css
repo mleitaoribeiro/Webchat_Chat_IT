@@ -1,3 +1,7 @@
+body{
+    font-family:Trebuchet MS, sans-serif;
+}
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -11,11 +15,12 @@ input[type=text], select {
 h2 {
     text-align: center;
     font-max-size: large;
-    font-family: Verdana;
+    font-family:Trebuchet MS, sans-serif;
 }
 
 h3 {
     text-align: center;
+    font-family:Trebuchet MS, sans-serif;
 }
 
 input[type=submit] {
@@ -34,7 +39,7 @@ input[type=submit]:hover {
     background-color: #717377;
     }
 
-div {
+#mainDiv {
     border-radius: 5px;
     background-color: #717377;
     padding: 20px;
@@ -44,10 +49,14 @@ img, #subjectName {
     max-width: 7%;
 }
 
-
 footer {
-    position: absolute;
-    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    text-align: center;
 }
 
 
