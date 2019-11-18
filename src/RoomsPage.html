@@ -12,14 +12,13 @@
 
     <title>ChatRooms</title>
     <link type="text/css" rel="stylesheet" href="static/CSS/RoomsPage.css"/>
-    <script src="static/JavaScript/RoomsPage.js"></script>
 
     <!--Library with icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
 </head>
 
-<body bgcolor=#8fbc8f onload="reloadMessage()">
+<body bgcolor=#8fbc8f>
 
     <div class="Wrapper">
 
@@ -39,9 +38,8 @@
                 <br>
                 <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> <i class="far fa-star"></i></i> Main Room</button>
                 <br>
-                <form action ="TalkToUs.html">
                 <button class="chatrooms_sidenav" onclick="openPage('Talk to us!', this, 'black')" id="Talktous"> <i class="glyphicon glyphicon-envelope"></i></i> Talk to us!</button>
-                </form>
+                <br>
                 <button class="chatrooms_sidenav" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
             </div>
 
@@ -84,17 +82,15 @@
             <!-- caixa do chat: -->
             <div id="chatBox">
                 <!-- sair do chat (X): -->
-                <form action ="WelcomePage.html">
-                <input id="exitButton" type="submit" value="X" >
-                </form>
+                <input id="exitButton" type="button" value="X">
                 <!-- output do chat: -->
-                <div id="outputBox">Please wait ...</div>
+                <div id="outputBox"></div>
                 <!-- inputs do user: -->
                 <div id="userInput">
                     <!-- Scanner de texto: -->
                     <input id="userTextInput" placeholder="Introduce new message" type="text" maxlength="140">
                     <!-- Botão de enviar: -->
-                    <input id="sendButton" type="submit" class="button" value="Send" onclick="sendMessage()">
+                    <input id="sendButton" type="submit" class="button" value="Send">
                 </div>
             </div>
             <!-- emojis, icons, e várias utilidades: -->
