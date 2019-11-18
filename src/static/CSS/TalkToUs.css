@@ -15,11 +15,12 @@ input[type=text], select {
 h2 {
     text-align: center;
     font-max-size: large;
-    font-family: Verdana;
+    font-family:Trebuchet MS, sans-serif;
 }
 
 h3 {
     text-align: center;
+    font-family:Trebuchet MS, sans-serif;
 }
 
 input[type=submit] {
