@@ -205,7 +205,7 @@ img, #subjectName, #chatTitle {
 }
 
 #chatBox {
-    padding:0%;
+    padding:0;
 }
 
 #outputBox {
@@ -213,7 +213,7 @@ img, #subjectName, #chatTitle {
     border-radius: 5px;
     border: solid 1px;
     margin-top:1%;
-    padding-bottom: 60%;
+    padding-bottom: 530px;
     background-color:white;
 }
 
