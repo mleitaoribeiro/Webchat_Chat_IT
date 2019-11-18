@@ -146,7 +146,6 @@ img, #subjectName, #chatTitle {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
     margin: 4px 2px;
     -webkit-transition: all .2s ease-in-out;
     cursor: pointer;
@@ -163,7 +162,7 @@ img, #subjectName, #chatTitle {
 .chatrooms_sidebar_footer{
     display: block;
     position:static;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     width: 100%;
 }
@@ -173,13 +172,12 @@ img, #subjectName, #chatTitle {
 
 .join chatroom {
     display: -ms-flex;
-    display:flex;
-    width: 100%;
+    width: auto;
     margin-bottom: 15px;
 }
 
 #join_chatroom {
-    width:90%;
+    width:auto;
     padding: 10px;
     color:black;
     background-color: white;
@@ -189,11 +187,12 @@ img, #subjectName, #chatTitle {
     font-family:Trebuchet MS, sans-serif;
     opacity: 1;
     transition: 0.3s;
-
+    float: left
 }
 
 #join_chatroom:focus {
     border: 2px solid #932D2D;
+
 }
 
 #joinRoomButton, #fa-sign-in-alt  {
@@ -203,6 +202,7 @@ img, #subjectName, #chatTitle {
     background-color: #932D2D;
     min-width:50px;
     font-family:Trebuchet MS, sans-serif;
+
 }
 
 #joinRoomButton:hover {opacity: 0.6}
@@ -214,12 +214,12 @@ img, #subjectName, #chatTitle {
 .create new chatroom {
     display: -ms-flex;
     display:flex;
-    width: 100%;
+    width: auto;
     margin-bottom: 15px;
 }
 
 #create_new_chatroom {
-    width:90%;
+    width:auto;
     padding: 10px;
     color:black;
     background-color: white;
@@ -227,6 +227,7 @@ img, #subjectName, #chatTitle {
     display: inline-block;
     font-size: 14px;
     font-family:Trebuchet MS, sans-serif;
+    float: left;
 }
 #create_new_chatroom:focus {
     border: 2px solid #932D2D;
