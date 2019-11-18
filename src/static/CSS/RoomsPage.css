@@ -292,7 +292,7 @@ img, #subjectName, #chatTitle {
 
 #Chat {
     padding:1%;
-    background-color: white;
+    background-color: whitesmoke;
     opacity: 1;
 }
 
@@ -348,6 +348,7 @@ img, #subjectName, #chatTitle {
 .sendButton:hover{
     background-color: #5f0d0c;
     color: white;
+    border: solid #5f0d0c;
 }
 
 #sendIcon {
