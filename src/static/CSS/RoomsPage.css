@@ -252,9 +252,14 @@ img, #subjectName, #chatTitle {
     transition: 0.3s;
     opacity:1;
 }
-#Talktous:hover {opacity: 0.6}
+#Talktous:hover {opacity: 0.6 }
 
+.chatrooms_sidebar_footer {
+    position: relative;
+    margin-top: 50%;
+}
 /*fim sidenav*/
+
 #subjectName, #chatTitle {
     font-size: large;
 }
