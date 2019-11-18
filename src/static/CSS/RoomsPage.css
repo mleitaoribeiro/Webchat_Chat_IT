@@ -308,6 +308,7 @@ img, #subjectName, #chatTitle {
     margin-top:1%;
     padding-bottom: 530px;
     background-color:white;
+    overflow-y:auto;
 }
 
 #userInput {
