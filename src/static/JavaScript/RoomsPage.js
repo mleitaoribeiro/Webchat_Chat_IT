@@ -3,7 +3,7 @@ function reloadMessage() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
         document.getElementById("outputBox").innerHTML = this.responseText;
-        setTimeout(reloadMessage, 1500);
+        setTimeout(reloadMessage, 500);
     };
     request.ontimeout = function timeoutCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
@@ -19,5 +19,8 @@ function reloadMessage() {
 }
 
 function sendMessage () {
-
+    var userTextInput = document.getElementById("userTextInput").value;
+    var request = new XMLHttpRequest();
+    request.open("POST", "https://vs280.dei.isep.ipp.pt/cgi-bin/outputBox", true);
+    request.send(userTextInput);
 }
