@@ -190,8 +190,8 @@ img, #subjectName, #chatTitle {
     background-color: red;
     border-radius: 8px;
     border: 2px solid #B61919;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 7px;
+    padding-right: 7px;
     padding-top: 2px;
     opacity: 0.6;
     transition: 0.3s;
@@ -225,7 +225,7 @@ img, #subjectName, #chatTitle {
 
 #userTextInput {
     margin-top: 4px;
-    margin-left: 1%;
+    margin-left: 2%;
     padding-right:58%;
     margin-right: 1%;
     position:relative;
@@ -233,6 +233,8 @@ img, #subjectName, #chatTitle {
     border-radius: 20px;
     font-size: 15px;
     border: solid 2px #B61919;
+    font-family: Trebuchet MS, sans-serif;
+    text-align: -moz-left;
 }
 
 #sendButton{
