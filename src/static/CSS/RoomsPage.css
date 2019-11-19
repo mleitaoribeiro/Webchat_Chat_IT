@@ -360,6 +360,7 @@ img, #subjectName, #chatTitle {
     background-color: #5f0d0c;
     color: white;
     border: solid #5f0d0c;
+    -webkit-transform: scale(1.05);
 }
 
 #sendIcon {

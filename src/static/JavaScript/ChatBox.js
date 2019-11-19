@@ -12,6 +12,13 @@ function clearInputText(){
     document.getElementById("userTextInput").value = "";
 }
 
+function ifEmpty(){
+    var input = document.getElementById("userTextInput");
+    if (input != ""){
+        sendMessage();
+    }
+}
+
 function reloadMessage() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
