@@ -75,7 +75,7 @@ img, #subjectName, #chatTitle {
     -webkit-transform: scale(1.39);
 }
 
-/* The side navigation menu */
+/* The side navigation menu - Início*/
 
 .User_Available_Rooms{
     display:inline-block;
@@ -164,9 +164,10 @@ img, #subjectName, #chatTitle {
 * {box-sizing: border-box;}
 
 .join chatroom {
-    display: -ms-flex;
+    display: -ms-inline-flexbox;
     width: auto;
     margin-bottom: 15px;
+    flex-shrink: 10;
 }
 
 #join_chatroom {
@@ -175,12 +176,13 @@ img, #subjectName, #chatTitle {
     color:black;
     background-color: white;
     border: none;
-    display: inline-block;
     font-size: 14px;
     font-family:Trebuchet MS, sans-serif;
     opacity: 1;
     transition: 0.3s;
-    float: left
+    float: left;
+    display: -ms-inline-flexbox;
+
 }
 
 #join_chatroom:focus {
@@ -192,7 +194,7 @@ img, #subjectName, #chatTitle {
     padding: 10px;
     color:white;
     border:none;
-    background-color: #932D2D;
+    background-color:#B61919;
     min-width:50px;
     font-family:Trebuchet MS, sans-serif;
 
@@ -230,7 +232,7 @@ img, #subjectName, #chatTitle {
     padding: 10px;
     color:white;
     border:none;
-    background-color: #932D2D;
+    background-color: #B61919;
     min-width:50px;
     font-family:Trebuchet MS, sans-serif;
     opacity: 1;
@@ -239,24 +241,36 @@ img, #subjectName, #chatTitle {
 #createRoomButton:hover {opacity: 0.6}
 
 #Talktous {
-    width:50%;
-    padding: 10px;
-    color:white;
-    background-color: #932D2D;
-    border: none;
+    margin-top: 2px;
+    padding-right: 4%;
+    padding-left: 3%;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    border: solid #B61919;
+    color: white;
+    background-color: #B61919;
+    font-family: Trebuchet MS, sans-serif, bold;
+    font-size: 15px;
+    cursor: pointer;
     display: inline-block;
-    font-size: 14px;
-    font-family:Trebuchet MS, sans-serif;
-    transition: 0.3s;
-    opacity:1;
+    text-align: center;
+    position: relative;
+    float: left;
+    transition:all 0.5s;
 }
-#Talktous:hover {opacity: 0.6 }
+#Talktous:hover {
+    opacity: 0.6
+    filter: none;
+    -webkit-transform: scale(1.1);
+}
 
 .chatrooms_sidebar_footer {
+    width: max-content;
     position: relative;
-    margin-top: 50%;
+    margin-top: 90%;
+
 }
-/*fim sidenav*/
+/* The side navigation menu - Fim*/
 
 #subjectName, #chatTitle {
     font-size: large;
@@ -301,6 +315,9 @@ img, #subjectName, #chatTitle {
     margin-top:1%;
     background-color:white;
     overflow-y:auto;
+    height: 580px;
+
+
 }
 
 #userInput {
@@ -326,9 +343,9 @@ img, #subjectName, #chatTitle {
     padding-left: 3%;
     padding-bottom: 1px;
     border-radius: 5px;
-    border: solid #B61919;
+    border: solid #932D2D;
     color: white;
-    background-color: #B61919;
+    background-color: #932D2D;
     font-family: Trebuchet MS, sans-serif, bold;
     font-size: 18px;
     cursor: pointer;
