@@ -77,6 +77,11 @@ img, #subjectName, #chatTitle {
 
 /* The side navigation menu - Início*/
 
+.chatRooms_sidebar {
+    width: auto;
+    flex: auto;
+}
+
 .User_Available_Rooms{
     display:inline-block;
     font-family:Trebuchet MS, sans-serif;
@@ -84,6 +89,11 @@ img, #subjectName, #chatTitle {
 .chatrooms_sidebar_header {
     text-decoration: underline overline #932D2D;
 }
+
+.chatrooms_sidebar_header h1 {
+    border-radius: 12px;
+}
+
 .chatrooms_sidenav {
     width:100%;
     background-color: transparent;
@@ -154,16 +164,17 @@ img, #subjectName, #chatTitle {
 
 .chatrooms_sidebar_footer{
     display: block;
-    position:static;
     text-align: left;
     text-decoration: none;
-    width: 100%;
+    width: max-content;
+    position: absolute;
+    bottom: 15px;
 }
 
 /*Entrar sala*/
 * {box-sizing: border-box;}
 
-.join chatroom {
+.joinchatroom {
     display: -ms-inline-flexbox;
     width: auto;
     margin-bottom: 15px;
@@ -176,18 +187,14 @@ img, #subjectName, #chatTitle {
     color:black;
     background-color: white;
     border: none;
+    display: inline-block;
     font-size: 14px;
     font-family:Trebuchet MS, sans-serif;
-    opacity: 1;
-    transition: 0.3s;
     float: left;
-    display: -ms-inline-flexbox;
-
 }
 
 #join_chatroom:focus {
     border: 2px solid #932D2D;
-
 }
 
 #joinRoomButton, #fa-sign-in-alt  {
@@ -264,12 +271,6 @@ img, #subjectName, #chatTitle {
     -webkit-transform: scale(1.1);
 }
 
-.chatrooms_sidebar_footer {
-    width: max-content;
-    position: relative;
-    margin-top: 90%;
-
-}
 /* The side navigation menu - Fim*/
 
 #subjectName, #chatTitle {
