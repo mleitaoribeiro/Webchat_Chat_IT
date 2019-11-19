@@ -87,11 +87,12 @@ img, #subjectName, #chatTitle {
     font-family:Trebuchet MS, sans-serif;
 }
 .chatrooms_sidebar_header {
-    text-decoration: underline overline #932D2D;
+
 }
 
 .chatrooms_sidebar_header h1 {
     border-radius: 12px;
+
 }
 
 .chatrooms_sidenav {
@@ -174,11 +175,10 @@ img, #subjectName, #chatTitle {
 /*Entrar sala*/
 * {box-sizing: border-box;}
 
-.joinchatroom {
+.joinChatroom {
     display: -ms-inline-flexbox;
     width: auto;
     margin-bottom: 15px;
-    flex-shrink: 10;
 }
 
 #join_chatroom {
@@ -213,7 +213,7 @@ img, #subjectName, #chatTitle {
 
 * {box-sizing: border-box;}
 
-.create new chatroom {
+.createNewChatroom {
     display: -ms-flex;
     display:flex;
     width: auto;
@@ -266,7 +266,7 @@ img, #subjectName, #chatTitle {
     transition:all 0.5s;
 }
 #Talktous:hover {
-    opacity: 0.6
+    opacity: 0.6;
     filter: none;
     -webkit-transform: scale(1.1);
 }
