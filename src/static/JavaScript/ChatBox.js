@@ -9,10 +9,6 @@ function reloadMessage() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
         setTimeout(reloadMessage, 1000);
     };
-    request.onerror = function errorCase() {
-        document.getElementById("outputBox").innerHTML = "Still trying ...";
-        setTimeout(reloadMessage, 1000);
-    };
     request.open("GET", "https://vs280.dei.isep.ipp.pt/cgi-bin/outputBox", true);
     request.timeout = 5000;
     request.send();
