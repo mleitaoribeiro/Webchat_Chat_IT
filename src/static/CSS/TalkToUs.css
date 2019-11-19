@@ -27,7 +27,7 @@ input[type=submit] {
     align-content: center;
     width: 10%;
     background-color: #B61919;
-    color: white;
+    color: whitesmoke;
     padding: 14px 20px;
     margin: 8px 0;
     border: #B61919;
@@ -36,17 +36,25 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #717377;
+    background-color: #FF2626;
+    color: white;
+    border: #B61919;
     }
 
 #mainDiv {
+    margin-left: 4%;
+    margin-right: 4%;
     border-radius: 5px;
-    background-color: #717377;
+    background-color: whitesmoke;
     padding: 20px;
 }
 img, #subjectName {
     margin: auto;
     max-width: 7%;
+}
+input[id=TermsAndConditions] {
+    width: 20px;
+    height: 20px;
 }
 
 footer {

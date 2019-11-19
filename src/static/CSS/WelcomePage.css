@@ -57,7 +57,10 @@ img, #subjectName, #chatTitle {
     -webkit-transform: scale(1.05);
     cursor: pointer;
 }
-
+.nickname_message_info {
+    color: grey;
+    font-size:10px;
+}
 footer {
     display: flex;
     position: fixed;
