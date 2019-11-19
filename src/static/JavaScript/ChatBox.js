@@ -1,3 +1,16 @@
+function enterToSend() {
+    var input = document.getElementById("userTextInput");
+    input.addEventListener("keydown", function(event) {
+        if (event.key == "Enter") {
+            event.preventDefault();
+            document.getElementById("sendButton").click();
+        }
+    });
+}
+
+function clearInputText(){
+    document.getElementById("userTextInput").value = "";
+}
 
 function reloadMessage() {
     var request = new XMLHttpRequest();
