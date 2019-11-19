@@ -18,16 +18,10 @@ head, body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 12fr 1fr;
+    grid-template-rows: 15fr 1fr;
     grid-gap: 5px;
     justify-items: stretch;
     align-items: stretch;
-}
-
-header {
-    display: grid;
-    grid-column: 1/4;
-    background-color: white;
 }
 
 footer {
@@ -65,7 +59,7 @@ footer {
 
 img, #subjectName, #chatTitle {
     margin: auto;
-    max-width: 20%;
+    max-width: 80px;
 }
 #ChatRooms {
     background: whitesmoke;
@@ -93,7 +87,6 @@ img, #subjectName, #chatTitle {
 .chatrooms_sidenav {
     width:100%;
     background-color: transparent;
-    padding: 20px 50px;
     color: black;
     border:none;
     padding: 10px 10px;
