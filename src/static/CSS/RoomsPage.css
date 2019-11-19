@@ -65,7 +65,7 @@ footer {
 
 img, #subjectName, #chatTitle {
     margin: auto;
-    max-width: 30%;
+    max-width: 20%;
 }
 #ChatRooms {
     background: whitesmoke;
@@ -306,7 +306,6 @@ img, #subjectName, #chatTitle {
     border-radius: 5px;
     border: solid 2px #B61919;
     margin-top:1%;
-    padding-bottom: 530px;
     background-color:white;
     overflow-y:auto;
 }
