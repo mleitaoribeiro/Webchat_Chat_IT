@@ -1,3 +1,5 @@
+
+// Função para carregar no botão "sendButton" ao carregar no Enter:
 function enterToSend() {
     var input = document.getElementById("userTextInput");
     input.addEventListener("keydown", function(event) {
@@ -7,17 +9,17 @@ function enterToSend() {
         }
     });
 }
-
+// Função para apagar caixa de texto do input do utilizador:
 function clearInputText(){
     document.getElementById("userTextInput").value = "";
 }
-
-function ifEmpty(){
-    var input = document.getElementById("userTextInput");
-    if (input != ""){
-        sendMessage();
-    }
+// Função para colocar os emojis na textbox (JQuery) :
+function addEmojis(){
+    $(document).ready(function() {
+        $("#userTextInput").emojioneArea();
+    });
 }
+
 
 function reloadMessage() {
     var request = new XMLHttpRequest();

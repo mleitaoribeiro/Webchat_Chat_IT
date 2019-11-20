@@ -322,7 +322,7 @@ img, #subjectName, #chatTitle {
 /* Scrollbar da outputBox: */
 #outputBox::-webkit-scrollbar {
     width: 15px;
-    opacity: 0.80;
+    margin-right:10px;
 }
 #outputBox::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
