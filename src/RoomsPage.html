@@ -20,8 +20,7 @@
     <!--Emoji library-->
     <link rel="stylesheet" href="static/CSS/emojionearea.min.css">
     <!-- Emoji JQuery-->
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous">
     </script>
@@ -118,7 +117,7 @@
             <div id="userInput">
                 <!-- Scanner de texto: -->
                 <input id="userTextInput" placeholder="Type a new message... " onfocusin="enterToSend()" type="text"
-                       size="102" maxlength="140" onkeypress="">
+                       size="102" maxlength="140" onkeypress="return blockSpecialChar(event)">
                 <!-- Botão de enviar: -->
                 <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                     Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>

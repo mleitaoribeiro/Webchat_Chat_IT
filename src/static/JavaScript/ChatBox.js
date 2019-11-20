@@ -1,23 +1,23 @@
 function enterToSend() {
     var input = document.getElementById("userTextInput");
-    input.addEventListener("keydown", function(event) {
+    input.addEventListener("keydown", function (event) {
         if (event.key == "Enter") {
             event.preventDefault();
             document.getElementById("sendButton").click();
         }
     });
 }
+
 // Função para apagar caixa de texto do input do utilizador:
-function clearInputText(){
+function clearInputText() {
     document.getElementById("userTextInput").value = "";
 }
+
 // Restrição de html tags na caixa de texto do input do utilizador:
-function checkSpecialChar(event){
-    if(!((event.keyCode >= 65) && (event.keyCode <= 90) || (event.keyCode >= 97) && (event.keyCode <= 122) || (event.keyCode >= 48) && (event.keyCode <= 57))){
-        event.returnValue = false;
-        return;
-    }
-    event.returnValue = true;
+function blockSpecialChar(event) {
+    var k;
+    document.all ? k = event.keyCode : k = event.which;
+    return ((k != 58) && (k != 59) && (k != 60) && (k != 62) && (k != 124) && (k != 91) && (k != 93));
 }
 
 // Função para reload das mensagens na outputBox sincronizando-as com o ficheiro responseText presente no servidor.
@@ -37,7 +37,7 @@ function reloadMessage() {
 }
 
 // Função que envia as mensagens para o srvidor a partir da barra de input: userTextInput.
-function sendMessage () {
+function sendMessage() {
     var userTextInput = document.getElementById("userTextInput").value;
     var request = new XMLHttpRequest();
     request.open("POST", "http://vs280.dei.isep.ipp.pt/cgi-bin/outputBox", true);

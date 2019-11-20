@@ -1,9 +1,8 @@
-
 function loginUser() {
     var nickname = document.getElementById("nickname").value;
     console.log(nickname);
     var request = new XMLHttpRequest();
-    request.onload = function() {
+    request.onload = function () {
         if (this.readyState == 4 && this.status != 200) {
             document.getElementById("errorMessage").innerHTML = this.response;
         }
