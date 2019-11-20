@@ -12,13 +12,7 @@ function clearInputText(){
     document.getElementById("userTextInput").value = "";
 }
 
-function ifEmpty(){
-    var input = document.getElementById("userTextInput");
-    if (input != ""){
-        sendMessage();
-    }
-}
-
+//Função para fazer o reload das 20 mensagens na Chatbox!
 function reloadMessage() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
@@ -34,6 +28,7 @@ function reloadMessage() {
     request.send();
 }
 
+//Função para mandar mensagens na Chatbox!!
 function sendMessage () {
     var userTextInput = document.getElementById("userTextInput").value;
     var request = new XMLHttpRequest();

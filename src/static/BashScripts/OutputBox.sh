@@ -11,13 +11,13 @@ if [ "REQUEST_METHOD" == "GET" ]; then
   echo "$OUTPUT_MESSAGES"
   exit
 fi
-if [ "REUQEST_METHOD" == "POST" ]; then
+if [ "REQUEST_METHOD" == "POST" ]; then
   OUTPUT_BASE_MESSAGES=var/www/cgi-bin/outputBox.log
   echo "Content-type: text/plain"
   echo "Access-Control-Allow-Origin: *"
   echo ""
   DATE=$(date+"%R")
-  echo "<p><b>$DATE</b> $(cat $M_CONTENT_FILE)</p>" >> $OUTPUT_BASE_MESSAGES
+  echo "<p><b>$DATE</b> $(cat "$M_CONTENT_FILE")</p>" >> $OUTPUT_BASE_MESSAGES
   exit
 fi
 echo "Status: 400 Bad Request"
