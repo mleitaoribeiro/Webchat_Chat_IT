@@ -59,7 +59,7 @@ footer {
 
 img, #subjectName, #chatTitle {
     margin: auto;
-    max-width: 80px;
+    max-width: 60px;
 }
 #ChatRooms {
     background: whitesmoke;
@@ -79,7 +79,19 @@ img, #subjectName, #chatTitle {
 
 .chatRooms_sidebar {
     width: auto;
-    flex: auto;
+    height: auto;
+    display:inline-block;
+    border: #932D2D;
+    text-align: center;
+    text-decoration: none;
+    background-color: #e7e7e7;
+    color: black;
+    font-size: 18px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-family:Trebuchet MS, sans-serif;
+    min-width: max-content;
+    position: relative;
 }
 
 .User_Available_Rooms{
@@ -87,12 +99,7 @@ img, #subjectName, #chatTitle {
     font-family:Trebuchet MS, sans-serif;
 }
 .chatrooms_sidebar_header {
-
-}
-
-.chatrooms_sidebar_header h1 {
     border-radius: 12px;
-
 }
 
 .chatrooms_sidenav {
@@ -104,7 +111,7 @@ img, #subjectName, #chatTitle {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 18px;
     font-family:Trebuchet MS, sans-serif;
     transition: 0.5s;
     opacity:1;
@@ -126,19 +133,6 @@ img, #subjectName, #chatTitle {
 .chatRooms_sidebar a.active {
     background-color: #932D2D;
     color: white;
-}
-.chatRooms_sidebar {
-    border: #932D2D;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    background-color: #e7e7e7;
-    color: black;
-    font-size: 18px;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-family:Trebuchet MS, sans-serif;
-    width: 100%;
 }
 .chatrooms_button{
     font-family:Trebuchet MS, sans-serif;
@@ -168,15 +162,12 @@ img, #subjectName, #chatTitle {
     text-align: left;
     text-decoration: none;
     width: max-content;
-    position: absolute;
-    bottom: 15px;
+    margin-top: 300px;
 }
 
 /*Entrar sala*/
-* {box-sizing: border-box;}
 
 .joinChatroom {
-    display: -ms-inline-flexbox;
     width: auto;
     margin-bottom: 15px;
 }
@@ -273,19 +264,23 @@ img, #subjectName, #chatTitle {
 
 /* The side navigation menu - Fim*/
 
-#subjectName, #chatTitle {
-    font-size: large;
+#chatBoxHeader {
+    display: grid;
+    grid-template-columns: 10fr 10fr 1fr;
 }
 
-#imageHeader {
-    max-height: 30px;
-    max-width: 30px;
+#logoSmall {
+    max-height: 35px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+}
+
+#chatBoxTitle{
+    font-family:Trebuchet MS, sans-serif;
+    font-size: 20px;
 }
 
 #exitButton {
-    margin-top: 0.1%;
-    position: relative;
-    margin-left: 97%;
     font-family: sans-serif;
     color: white;
     background-color: #B61919;
@@ -297,6 +292,7 @@ img, #subjectName, #chatTitle {
     opacity: 0.6;
     transition: 0.3s;
 }
+
 #exitButton:hover {opacity: 1}
 
 #Chat {
@@ -382,6 +378,10 @@ img, #subjectName, #chatTitle {
     display: inline-block;
     position: relative;
     left: 12px;
+}
+
+#subjectName {
+    font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {

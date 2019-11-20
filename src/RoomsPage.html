@@ -40,7 +40,7 @@
             <div class="User_Available_Rooms">
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <br>
-                <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> <i class="far fa-star"></i> Main Room</button>
+                <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> Main Room</button>
                 <br>
                 <br>
                 <button class="chatrooms_sidenav" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
@@ -73,7 +73,8 @@
 
             </div>
 
-            <!--Conteudo das Salas-->
+            <!--Conteudo das Salas
+
             <div id="Main Room" class="tabcontent">
             </div>
 
@@ -82,10 +83,12 @@
 
             <div id="Just For Fun" class="tabcontent">
             </div>
+
+            -->
             <!--Fontes-->
-            <!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_vertical_tabs-->
-            <!--https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp-->
-            <!--https://www.w3schools.com/howto/howto_css_navbar_icon.asp-->
+            <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_vertical_tabs -->
+            <!-- https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp -->
+            <!-- https://www.w3schools.com/howto/howto_css_navbar_icon.asp -->
 
         </div>
 
@@ -95,10 +98,14 @@
             <h1></h1>
             <!-- caixa do chat: -->
             <div id="chatBox">
-                <!-- sair do chat (X): -->
-                <form action ="WelcomePage.html">
-                <input id="exitButton" type="submit" value="X" >
-                </form>
+                <div id="chatBoxHeader">
+                    <img id="logoSmall" src="https://imgur.com/2OttJwN.png" alt="logo of the chat">
+                    <div id="chatBoxTitle"> Chat IT</div>
+                    <!-- sair do chat (X): -->
+                    <form action ="WelcomePage.html">
+                        <input id="exitButton" type="submit" value="X" >
+                    </form>
+                </div>
                 <!-- output do chat: -->
                 <div id="outputBox" height="40px">Please wait...</div>
                 <!-- inputs do user: -->
