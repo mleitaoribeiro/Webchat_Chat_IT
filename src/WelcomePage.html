@@ -11,6 +11,7 @@
 
     <title>Chat IT</title>
     <link type="text/css" rel="stylesheet" href="static/CSS/WelcomePage.css"/>
+    <script src="static/JavaScript/WelcomePage.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body>
@@ -23,7 +24,11 @@
         <div id="login">
             <form action ="RoomsPage.html">
                 <input class ="nickNameButtonStyle" type="text" pattern="[a-zA-Z0-9-]+" placeholder="Nickname:" id="nickname" size="40" minlength="2" maxlength=12" required>
-                <button class ="loginButtonStyle loginButton" type="submit" id="loginButton">Login</button>
+                <button class ="loginButtonStyle loginButton" type="submit" id="loginButton" onclick="loginUser()">Login</button>
+                <div id="errorMessage"> </div>
+                <div class="nickname_message_info">
+                <p>Please use only letters (a-z) and numbers (0-9). Your nickname must have between 2-12 characters.<p>
+                </div>
             </form>
             </div>
     </div>

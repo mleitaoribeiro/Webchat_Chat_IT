@@ -1,3 +1,23 @@
+function enterToSend() {
+    var input = document.getElementById("userTextInput");
+    input.addEventListener("keydown", function(event) {
+        if (event.key == "Enter") {
+            event.preventDefault();
+            document.getElementById("sendButton").click();
+        }
+    });
+}
+
+function clearInputText(){
+    document.getElementById("userTextInput").value = "";
+}
+
+function ifEmpty(){
+    var input = document.getElementById("userTextInput");
+    if (input != ""){
+        sendMessage();
+    }
+}
 
 function reloadMessage() {
     var request = new XMLHttpRequest();
@@ -6,10 +26,6 @@ function reloadMessage() {
         setTimeout(reloadMessage, 500);
     };
     request.ontimeout = function timeoutCase() {
-        document.getElementById("outputBox").innerHTML = "Still trying ...";
-        setTimeout(reloadMessage, 1000);
-    };
-    request.onerror = function errorCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
         setTimeout(reloadMessage, 1000);
     };

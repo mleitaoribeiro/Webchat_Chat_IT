@@ -12,7 +12,7 @@
 
     <title>ChatRooms</title>
     <link type="text/css" rel="stylesheet" href="static/CSS/RoomsPage.css"/>
-    <script src="static/JavaScript/RoomsPage.js"></script>
+    <script src="static/JavaScript/ChatBox.js"></script>
 
     <!--Library with icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -31,7 +31,7 @@
             <div class="User_Available_Rooms">
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <br>
-                <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> <i class="far fa-star"></i></i> Main Room</button>
+                <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> <i class="far fa-star"></i> Main Room</button>
                 <br>
                 <br>
                 <button class="chatrooms_sidenav" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
@@ -40,29 +40,27 @@
             </div>
 
             <div class="chatrooms_sidebar_footer">
-                <div class="join chatroom">
-                    <button type="submit" id="joinRoomButton" ><i class="fas fa-sign-in-alt"></i></button>
+                <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="join_chatroom" min="1" maxlength="10" required>
+                    <button type="submit" id="joinRoomButton" ><i class="fas fa-sign-in-alt"></i></button>
                 </div>
 
                 <br>
 
-                <div class="create new chatroom ">
-                    <button type="submit" id="createRoomButton"><i class="fas fa-plus-circle"></i></button>
+                <div class="createNewChatroom">
                     <input type="text" placeholder="Create a New Chat Room" id="create_new_chatroom" min="1" maxlength="10" required>
+                    <button type="submit" id="createRoomButton"><i class="fas fa-plus-circle"></i></button>
                     <br>
                     <br>
                 </div>
 
 
-                <div class="talk to us">
+                <div class="talkToUs">
                     <form action ="TalkToUs.html">
-                    <button onclick="openPage('Talk to us!', this, 'black')" id="Talktous"> <i class="glyphicon glyphicon-envelope"></i></i> Talk to us!</button>
+                    <button id="Talktous"> <i class="glyphicon glyphicon-envelope"></i></i> Talk to us!</button>
                     </form> 
                     <br>
                 </div>
-
-
 
             </div>
 
@@ -84,6 +82,8 @@
 
         <!-- div associada ao chat : -->
         <div class="Chat" id="Chat">
+
+            <h1></h1>
             <!-- caixa do chat: -->
             <div id="chatBox">
                 <div id="chatBoxHeader">
@@ -95,13 +95,13 @@
                     </form>
                 </div>
                 <!-- output do chat: -->
-                <div id="outputBox" >Please wait...</div>
+                <div id="outputBox" height="40px">Please wait...</div>
                 <!-- inputs do user: -->
                 <div id="userInput">
                     <!-- Scanner de texto: -->
-                    <input id="userTextInput" placeholder="Type a new message... " type="text" size="102" maxlength="140">
+                    <input id="userTextInput" placeholder="Type a new message... " onfocus="enterToSend()" type="text" size="102" maxlength="140">
                     <!-- Botão de enviar: -->
-                    <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage()">Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
+                    <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(), clearInputText()">Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
                 </div>
             </div>
             <!-- emojis, icons, e várias utilidades: -->
