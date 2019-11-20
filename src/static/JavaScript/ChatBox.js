@@ -19,6 +19,7 @@ function checkSpecialChar(event){
     }
     event.returnValue = true;
 }
+
 // Função para reload das mensagens na outputBox sincronizando-as com o ficheiro responseText presente no servidor.
 function reloadMessage() {
     var request = new XMLHttpRequest();
