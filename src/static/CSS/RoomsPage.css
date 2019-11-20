@@ -279,13 +279,14 @@ img, #subjectName, #chatTitle {
 }
 
 #logoSmall {
-    max-height: 40px;
+    max-height: 35px;
+    margin-bottom: 5px;
     margin-right: 20px;
 }
 
 #chatBoxTitle{
     font-family:Trebuchet MS, sans-serif;
-    margin-top: 10px;
+    font-size: 20px;
 }
 
 #exitButton {
@@ -386,6 +387,10 @@ img, #subjectName, #chatTitle {
     display: inline-block;
     position: relative;
     left: 12px;
+}
+
+#subjectName {
+    font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
