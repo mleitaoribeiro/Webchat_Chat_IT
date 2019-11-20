@@ -59,7 +59,7 @@ footer {
 
 img, #subjectName, #chatTitle {
     margin: auto;
-    max-width: 60px;
+    max-width: 80px;
 }
 #ChatRooms {
     background: whitesmoke;
@@ -267,13 +267,24 @@ img, #subjectName, #chatTitle {
 
 #chatBoxHeader {
     display: grid;
-    grid-template-columns: 10fr 10fr 1fr;
+    grid-template-columns: 10fr 1fr 1fr 1fr 10fr 1fr;
 }
 
 #logoSmall {
     max-height: 35px;
     margin-bottom: 5px;
-    margin-right: 20px;
+    margin-right: 5px;
+}
+
+#logoCHAT {
+    max-height: 35px;
+    margin-bottom: 5px;
+}
+
+#logoIT {
+    max-height: 30px;
+    margin-bottom: 9px;
+    margin-left: -3px;
 }
 
 #chatBoxTitle{
@@ -312,7 +323,7 @@ img, #subjectName, #chatTitle {
     border: solid 2px #B61919;
     margin-top:1%;
     background-color:white;
-    overflow-y:auto;
+    overflow-y: scroll;
     height: 580px;
 }
 
