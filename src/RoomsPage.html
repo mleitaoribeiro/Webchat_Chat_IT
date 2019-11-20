@@ -99,8 +99,11 @@
             <!-- caixa do chat: -->
             <div id="chatBox">
                 <div id="chatBoxHeader">
+                    <h1> </h1>
                     <img id="logoSmall" src="https://imgur.com/2OttJwN.png" alt="logo of the chat">
-                    <div id="chatBoxTitle"> Chat IT</div>
+                    <img id="logoCHAT" src="https://imgur.com/kwy8YcJ.png" alt="logo of the chat">
+                    <img id="logoIT" src="https://imgur.com/CH7uj9x.png" alt="logo of the chat">
+                    <h1> </h1>
                     <!-- sair do chat (X): -->
                     <form action ="WelcomePage.html">
                         <input id="exitButton" type="submit" value="X" >
@@ -115,7 +118,7 @@
                     <!--div para os emojis-->
                     <!--<div id="emojiDiv"><script>addEmojis()</script></div>-->
                     <!-- Botão de enviar: -->
-                    <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(), clearInputText()">Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
+                    <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
                 </div>
             </div>
             <!-- emojis, icons, e várias utilidades: -->
@@ -126,7 +129,8 @@
         <div class="CurrentOnlineUsers" id="CurrentOnlineUsers">
             <div><h1>RoomName</h1>
             </div>
-            <div>
+            <div id="onlineUsers">
+                <h4>Online users:</h4>
                 <ul>
                     <li id="user1" class="user">User1</li>
                     <li id="user2" class="user">User2</li>
