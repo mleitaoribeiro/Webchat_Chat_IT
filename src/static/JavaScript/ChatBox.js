@@ -13,12 +13,7 @@ function enterToSend() {
 function clearInputText(){
     document.getElementById("userTextInput").value = "";
 }
-// Função para colocar os emojis na textbox (JQuery) :
-function addEmojis(){
-    $(document).ready(function() {
-        $("#emojiDiv").emojioneArea();
-    });
-}
+
 
 // Função para reload das mensagens na outputBox sincronizando-as com o ficheiro responseText presente no servidor.
 function reloadMessage() {
