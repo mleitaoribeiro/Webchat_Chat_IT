@@ -2,9 +2,10 @@
 function loginUser() {
     var loginButton = document.getElementById("loginButton").value;
     var request = new XMLHttpRequest();
-    request.onreadystatechange = function() {
+    request.onload = function() {
         if (this.readyState == 4 && this.status != 200) {
-            document.getElementById("errorMessage").innerHTML = "This nickname already exists. Please enter a new one!";
+            document.getElementById("errorMessage").innerHTML = "<p><i class='fas fa-exclamation-circle' " +
+                "style=font-size:15px;></i> This nickname already exists. Please enter a new one!</p>";
         }
     };
     request.open("PUT", "https://vs280.dei.isep.ipp.pt/cgi-bin/users", true);
