@@ -430,14 +430,14 @@ img, #subjectName, #chatTitle {
         text-align: center;
         text-decoration: none;
         background-color: #B61919;
-        opacity: 80%;
+        opacity: 90%;
         color: white;
         font-family:Trebuchet MS, sans-serif;
         position: absolute;
-        top:-190px;
-        right:0;
+        top:-150px;
+        right:2px;
         transition: 0.3s;
-        padding: 15px;
+        padding: 10px;
         width: 200px;
         max-height: max-content;
         border-bottom-left-radius: 20px;
@@ -445,14 +445,17 @@ img, #subjectName, #chatTitle {
         border-top-right-radius: 0;
 
     }
+
     #CurrentOnlineUsers:hover {
         top: 0;
-        right:-1px;
+        right:0;
         border-bottom-right-radius: 0;
     }
+
     #onlineUsers {
         border-radius: 10px;
-        border: solid 2px white;
+        border: solid 1px white;
+        background-color: whitesmoke;;
         height: 90px;
         max-height: 90px;
         margin-left: 10px;
@@ -462,9 +465,9 @@ img, #subjectName, #chatTitle {
     .CurrentOnlineUsers ul{
         margin-top: 5px;
         font-size: 15px;
-        color: white;
+        color: rgba(0, 0, 0, 0.9);
         font-family:Trebuchet MS, sans-serif;
-        text-align: center;
+        text-align: left;
         list-style-type: none;
         line-height: 1.4;
     }
