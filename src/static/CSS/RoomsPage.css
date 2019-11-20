@@ -59,7 +59,7 @@ footer {
 
 img, #subjectName, #chatTitle {
     margin: auto;
-    max-width: 60px;
+    max-width: 80px;
 }
 #ChatRooms {
     background: whitesmoke;
@@ -261,13 +261,24 @@ img, #subjectName, #chatTitle {
 
 #chatBoxHeader {
     display: grid;
-    grid-template-columns: 10fr 10fr 1fr;
+    grid-template-columns: 10fr 1fr 1fr 1fr 10fr 1fr;
 }
 
 #logoSmall {
     max-height: 35px;
     margin-bottom: 5px;
-    margin-right: 20px;
+    margin-right: 5px;
+}
+
+#logoCHAT {
+    max-height: 35px;
+    margin-bottom: 5px;
+}
+
+#logoIT {
+    max-height: 30px;
+    margin-bottom: 9px;
+    margin-left: -3px;
 }
 
 #chatBoxTitle{
@@ -291,7 +302,7 @@ img, #subjectName, #chatTitle {
     margin-left: 12px;
 }
 
-#exitButton:hover {opacity: 1}
+#exitButton:hover {opacity: 1;-webkit-transform: scale(1.05);}
 
 #Chat {
     padding:1%;
@@ -309,7 +320,7 @@ img, #subjectName, #chatTitle {
     border: solid 2px #B61919;
     margin-top:1%;
     background-color:white;
-    overflow-y:auto;
+    overflow-y: scroll;
     height: 580px;
 }
 
@@ -334,6 +345,10 @@ img, #subjectName, #chatTitle {
     position:relative;
     margin-top :1%;
     margin-bottom:0.5%;
+}
+#emojiDiv{
+    positon:relative;
+    float: right;
 }
 
 #userTextInput {
@@ -413,25 +428,39 @@ img, #subjectName, #chatTitle {
     }
 }
 
+
+/* Barra Direita - Fim*/
+
     #CurrentOnlineUsers {
         text-align: center;
         text-decoration: none;
         background-color: whitesmoke;
         color: #B61919;
         font-family:Trebuchet MS, sans-serif;
+        position: relative;
     }
 
+    .CurrentOnlineUsers h4{
+        color: #932D2D;
+        float: left;
+        margin-bottom: 15%;
+        margin-left: 10px;
+    }
 
-    ul{
+    #onlineUsers {
+        border-radius: 10px;
+        border: solid 2px #B61919;
+        height: 600px;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    .CurrentOnlineUsers ul{
         font-size: 15px;
         color: black;
         font-family:Trebuchet MS, sans-serif;
-        border-radius: 10px;
-        border: solid 2px #5f0d0c;
         text-align: center;
-        height: 400px;
         list-style-type: none;
-        padding: 0;
         line-height: 1.8;
     }
     #userLimit {
@@ -441,3 +470,4 @@ img, #subjectName, #chatTitle {
         color: #B61919;
     }
 
+/* Barra Direita - Fim*/
