@@ -1,3 +1,5 @@
+
+// Função para carregar no botão "sendButton" ao carregar no Enter:
 function enterToSend() {
     var input = document.getElementById("userTextInput");
     input.addEventListener("keydown", function(event) {
@@ -7,10 +9,18 @@ function enterToSend() {
         }
     });
 }
-
+// Função para apagar caixa de texto do input do utilizador:
 function clearInputText(){
     document.getElementById("userTextInput").value = "";
 }
+// Função para colocar os emojis na textbox (JQuery) :
+function addEmojis(){
+    $(document).ready(function() {
+        $("#userTextInput").emojioneArea();
+    });
+}
+
+
 
 //Função para fazer o reload das 20 mensagens na Chatbox!
 function reloadMessage() {
