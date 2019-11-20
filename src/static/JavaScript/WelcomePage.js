@@ -1,3 +1,4 @@
+// Função que guarda o nickname introduzido num ficheiro do servidor (userLogin):
 function loginUser() {
     var nickname = document.getElementById("nickname").value;
     console.log(nickname);
