@@ -79,6 +79,7 @@ img, #subjectName, #chatTitle {
 
 .chatRooms_sidebar {
     width: auto;
+    height: auto;
     display:inline-block;
     border: #932D2D;
     text-align: center;
@@ -90,7 +91,7 @@ img, #subjectName, #chatTitle {
     border-radius: 12px;
     font-family:Trebuchet MS, sans-serif;
     min-width: max-content;
-
+    position: relative;
 }
 
 .User_Available_Rooms{
@@ -110,7 +111,7 @@ img, #subjectName, #chatTitle {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 18px;
     font-family:Trebuchet MS, sans-serif;
     transition: 0.5s;
     opacity:1;
@@ -121,18 +122,15 @@ img, #subjectName, #chatTitle {
     border: 2px solid lightgrey;
     filter: none;
     -webkit-transform: scale(1.3);
+}
 
+.active .chatRooms_sidenav {
+    background-color: transparent;
+    border-color: lightgrey;
+    border-radius: 2px;
+    transform: scale(1.3);
 }
-.chatRooms_sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-}
-.chatRooms_sidebar a.active {
-    background-color: #932D2D;
-    color: white;
-}
+
 .chatrooms_button{
     font-family:Trebuchet MS, sans-serif;
     font-size: 15px;
@@ -161,14 +159,12 @@ img, #subjectName, #chatTitle {
     text-align: left;
     text-decoration: none;
     width: max-content;
-    position: absolute;
-    bottom: 30px;
+    margin-top: 300px;
 }
 
 /*Entrar sala*/
 
 .joinChatroom {
-    display: -ms-inline-flexbox;
     width: auto;
     margin-bottom: 15px;
 }
@@ -202,8 +198,6 @@ img, #subjectName, #chatTitle {
 #joinRoomButton:hover {opacity: 0.6}
 
 /*Criar nova sala */
-
-* {box-sizing: border-box;}
 
 .createNewChatroom {
     display: -ms-flex;
@@ -303,6 +297,9 @@ img, #subjectName, #chatTitle {
     padding-top: 2px;
     opacity: 0.6;
     transition: 0.3s;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 12px;
 }
 
 #exitButton:hover {opacity: 1}
@@ -330,7 +327,7 @@ img, #subjectName, #chatTitle {
 /* Scrollbar da outputBox: */
 #outputBox::-webkit-scrollbar {
     width: 15px;
-    opacity: 0.80;
+    margin-right:10px;
 }
 #outputBox::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
@@ -427,25 +424,39 @@ img, #subjectName, #chatTitle {
     }
 }
 
+
+/* Barra Direita - Fim*/
+
     #CurrentOnlineUsers {
         text-align: center;
         text-decoration: none;
         background-color: whitesmoke;
         color: #B61919;
         font-family:Trebuchet MS, sans-serif;
+        position: relative;
     }
 
+    .CurrentOnlineUsers h4{
+        color: #932D2D;
+        float: left;
+        margin-bottom: 15%;
+        margin-left: 10px;
+    }
 
-    ul{
+    #onlineUsers {
+        border-radius: 10px;
+        border: solid 2px #B61919;
+        height: 600px;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    .CurrentOnlineUsers ul{
         font-size: 15px;
         color: black;
         font-family:Trebuchet MS, sans-serif;
-        border-radius: 10px;
-        border: solid 2px #5f0d0c;
         text-align: center;
-        height: 400px;
         list-style-type: none;
-        padding: 0;
         line-height: 1.8;
     }
     #userLimit {
@@ -455,3 +466,4 @@ img, #subjectName, #chatTitle {
         color: #B61919;
     }
 
+/* Barra Direita - Fim*/
