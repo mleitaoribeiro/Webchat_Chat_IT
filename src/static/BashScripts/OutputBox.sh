@@ -12,7 +12,6 @@ if [ "REQUEST_METHOD" == "GET" ]; then
   exit
 fi
 if [ "REQUEST_METHOD" == "POST" ]; then
-  OUTPUT_BASE_MESSAGES=var/www/cgi-bin/outputBox.log
   echo "Content-type: text/plain"
   echo "Access-Control-Allow-Origin: *"
   echo ""
