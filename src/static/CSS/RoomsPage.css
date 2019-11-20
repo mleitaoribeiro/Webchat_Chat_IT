@@ -317,7 +317,7 @@ img, #subjectName, #chatTitle {
 
 #outputBox {
     text-align: left;
-    border-radius: 5px;
+    border-radius: 10px;
     border: solid 2px #B61919;
     margin-top:1%;
     background-color:white;

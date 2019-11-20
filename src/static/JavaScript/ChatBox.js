@@ -1,4 +1,4 @@
-// Função que simula click no #sendButton após pressionar Enter:
+// Função que simula click no #sendButton após se pressionar o Enter:
 function enterToSend() {
     var input = document.getElementById("userTextInput");
     input.addEventListener("keydown", function (event) {
@@ -9,19 +9,19 @@ function enterToSend() {
     });
 }
 
-// Função para apagar caixa de input do utilizador (#userTextInput):
+// Função para limpar caixa de input do utilizador após este enviar mensagem(#userTextInput):
 function clearInputText() {
     document.getElementById("userTextInput").value = "";
 }
 
-// Restrição de inputs na caixa de input do utilizador (#userTextInput):
+// Restrição de certos caractéres na caixa de input do utilizador (#userTextInput):
 function blockSpecialChar(event) {
     var k;
     document.all ? k = event.keyCode : k = event.which;
     return ((k != 58) && (k != 59) && (k != 60) && (k != 62) && (k != 124) && (k != 91) && (k != 93));
 }
 
-// Função para reload das mensagens na outputBox sincronizando-as com o ficheiro responseText presente no servidor:
+// Função para reload das mensagens na outputBox sincronizando-as com o ficheiro outputBox presente no servidor:
 function reloadMessage() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
@@ -37,7 +37,7 @@ function reloadMessage() {
     request.send();
 }
 
-// Função que envia as mensagens para o srvidor a partir da caixa de input (#userTextInput):
+// Função que envia as mensagens para o servidor (outputBox) a partir da caixa de input (#userTextInput):
 function sendMessage() {
     var userTextInput = document.getElementById("userTextInput").value;
     var request = new XMLHttpRequest();
