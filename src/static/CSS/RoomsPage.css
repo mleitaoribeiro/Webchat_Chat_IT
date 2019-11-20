@@ -59,7 +59,7 @@ footer {
 
 img, #subjectName, #chatTitle {
     margin: auto;
-    max-width: 80px;
+    max-width: 60px;
 }
 #ChatRooms {
     background: whitesmoke;
@@ -258,19 +258,22 @@ img, #subjectName, #chatTitle {
 }
 /*fim sidenav*/
 
-#subjectName, #chatTitle {
-    font-size: large;
+#chatBoxHeader {
+    display: grid;
+    grid-template-columns: 10fr 10fr 1fr;
 }
 
-#imageHeader {
-    max-height: 30px;
-    max-width: 30px;
+#logoSmall {
+    max-height: 40px;
+    margin-right: 20px;
+}
+
+#chatBoxTitle{
+    font-family:Trebuchet MS, sans-serif;
+    margin-top: 10px;
 }
 
 #exitButton {
-    margin-top: 0.1%;
-    position: relative;
-    margin-left: 97%;
     font-family: sans-serif;
     color: white;
     background-color: #B61919;
@@ -282,6 +285,7 @@ img, #subjectName, #chatTitle {
     opacity: 0.6;
     transition: 0.3s;
 }
+
 #exitButton:hover {opacity: 1}
 
 #Chat {
