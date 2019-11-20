@@ -427,15 +427,47 @@ img, #subjectName, #chatTitle {
 /* Barra Direita - Fim*/
 
     #CurrentOnlineUsers {
+        background-color: whitesmoke;
+    }
+
+    #CurrentOnlineUsers h3 {
+        color: #932D2D;
+    }
+
+    #onlineUsers {
+        border-radius: 10px;
+        border: solid 2px #932D2D;
+        height: 620px;
+        max-height: 620px;
+        overflow-y: auto
+    }
+
+    .CurrentOnlineUsers ul{
+        margin-top: 5px;
+        font-size: 15px;
+        color: black;
+        font-family:Trebuchet MS, sans-serif;
+        text-align: center;
+        list-style-type: none;
+        line-height: 1.4;
+    }
+
+    #userLimit {
+        color: #932D2D;
+        text-align: center;
+    }
+
+@media screen and (max-width: 1200px) {
+    #CurrentOnlineUsers {
         text-align: center;
         text-decoration: none;
         background-color: #B61919;
         opacity: 90%;
         color: white;
-        font-family:Trebuchet MS, sans-serif;
+        font-family: Trebuchet MS, sans-serif;
         position: absolute;
-        top:-150px;
-        right:2px;
+        top: -150px;
+        right: 2px;
         transition: 0.3s;
         padding: 10px;
         width: 200px;
@@ -448,7 +480,7 @@ img, #subjectName, #chatTitle {
 
     #CurrentOnlineUsers:hover {
         top: 0;
-        right:0;
+        right: 0;
         border-bottom-right-radius: 0;
     }
 
@@ -462,19 +494,21 @@ img, #subjectName, #chatTitle {
         margin-right: 3px;
         overflow-y: auto;
     }
-    .CurrentOnlineUsers ul{
+
+    .CurrentOnlineUsers ul {
         margin-top: 5px;
         font-size: 15px;
         color: rgba(0, 0, 0, 0.9);
-        font-family:Trebuchet MS, sans-serif;
+        font-family: Trebuchet MS, sans-serif;
         text-align: left;
         list-style-type: none;
         line-height: 1.4;
     }
+
     #userLimit {
         margin-top: 5px;
         background-color: transparent;
-        font-family:Trebuchet MS, sans-serif;
+        font-family: Trebuchet MS, sans-serif;
         font-size: 15px;
         color: white;
     }
@@ -488,5 +522,6 @@ img, #subjectName, #chatTitle {
         size: 0;
         float: left;
     }
+}
 
 /* Barra Direita - Fim*/
