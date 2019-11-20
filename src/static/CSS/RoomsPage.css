@@ -79,6 +79,7 @@ img, #subjectName, #chatTitle {
 
 .chatRooms_sidebar {
     width: auto;
+    height: auto;
     display:inline-block;
     border: #932D2D;
     text-align: center;
@@ -90,7 +91,7 @@ img, #subjectName, #chatTitle {
     border-radius: 12px;
     font-family:Trebuchet MS, sans-serif;
     min-width: max-content;
-
+    position: relative;
 }
 
 .User_Available_Rooms{
@@ -110,7 +111,7 @@ img, #subjectName, #chatTitle {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 18px;
     font-family:Trebuchet MS, sans-serif;
     transition: 0.5s;
     opacity:1;
@@ -161,14 +162,12 @@ img, #subjectName, #chatTitle {
     text-align: left;
     text-decoration: none;
     width: max-content;
-    position: absolute;
-    bottom: 30px;
+    margin-top: 300px;
 }
 
 /*Entrar sala*/
 
 .joinChatroom {
-    display: -ms-inline-flexbox;
     width: auto;
     margin-bottom: 15px;
 }
