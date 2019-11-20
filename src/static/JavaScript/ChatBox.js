@@ -11,8 +11,14 @@ function enterToSend() {
 function clearInputText(){
     document.getElementById("userTextInput").value = "";
 }
-
-
+// Restrição de html tags na caixa de texto do input do utilizador:
+function checkSpecialChar(event){
+    if(!((event.keyCode >= 65) && (event.keyCode <= 90) || (event.keyCode >= 97) && (event.keyCode <= 122) || (event.keyCode >= 48) && (event.keyCode <= 57))){
+        event.returnValue = false;
+        return;
+    }
+    event.returnValue = true;
+}
 // Função para reload das mensagens na outputBox sincronizando-as com o ficheiro responseText presente no servidor.
 function reloadMessage() {
     var request = new XMLHttpRequest();
