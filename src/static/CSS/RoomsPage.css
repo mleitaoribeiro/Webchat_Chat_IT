@@ -302,7 +302,7 @@ img, #subjectName, #chatTitle {
     margin-left: 12px;
 }
 
-#exitButton:hover {opacity: 1}
+#exitButton:hover {opacity: 1;-webkit-transform: scale(1.05);}
 
 #Chat {
     padding:1%;
@@ -345,6 +345,10 @@ img, #subjectName, #chatTitle {
     position:relative;
     margin-top :1%;
     margin-bottom:0.5%;
+}
+#emojiDiv{
+    positon:relative;
+    float: right;
 }
 
 #userTextInput {
