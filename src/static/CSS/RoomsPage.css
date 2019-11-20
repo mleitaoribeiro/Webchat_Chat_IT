@@ -413,25 +413,39 @@ img, #subjectName, #chatTitle {
     }
 }
 
+
+/* Barra Direita - Fim*/
+
     #CurrentOnlineUsers {
         text-align: center;
         text-decoration: none;
         background-color: whitesmoke;
         color: #B61919;
         font-family:Trebuchet MS, sans-serif;
+        position: relative;
     }
 
+    .CurrentOnlineUsers h4{
+        color: #932D2D;
+        float: left;
+        margin-bottom: 15%;
+        margin-left: 10px;
+    }
 
-    ul{
+    #onlineUsers {
+        border-radius: 10px;
+        border: solid 2px #B61919;
+        height: 600px;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    .CurrentOnlineUsers ul{
         font-size: 15px;
         color: black;
         font-family:Trebuchet MS, sans-serif;
-        border-radius: 10px;
-        border: solid 2px #5f0d0c;
         text-align: center;
-        height: 400px;
         list-style-type: none;
-        padding: 0;
         line-height: 1.8;
     }
     #userLimit {
@@ -441,3 +455,4 @@ img, #subjectName, #chatTitle {
         color: #B61919;
     }
 
+/* Barra Direita - Fim*/
