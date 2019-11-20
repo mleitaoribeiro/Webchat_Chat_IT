@@ -16,11 +16,11 @@ function clearInputText(){
 // Função para colocar os emojis na textbox (JQuery) :
 function addEmojis(){
     $(document).ready(function() {
-        $("#userTextInput").emojioneArea();
+        $("#emojiDiv").emojioneArea();
     });
 }
 
-
+// Função para reload das mensagens na outputBox sincronizando-as com o ficheiro responseText presente no servidor.
 function reloadMessage() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
@@ -36,6 +36,7 @@ function reloadMessage() {
     request.send();
 }
 
+// Função que envia as mensagens para o srvidor a partir da barra de input: userTextInput.
 function sendMessage () {
     var userTextInput = document.getElementById("userTextInput").value;
     var request = new XMLHttpRequest();
