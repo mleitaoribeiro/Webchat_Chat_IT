@@ -18,7 +18,7 @@ head, body {
 .Wrapper {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 2fr 8fr 2fr;
     grid-template-rows: 15fr 1fr;
     grid-gap: 5px;
     justify-items: stretch;
@@ -317,7 +317,7 @@ img, #subjectName, #chatTitle {
 
 #outputBox {
     text-align: left;
-    border-radius: 5px;
+    border-radius: 10px;
     border: solid 2px #B61919;
     margin-top:1%;
     background-color:white;
@@ -346,10 +346,6 @@ img, #subjectName, #chatTitle {
     position:relative;
     margin-top :1%;
     margin-bottom:0.5%;
-}
-#emojiDiv{
-    positon:relative;
-    float: right;
 }
 
 #userTextInput {
@@ -424,66 +420,111 @@ img, #subjectName, #chatTitle {
     }
 }
 
-/* Barra Direita - Fim*/
+/* Barra Direita - Início*/
 
+    #CurrentOnlineUsers {
+        background-color: whitesmoke;
+        position: relative;
+    }
+
+    #onlineUsers {
+        border-radius: 10px;
+        border: solid 2px #932D2D;
+        height: 620px;
+        max-height: 620px;
+        overflow-y: auto
+    }
+
+    .CurrentOnlineUsers ul{
+        margin-top: 5px;
+        font-size: 15px;
+        color: black;
+        font-family:Trebuchet MS, sans-serif;
+        text-align: center;
+        list-style-type: none;
+        line-height: 1.4;
+    }
+
+    #userLimit {
+        color: #932D2D;
+        text-align: center;
+    }
+
+    #onlineUsersTag {
+        text-align: center;
+        font-weight: bold;
+        color: #932D2D;
+    }
+
+    #onlineUsersTag span.troca1 {
+        display: none;
+    }
+
+@media screen and (max-width: 1300px) {
     #CurrentOnlineUsers {
         text-align: center;
         text-decoration: none;
         background-color: #B61919;
-        opacity: 80%;
+        opacity: 90%;
         color: white;
-        font-family:Trebuchet MS, sans-serif;
+        font-family: Trebuchet MS, sans-serif;
         position: absolute;
-        top:-190px;
-        right:0;
+        top: -175px;
+        right: 2px;
         transition: 0.3s;
-        padding: 15px;
+        padding: 10px;
         width: 200px;
         max-height: max-content;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         border-top-right-radius: 0;
-
     }
     #CurrentOnlineUsers:hover {
         top: 0;
-        right:-1px;
+        right: 0;
         border-bottom-right-radius: 0;
     }
+
+    #onlineUsersTag {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+    #CurrentOnlineUsers span.troca1, #CurrentOnlineUsers:hover span.troca2 {
+        display: inline;
+    }
+    #CurrentOnlineUsers:hover span.troca1, #CurrentOnlineUsers span.troca2 {
+        display: none;
+    }
+
     #onlineUsers {
         border-radius: 10px;
-        border: solid 2px white;
+        border: solid 1px white;
+        background-color: whitesmoke;;
         height: 90px;
         max-height: 90px;
         margin-left: 10px;
         margin-right: 3px;
         overflow-y: auto;
     }
-    .CurrentOnlineUsers ul{
+
+    .CurrentOnlineUsers ul {
         margin-top: 5px;
         font-size: 15px;
-        color: white;
-        font-family:Trebuchet MS, sans-serif;
-        text-align: center;
+        color: rgba(0, 0, 0, 0.9);
+        font-family: Trebuchet MS, sans-serif;
+        text-align: left;
         list-style-type: none;
         line-height: 1.4;
     }
+
     #userLimit {
         margin-top: 5px;
         background-color: transparent;
-        font-family:Trebuchet MS, sans-serif;
+        font-family: Trebuchet MS, sans-serif;
         font-size: 15px;
         color: white;
     }
-
-    #fa-arrow-down {
-        size: 0;
-        float: left;
-    }
-
-    #fa-arrow-down:hover {
-        size: 0;
-        float: left;
-    }
+}
 
 /* Barra Direita - Fim*/
