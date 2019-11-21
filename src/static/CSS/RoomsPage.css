@@ -18,7 +18,7 @@ head, body {
 .Wrapper {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 2fr 8fr 2fr;
     grid-template-rows: 15fr 1fr;
     grid-gap: 5px;
     justify-items: stretch;
