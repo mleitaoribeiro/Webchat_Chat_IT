@@ -17,7 +17,7 @@
     <!--Library with icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
-    <!-- Emoji JQuery-->
+    <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous">
@@ -116,14 +116,11 @@
             <div id="userInput">
                 <!-- Scanner de texto: -->
                 <input id="userTextInput" placeholder="Type a new message... " onfocusin="enterToSend()" type="text"
-                       size="102" maxlength="140" onkeypress="return blockSpecialChar(event)">
+                       size="112" maxlength="140" onkeypress="return blockSpecialChar(event)">
                 <!-- Botão de enviar: -->
                 <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                     Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
             </div>
-        </div>
-        <!-- emojis, icons, e várias utilidades: -->
-        <div id="Misc">
         </div>
     </div>
 
