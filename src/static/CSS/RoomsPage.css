@@ -390,6 +390,15 @@ img, #subjectName, #chatTitle {
     left: 12px;
 }
 
+#misc {
+    display: inline-block;
+    position: relative;
+    background-color: grey;
+    left: 78%;
+    top : 10%;
+    float: left;
+}
+
 #subjectName {
     font-weight: bold;
 }
