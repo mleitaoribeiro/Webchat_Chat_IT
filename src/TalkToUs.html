@@ -10,6 +10,7 @@
                                     João Cardoso, Marta Cardoso, Marta Pinheiro, Marta Ribeiro, Raquel Santos">
 
     <title>Talk to us!</title>
+    <script src="static/JavaScript/TalkToUs.js"></script>
     <link type="text/css" rel="stylesheet" href="static/CSS/TalkToUs.css"/>
 
 </head>
@@ -22,7 +23,7 @@ Feel free to talk to us if you have any subjet to discuss.</h2>
 <h3>You can chat about anything with us!</h3>
 
   <div id="mainDiv">
-       <form action="ErrorMessage.html">
+
            <label for="fname"><b>Full Name</b></label>
         <input type="text" id="fname" name="fullname" placeholder="Your name.." required>
 
@@ -42,8 +43,8 @@ Feel free to talk to us if you have any subjet to discuss.</h2>
            <input type="checkbox" id="TermsAndConditions" name="TermsAndConditions" required>
            <label for="TermsAndConditions">I confirm that I've read the <a href="TermsAndConditions.html">"Terms and Conditions"</a> regarding my private information.</label>
            <br>
-           <input type="submit" value="Submit">
-      </form>
+           <input type="submit" onclick="sendEmail()" value="Submit">
+
        </div>
 <br>
 
