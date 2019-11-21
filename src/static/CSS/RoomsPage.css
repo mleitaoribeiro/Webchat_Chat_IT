@@ -469,7 +469,7 @@ img, #subjectName, #chatTitle {
         color: white;
         font-family: Trebuchet MS, sans-serif;
         position: absolute;
-        top: -170px;
+        top: -175px;
         right: 2px;
         transition: 0.3s;
         padding: 10px;
