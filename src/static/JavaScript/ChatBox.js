@@ -44,3 +44,4 @@ function sendMessage() {
     request.open("POST", "http://vs280.dei.isep.ipp.pt/cgi-bin/outputBox", true);
     request.send(userTextInput);
 }
+

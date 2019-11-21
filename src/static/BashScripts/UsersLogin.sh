@@ -1,5 +1,5 @@
 #!/bin/bash
-USER_REPOSITORY=/cgi-bin/userLogin.log
+USER_REPOSITORY=/cgi-bin/usersLogin.log
 if [ "REQUEST_METHOD" == "PUT" ]; then
   echo "Content-type: text/plain"
   echo "Access-Control-Allow-Origin: *"
@@ -19,4 +19,3 @@ if [ "REQUEST_METHOD" == "PUT" ]; then
   echo "<p> This chat is temporarily unavailable due to excessive load.</p>"
   fi
 fi
-echo "Status: 400 Bad Request"
