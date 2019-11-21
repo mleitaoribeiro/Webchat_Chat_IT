@@ -1,7 +1,7 @@
 function sendEmail() {
     var confirmed = "Form sent. We'll get back at you as soon as possible."
     var noField = "It looks like you forgot something."
-
+    var falseEmail = "You need to enter a valid email."
     var fname = document.getElementById("fname").value;
     var email = document.getElementById("email").value;
     var topic = document.getElementById("Topic").value;
@@ -9,17 +9,24 @@ function sendEmail() {
     var TaC = false;
     if (document.getElementById("TermsAndConditions").checked === true) {TaC = true;}
 
+    var emailLegit = confirmEmail(email);
+    if (email !== "" && emailLegit === false) {alert(falseEmail)}
+
     var allTrue = false;
     if (fname === "" || message === "" || TaC !== true || email === "") {alert(noField)}
        else allTrue = true;
 
-    if (allTrue === true) {
+    if (allTrue === true && emailLegit === true) {
         var corpoEmail = "Subject: " + topic + ".  Sent from: " + fname + ", at " + email + ";  The message is: '" + message + "'";
         var request = new XMLHttpRequest();
         request.open("POST", "http://vs280.dei.isep.ipp.pt/cgi-bin/sendEmail", true);
         request.send(corpoEmail);
         alert(confirmed);
     }
-
-
 }
+
+ function confirmEmail(mail)
+    {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {return true;}
+        else return false;
+    }
