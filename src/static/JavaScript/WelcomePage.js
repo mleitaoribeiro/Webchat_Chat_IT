@@ -24,6 +24,6 @@ function loginUser () {
             document.getElementById("errorMessage").innerHTML = this.response;
         }
     };
-    request.open ("PUT" , "http://vs280.dei.isep.ipp.pt/cgi-bin/usersLogin", true);
+    request.open ("PUT" , "https://vs280.dei.isep.ipp.pt/cgi-bin/usersLogin", true);
     request.send(nickname);
 }
