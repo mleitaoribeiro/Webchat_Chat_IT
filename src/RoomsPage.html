@@ -17,14 +17,12 @@
     <!--Library with icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
-    <!--Emoji library-->
-    <link rel="stylesheet" href="static/CSS/emojionearea.min.css">
     <!-- Emoji JQuery-->
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous">
     </script>
+
 </head>
 
 <body bgcolor=#8fbc8f onload="reloadMessage()">
@@ -118,7 +116,7 @@
             <div id="userInput">
                 <!-- Scanner de texto: -->
                 <input id="userTextInput" placeholder="Type a new message... " onfocusin="enterToSend()" type="text"
-                       size="102" maxlength="140" onkeypress="">
+                       size="102" maxlength="140" onkeypress="return blockSpecialChar(event)">
                 <!-- Botão de enviar: -->
                 <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                     Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
@@ -142,7 +140,7 @@
         <div id="onlineUsersTag">
             <p>
                 <span class="troca1">Online Users</span>
-                <span class="troca2">3/10</span>
+                <span class="troca2"><span id="numberOnlineUsers">0</span>/20</span>
             </p>
         </div>
 

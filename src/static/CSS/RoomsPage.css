@@ -317,7 +317,7 @@ img, #subjectName, #chatTitle {
 
 #outputBox {
     text-align: left;
-    border-radius: 5px;
+    border-radius: 10px;
     border: solid 2px #B61919;
     margin-top:1%;
     background-color:white;
@@ -346,10 +346,6 @@ img, #subjectName, #chatTitle {
     position:relative;
     margin-top :1%;
     margin-bottom:0.5%;
-}
-#emojiDiv{
-    positon:relative;
-    float: right;
 }
 
 #userTextInput {
@@ -473,7 +469,7 @@ img, #subjectName, #chatTitle {
         color: white;
         font-family: Trebuchet MS, sans-serif;
         position: absolute;
-        top: -170px;
+        top: -175px;
         right: 2px;
         transition: 0.3s;
         padding: 10px;
