@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chat IT - Let's chat about it! Try our live chat!
@@ -9,44 +8,40 @@
     <meta name="Keywords" content="Chat, WebChat, Chat IT, HTML, CSS, JavaScript, Live Chat, Chatrooms">
     <meta name="author" content="SWitCH - Alexandre Oliveira, Diana Dias, Elsa Almeida, Gabriel Pereira,
                                     João Cardoso, Marta Cardoso, Marta Pinheiro, Marta Ribeiro, Raquel Santos">
-
     <title>ChatRooms</title>
     <link type="text/css" rel="stylesheet" href="static/CSS/RoomsPage.css"/>
     <script src="static/JavaScript/ChatBox.js"></script>
 
-    <!--Library with icons-->
+    <!--Library de icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous">
     </script>
-
 </head>
-
+<!--???-->
 <body bgcolor=#8fbc8f onload="reloadMessage()">
-
 <div class="Wrapper">
-
+    <!--Divisão do lado esquerdo onde aparecem as difetentes salas de chat-->
     <div class="chatRooms_sidebar" id="ChatRooms">
-
         <div class="chatrooms_sidebar_header">
             <h1>Chat Rooms</h1>
         </div>
         <div class="User_Available_Rooms">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
             <br>
+            <!--Botão da sala principal, onde o utilizador entra automáticamente após o login-->
             <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> Main
                 Room
             </button>
             <br>
             <br>
+            <!--Botão para mudar para a Room Just for Fun-->
             <button class="chatrooms_sidenav" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
             <br>
             <br>
         </div>
-
         <!--
 
         <div id="Main Room" class="tabcontent">
@@ -62,16 +57,16 @@
         </div>
 
         -->
-
         <div class="chatrooms_sidebar_footer">
+            <!--Input Field para fazer join a uma sala (sabendo o seu nome)-->
             <div class="joinChatroom">
                 <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="10"
                        required>
-                <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="reloadRoom()"></i></button>
+                <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="reloadRoom()"></i>
+                </button>
             </div>
-
             <br>
-
+            <!--Input field para criar uma nova sala (atribuindo-lhe um nome)-->
             <div class="createNewChatroom">
                 <input type="text" placeholder="Create a New Chat Room" id="create_new_chatroom" min="1" maxlength="10"
                        required>
@@ -79,27 +74,21 @@
                 <br>
                 <br>
             </div>
-
-
+            <!--Form para dar opiniões e/ou reportar problemas com o website-->
             <div class="talkToUs">
                 <form action="TalkToUs.html">
                     <button id="Talktous"><i class="glyphicon glyphicon-envelope"></i> Talk to us!</button>
                 </form>
                 <br>
             </div>
-
         </div>
-
         <!--Fontes-->
         <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_vertical_tabs -->
         <!-- https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp -->
         <!-- https://www.w3schools.com/howto/howto_css_navbar_icon.asp -->
-
     </div>
-
     <!-- div associada ao chat : -->
     <div class="Chat" id="Chat">
-
         <h1></h1>
         <!-- caixa do chat: -->
         <div id="chatBox">
@@ -120,31 +109,32 @@
             <div id="userInput">
                 <!-- Scanner de texto: -->
                 <input id="userTextInput" placeholder="Type a new message... " onfocusin="enterToSend()" type="text"
-                        maxlength="140" onkeypress="return blockSpecialChar(event)">
+                       maxlength="140" onkeypress="return blockSpecialChar(event)">
                 <!-- Botão de enviar: -->
                 <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                     Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
             </div>
         </div>
     </div>
-
+    <!--Divisão do lado direito onde conseguimos ver os diferentes utilizadores de dada sala-->
     <div class="CurrentOnlineUsers" id="CurrentOnlineUsers">
         <div id="userLimit"><h3>Online users</h3></div>
+        <!--Lista dos utilizadores obtida do servidor-->
         <div id="onlineUsers">
-            <ul>
+            <ul id="userList">
                 <li id="user1" class="user">User1</li>
             </ul>
         </div>
         <h1></h1>
+        <!--Divisão que nos mostra quantos users estão na Room e o limite da mesma-->
         <div id="onlineUsersTag">
             <p>
                 <span class="troca1">Online Users</span>
                 <span class="troca2"><span id="numberOnlineUsers">0</span>/20</span>
             </p>
         </div>
-
     </div>
-
+    <!--Rodapé com os diferentes logos-->
     <footer class="nestedFooter">
         <div id="subjectName">SCOMRED</div>
         <img id="switchLogo" src="https://portotechhub.com/wp-content/themes/pth/images/brand.svg" alt="Switch Logo">
@@ -152,8 +142,6 @@
         <img id="portoTechHubLogo" src="https://pontosdevista.pt/static/uploads/2019/06/primage-38128.png"
              alt="Porto Tech Hub Logo">
     </footer>
-
 </div>
-
 </body>
 </html>

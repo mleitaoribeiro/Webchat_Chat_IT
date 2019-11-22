@@ -6,9 +6,8 @@
     <meta name="description" content="Chat IT - Let's chat about it! Try our live chat!
                                       Chat in real time with other users directly in your favorite browser">
     <meta name="Keywords" content="Chat, WebChat, Chat IT, HTML, CSS, JavaScript, Live Chat, Chatrooms">
-    <meta name="author" content = "SWitCH - Alexandre Oliveira, Diana Dias, Elsa Almeida, Gabriel Pereira,
+    <meta name="author" content="SWitCH - Alexandre Oliveira, Diana Dias, Elsa Almeida, Gabriel Pereira,
                                     João Cardoso, Marta Cardoso, Marta Pinheiro, Marta Ribeiro, Raquel Santos">
-
     <title>Chat IT</title>
     <link type="text/css" rel="stylesheet" href="static/CSS/WelcomePage.css"/>
     <script src="static/JavaScript/WelcomePage.js"></script>
@@ -16,56 +15,66 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body>
-<div id="wrapper" >
+<div id="wrapper">
     <div class="welcomePageWrapper">
+        <!--Cabeçalho da WelcomePage com o logo do website-->
         <div id="websiteHeader">
             <img id="logoGrande" src="https://imgur.com/xFcwjDx.png" alt="logo of the chat">
             <p id="websiteDescription">Welcome to <b>Chat IT!</b> Please insert your desired nickname: </p>
         </div>
+        <!--Divisão destinada ao login do utilizador-->
         <div id="login">
-                <input class ="nickNameButtonStyle" type="text" pattern="[a-zA-Z0-9-]+" placeholder="Nickname:" id="nickname" size="40" minlength="2" maxlength=12" required>
-                <button class ="loginButtonStyle loginButton" type="submit" id="loginButton" onclick="loginUser()">Login</button>
-                <div id="errorMessage"> </div>
-                <div class="nickname_message_info">
-                <p>Please use only letters (a-z) and numbers (0-9). Your nickname must have between 2-12 characters.<p>
-                </div>
+            <!--Nickname do utilizador e parâmetros para o mesmo-->
+            <input class="nickNameButtonStyle" type="text" pattern="[a-zA-Z0-9-]+" placeholder="Nickname:" id="nickname"
+                   size="40" minlength="2" maxlength=12" required>
+            <!--Botão que executa o login do utilizador-->
+            <button class="loginButtonStyle loginButton" type="submit" id="loginButton" onclick="loginUser()">Login
+            </button>
+            <!--Divisão destinada á mensagem de erro após o utilizador ter introduzido um nickname inválido-->
+            <div id="errorMessage"></div>
+            <div class="nickname_message_info">
+                <!--Informação sobre os parametros de admissão do nickname-->
+                <p>Please use only letters (a-z) and numbers (0-9). Your nickname must have between 2-12 characters.
+                <p>
             </div>
+        </div>
     </div>
-
     <br>
     <br>
-
+    <!--Divisão com explicação das diferentes regras do website-->
     <div class="ChatInfo">
         <br>
         <br>
         <div class="chatInfoAnime" style="background-color:whitesmoke;">
-          <i id="gif1" class="fas fa-exclamation-circle" style=font-size:30px;"></i>
-            <p id="chatRoomAlert">Please be mindful that when you exit Chat IT,<br>your nickname will be deleted and <br> may be used by another client.</p>
+            <i id="gif1" class="fas fa-exclamation-circle" style=font-size:30px;"></i>
+            <p id="chatRoomAlert">Please be mindful that when you exit Chat IT,<br>your nickname will be deleted and
+                <br> may be used by another client.</p>
         </div>
         <div class="chatInfoAnime" style="background-color:whitesmoke;">
-           <i class="fas fa-user-check" style=font-size:30px;"></i>
-           <p id="chatDefaultInfo">If your nickname is not in use <br> you will be logged into the Lobby Room by default. </p>
+            <i class="fas fa-user-check" style=font-size:30px;"></i>
+            <p id="chatDefaultInfo">If your nickname is not in use <br> you will be logged into the Lobby Room by
+                default. </p>
         </div>
         <div class="chatInfoAnime" style="background-color:whitesmoke;">
-         <i class="fas fa-plus-circle" style=font-size:30px;"></i>
-            <p id="chatFunctionDescription">If you wish to join or create a room,<br> you can do so on the left-side menu.</p>
+            <i class="fas fa-plus-circle" style=font-size:30px;"></i>
+            <p id="chatFunctionDescription">If you wish to join or create a room,<br> you can do so on the left-side
+                menu.</p>
         </div>
     </div>
-
+    <!--Rodpé com os diferentes logos-->
     <footer>
         <div id="subjectName">SCOMRED</div>
         <img id="switchLogo" src="https://portotechhub.com/wp-content/themes/pth/images/brand.svg" alt="Switch Logo">
         <img id="isepLogo" src="http://www.isep.ipp.pt/images/ISEP_marca_cor.png" alt="Isep Logo">
-        <img id="portoTechHubLogo" src="https://pontosdevista.pt/static/uploads/2019/06/primage-38128.png" alt="Porto Tech Hub Logo">
+        <img id="portoTechHubLogo" src="https://pontosdevista.pt/static/uploads/2019/06/primage-38128.png"
+             alt="Porto Tech Hub Logo">
     </footer>
-
 </div>
-
 <!-- Cookie Consent -->
 <div id="cookieConsent" onload="hideNow(event)">
     <div id="closeCookieConsent" onClick="cookiePopUp('hide')">x</div>
-    This website is using cookies. <a href="CookiesPolicy.html" target="_blank">More info</a>. <a class="cookieConsentOK" onClick="cookiePopUp('hide')">Okay!</a>
+    This website is using cookies. <a href="CookiesPolicy.html" target="_blank">More info</a>. <a
+        class="cookieConsentOK" onClick="cookiePopUp('hide')">Okay!</a>
 </div>
-
 </body>
 </html>
