@@ -166,6 +166,8 @@ img, #subjectName, #chatTitle {
 /*Entrar sala*/
 
 .joinChatroom {
+    display: -ms-flex;
+    display:flex;
     width: auto;
     margin-bottom: 15px;
 }
@@ -190,10 +192,11 @@ img, #subjectName, #chatTitle {
     padding: 10px;
     color:white;
     border:none;
-    background-color:#B61919;
+    background-color: #B61919;
     min-width:50px;
     font-family:Trebuchet MS, sans-serif;
-
+    opacity: 1;
+    transition: 0.3s;
 }
 
 #joinRoomButton:hover {opacity: 0.6}

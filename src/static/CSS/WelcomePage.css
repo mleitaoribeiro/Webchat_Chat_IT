@@ -59,9 +59,10 @@ img, #subjectName, #chatTitle {
 }
 
 #errorMessage {
-     color: black;
+     color: #B61919;
      font-size: 13px;
 }
+
 
 .nickname_message_info {
     color: grey;
