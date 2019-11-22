@@ -120,7 +120,7 @@
             <div id="userInput">
                 <!-- Scanner de texto: -->
                 <input id="userTextInput" placeholder="Type a new message... " onfocusin="enterToSend()" type="text"
-                       size="112" maxlength="140" onkeypress="return blockSpecialChar(event)">
+                        maxlength="140" onkeypress="return blockSpecialChar(event)">
                 <!-- Botão de enviar: -->
                 <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                     Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
@@ -133,8 +133,6 @@
         <div id="onlineUsers">
             <ul>
                 <li id="user1" class="user">User1</li>
-                <li id="user2" class="user">User2</li>
-                <li id="user3" class="user">User3</li>
             </ul>
         </div>
         <h1></h1>

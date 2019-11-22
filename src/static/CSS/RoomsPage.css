@@ -349,18 +349,28 @@ img, #subjectName, #chatTitle {
     position:relative;
     margin-top :1%;
     margin-bottom:0.5%;
+    display: block;
+    width:auto;
 }
 
 #userTextInput {
     margin-top: 4px;
     position:relative;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     border-radius: 5px;
     font-size: 15px;
     border: solid 2px #B61919;
     font-family: Trebuchet MS, sans-serif;
     text-align: -moz-left;
+    text-align: left;
+    width: 85.8%;
+    display: inline-block;
+    float: left;
+    min-width: max-content;
+
 }
+
+
 
 .sendButton {
     margin-top: 2px;
@@ -406,17 +416,30 @@ img, #subjectName, #chatTitle {
     font-weight: bold;
 }
 
+@media screen and (max-width: 1350px) {
+    #userTextInput {
+        width: 84%;
+    }
+
+    .sendButton {
+        width: auto;
+    }
+}
 @media screen and (max-width: 1200px) {
     .Wrapper {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 10fr;
         grid-template-rows: 1fr 8fr 5fr 1fr;
         justify-items: stretch;
         align-items: stretch;
     }
 
     #userTextInput {
-        padding-right: 35%
+        width: 100%;
+    }
+
+    .sendButton {
+        width:auto;
     }
 
     header {
@@ -444,8 +467,9 @@ img, #subjectName, #chatTitle {
         border-radius: 10px;
         border: solid 2px #B61919;
         background-color: white;
-        height: 620px;
-        max-height: 620px;
+        position: relative;
+        height: 85%;
+        max-height: 85%;
         overflow-y: auto
     }
 
@@ -454,7 +478,7 @@ img, #subjectName, #chatTitle {
         font-size: 15px;
         color: black;
         font-family:Trebuchet MS, sans-serif;
-        text-align: center;
+        text-align: left;
         list-style-type: none;
         line-height: 1.4;
     }
@@ -476,7 +500,7 @@ img, #subjectName, #chatTitle {
         display: none;
     }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
     #CurrentOnlineUsers {
         text-align: center;
         text-decoration: none;

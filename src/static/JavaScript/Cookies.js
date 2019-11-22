@@ -11,9 +11,11 @@ window.onload = function () {
     setTimeout(function () {
         cookiePopUp('show');
     }, 0);
-}
 
+};
 
 function hideNow(e) {
-    if (e.target.id === 'cookieConsent') document.getElementById('cookieConsent').style.display = 'none';
+    if (e.target.id == 'cookieConsent')
+        document.getElementById('cookieConsent').style.display = 'none';
 }
+
