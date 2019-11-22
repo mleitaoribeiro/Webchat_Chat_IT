@@ -35,6 +35,9 @@ function reloadMainRoom() {
     request.open("GET", "http://vs280.dei.isep.ipp.pt/cgi-bin/outputBox", true);
     request.timeout = 5000;
     request.send();
+    //Fazer scroll-down a cada nova mensagem:
+    var elem = document.getElementById('outputBox');
+    elem.scrollTop = elem.scrollHeight;
 }
 
 //Faz o reload das mensagens dentro do respectivo Room
