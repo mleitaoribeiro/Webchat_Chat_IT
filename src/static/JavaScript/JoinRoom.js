@@ -1,4 +1,3 @@
-
 function reloadRoom () {
     var joinChatroom = document.getElementById("joinChatroom").value;
     var request = new XMLHttpRequest();
