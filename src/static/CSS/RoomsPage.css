@@ -349,8 +349,10 @@ img, #subjectName, #chatTitle {
     position:relative;
     margin-top :1%;
     margin-bottom:0.5%;
-    display: block;
     width:auto;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    grid-gap: 2px;
 }
 
 #userTextInput {
@@ -363,15 +365,12 @@ img, #subjectName, #chatTitle {
     font-family: Trebuchet MS, sans-serif;
     text-align: -moz-left;
     text-align: left;
-    width: 85.8%;
     display: inline-block;
-    float: left;
-    min-width: max-content;
-
 }
 
 .sendButton {
     margin-top: 2px;
+    min-width: 60px;
     padding-right: 4%;
     padding-left: 3%;
     padding-bottom: 1px;
@@ -380,12 +379,11 @@ img, #subjectName, #chatTitle {
     color: white;
     background-color: #B61919;
     font-family: Trebuchet MS, sans-serif, bold;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     display: inline-block;
     text-align: center;
     position: relative;
-    float: right;
     transition:all 0.5s;
 }
 .sendButton:hover{
@@ -414,15 +412,6 @@ img, #subjectName, #chatTitle {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1380px) {
-    #userTextInput {
-        width: 84%;
-    }
-
-    .sendButton {
-        width: auto;
-    }
-}
 @media screen and (max-width: 1200px) {
     .Wrapper {
         display: grid;
@@ -432,12 +421,12 @@ img, #subjectName, #chatTitle {
         align-items: stretch;
     }
 
-    #userTextInput {
-        width: 100%;
+    #sendButton {
+        font-size: 14px;
     }
 
-    .sendButton {
-        width:auto;
+    #sendIcon {
+        left: 5px;
     }
 
     header {
