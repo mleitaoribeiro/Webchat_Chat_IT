@@ -370,8 +370,6 @@ img, #subjectName, #chatTitle {
 
 }
 
-
-
 .sendButton {
     margin-top: 2px;
     padding-right: 4%;
@@ -416,7 +414,7 @@ img, #subjectName, #chatTitle {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1380px) {
     #userTextInput {
         width: 84%;
     }
