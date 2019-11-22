@@ -10,7 +10,9 @@ error_response() {
 }
 
 if [ -z "$QUERY_STRING" ]; then error_response "No query-string"; fi
+
 ROOM=${QUERY_STRING#room=}
+
 if [ "$ROOM" == "$QUERY_STRING" ]; then error_response "Bad query-string: $QUERY_STRING"; fi
 case "$ROOM" in
   just4Fun|youShellNotPass|bashtardsOnly);;
@@ -24,11 +26,10 @@ if [ ! -f $OUTPUT_MESSAGES ]; then
 fi
 
 if [ "REQUEST_METHOD" == "GET" ]; then
+  OUTPUT_ROOM=$(cat $OUTPUT_MESSAGES|tail -20)
   echo "Content-type: text/plain"
   echo "Access-Control-Allow-Origin: *"
   echo ""
-
-  OUTPUT_ROOM=$(cat $OUTPUT_MESSAGES|tail -20)
   echo "$OUTPUT_ROOM"
   exit
 fi
