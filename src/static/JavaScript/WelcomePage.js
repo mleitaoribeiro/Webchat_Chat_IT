@@ -1,5 +1,5 @@
 // Função que guarda o nickname introduzido num ficheiro do servidor (userLogin):
-function bla() {
+/*function bla() {
     var nickname = document.getElementById("nickname").value;
     console.log(nickname);
     var request = new XMLHttpRequest();
@@ -10,7 +10,7 @@ function bla() {
     };
     request.open("POST", "http://vs280.dei.isep.ipp.pt/cgi-bin/usersLogin", true);
     request.send(nickname);
-}
+}*/
 
 // Função que valida nickname introduzido no #nickname:
 function loginUser () {
