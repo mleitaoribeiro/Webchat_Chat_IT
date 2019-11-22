@@ -2,7 +2,7 @@
 function enterToSend() {
     var input = document.getElementById("userTextInput");
     input.addEventListener("keydown", function (event) {
-        if (event.key == "Enter") {
+        if (event.key === "Enter" && document.getElementById("userTextInput").value !== "") {
             event.preventDefault();
             document.getElementById("sendButton").click();
         }
