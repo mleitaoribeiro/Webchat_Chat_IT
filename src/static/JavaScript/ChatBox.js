@@ -35,6 +35,9 @@ function reloadMessage() {
     request.open("GET", "http://vs280.dei.isep.ipp.pt/cgi-bin/outputBox", true);
     request.timeout = 5000;
     request.send();
+    //Fazer scroll-down a cada nova mensagem:
+    var elem = document.getElementById('outputBox');
+    elem.scrollTop = elem.scrollHeight;
 }
 
 // Função que envia as mensagens para o servidor (outputBox) a partir da caixa de input (#userTextInput):
