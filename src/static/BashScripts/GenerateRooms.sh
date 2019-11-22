@@ -26,7 +26,7 @@ if [ ! -f $OUTPUT_MESSAGES ]; then
 fi
 
 if [ "REQUEST_METHOD" == "GET" ]; then
-  OUTPUT_ROOM=$(cat $OUTPUT_MESSAGES|tail -20)
+  OUTPUT_ROOM=$(cat $OUTPUT_MESSAGES|tail -50)
   echo "Content-type: text/plain"
   echo "Access-Control-Allow-Origin: *"
   echo ""
@@ -35,3 +35,4 @@ if [ "REQUEST_METHOD" == "GET" ]; then
 fi
 
 echo "Status: 400 Bad Request"
+

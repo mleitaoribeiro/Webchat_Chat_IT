@@ -22,17 +22,35 @@ function blockSpecialChar(event) {
 }
 
 // Função para reload das mensagens na outputBox sincronizando-as com o ficheiro outputBox presente no servidor:
-function reloadMessage() {
+function reloadMainRoom() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
         document.getElementById("outputBox").innerHTML = this.responseText;
-        setTimeout(reloadMessage, 500);
+        setTimeout(reloadMainRoom, 500);
     };
     request.ontimeout = function timeoutCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
-        setTimeout(reloadMessage, 1000);
+        setTimeout(reloadMainRoom, 1000);
     };
     request.open("GET", "http://vs280.dei.isep.ipp.pt/cgi-bin/outputBox", true);
+    request.timeout = 5000;
+    request.send();
+}
+
+//Faz o reload das mensagens dentro do respectivo Room
+function reloadRoom () {
+    var joinChatroom = document.getElementById("joinChatroom").value;
+    console.log(joinRoomButton);
+    var request = new XMLHttpRequest();
+    request.onload = function upDate() {
+        document.getElementById("outputBox").innerHTML = this.responseText;
+        setTimeout(reloadRoom, 500);
+    };
+    request.ontimeout = function timeoutCase() {
+        document.getElementById("outputBox").innerHTML = "Still trying ...";
+        setTimeout(reloadRoom, 1000);
+    };
+    request.open("GET", "https://vs280.dei.isep.ipp.pt/cgi-bin/generateRooms?room=" + joinChatroom, true);
     request.timeout = 5000;
     request.send();
 }
@@ -44,4 +62,3 @@ function sendMessage() {
     request.open("POST", "http://vs280.dei.isep.ipp.pt/cgi-bin/outputBox", true);
     request.send(userTextInput);
 }
-
