@@ -23,7 +23,7 @@
     </script>
 </head>
 <!--???-->
-<body bgcolor=#8fbc8f onload="reloadMainRoom()">
+<body bgcolor=#8fbc8f onload="reloadRoom()">
 <div class="Wrapper">
     <!--Divisão do lado esquerdo onde aparecem as difetentes salas de chat-->
     <div class="chatRooms_sidebar" id="ChatRooms">
@@ -44,21 +44,7 @@
             <br>
             <br>
         </div>
-        <!--
 
-        <div id="Main Room" class="tabcontent">
-        </div>
-
-        <div id="just4Fun" class="tabcontent">
-        </div>
-
-        <div id="youShellNotPass" class="tabcontent">
-        </div>
-
-        <div id="bashtardsOnly" class="tabcontent">
-        </div>
-
-        -->
         <div class="chatrooms_sidebar_footer">
             <!--Input Field para fazer join a uma sala (sabendo o seu nome)-->
             <div class="joinChatroom">
@@ -66,6 +52,8 @@
                        required>
                 <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="reloadRoom()"></i>
                 </button>
+                <br>
+                <div id="errorRoomMessage"></div>
             </div>
             <br>
             <!--Input field para criar uma nova sala (atribuindo-lhe um nome)-->
