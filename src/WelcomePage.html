@@ -12,6 +12,7 @@
     <title>Chat IT</title>
     <link type="text/css" rel="stylesheet" href="static/CSS/WelcomePage.css"/>
     <script src="static/JavaScript/WelcomePage.js"></script>
+    <script src="static/JavaScript/Cookies.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body>
@@ -61,9 +62,9 @@
 </div>
 
 <!-- Cookie Consent | Não faz nada - Falta o Javascript  -->
-<div id="cookieConsent">
-    <div id="closeCookieConsent" onclick="this.parentElement.style.display='none';">x</div>
-    This website is using cookies. <a href="#" target="_blank">More info</a>. <a class="cookieConsentOK" onclick="this.parentElement.style.display='none';">Okay!</a>
+<div id="cookieConsent" onload="hideNow(e)">
+    <div id="closeCookieConsent" onClick="cookiePopUp('hide')">x</div>
+    This website is using cookies. <a href="#" target="_blank">More info</a>. <a class="cookieConsentOK" onClick="cookiePopUp('hide')">Okay!</a>
 </div>
 
 </body>
