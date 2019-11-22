@@ -1,5 +1,5 @@
 
-function ReloadRoom () {
+function reloadRoom () {
     var joinChatroom = document.getElementById("joinChatroom").value;
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
@@ -13,11 +13,4 @@ function ReloadRoom () {
     request.open("GET", "http://vs280.dei.isep.ipp.pt/cgi-bin/generateRoom?room=" + joinChatroom, true);
     request.timeout = 5000;
     request.send();
-}
-
-function sendMessageRoom() {
-    var userTextInput = document.getElementById("userTextInput").value;
-    var request = new XMLHttpRequest();
-    request.open("POST", "http://vs280.dei.isep.ipp.pt/cgi-bin/generateRoom", true);
-    request.send(userTextInput);
 }
