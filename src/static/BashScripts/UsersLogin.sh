@@ -2,13 +2,19 @@
 USERS_REPOSITORY=/var/www/cgi-bin/usersLogin.log
 CONTENT_FILE=/tmp/http_body.tmp
 
-if [ "$REQUEST_METHOD" == "PUT" ]; then
+response() {
+ echo "Status: ${1}"
  echo "Content-type: text/plain"
  echo "Access-Control-Allow-Origin: *"
  echo ""
+ echo "${2}"
+exit
+}
+
+if [ "$REQUEST_METHOD" == "PUT" ]; then
 
  # Save Body content (available in the STDIN)
- if [ -n "$CONTENT_LENGTH" ]; then cat > $CONTENT_FILE; else echo "400: Bad Request - No body was detected"; fi
+ if [ "$CONTENT_LENGTH" -ne 0 ]; then cat > $CONTENT_FILE; else response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> You must provide a nickname!</p>"; fi
 
  # Debug
  #echo -n "Body content is: "
@@ -34,7 +40,7 @@ if [ "$REQUEST_METHOD" == "PUT" ]; then
 
  # Error : reached limit of users online
  if [ $COUNT_USERS_ONLINE -eq 50 ]; then
-  echo "<p> This chat is temporarily unvailable due to excessive load.</p>"
+ response "503 Service Unavailable" "<p> This chat is temporarily unvailable due to excessive load.</p>"
  fi
 
  # Nickname can be added
@@ -42,16 +48,20 @@ if [ "$REQUEST_METHOD" == "PUT" ]; then
    #echo -n "Nickname to be added to the file: "
    #cat $M_CONTENT_FILE
    echo $NICKNAME >> $USERS_REPOSITORY
-   echo "" >> $USERS_REPOSITORY
    #cat $USERS_REPOSITORY
-   echo "True"
+   response "200 OK" ""
  fi
 
  if [ $IS_IN_REPOSITORY -gt 0 ]; then
-  echo "<p><i class='fas fa-exclamation-circle'></i> This nickname already exists. Please enter a new nickname</p>"
+  response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> This nickname already exists. Please enter a new nickname</p>"
  fi
  exit
 fi
-echo "Status: 400 Bad Request"
 
-
+if [ "$REQUEST_METHOD" == "OPTIONS" ]; then
+ echo "Content-type: text/plain"
+ echo "Access-Control-Allow-Origin: *"
+ echo "Access-Control-Allow-Methods: PUT, OPTIONS"
+ echo ""
+ exit
+fi
