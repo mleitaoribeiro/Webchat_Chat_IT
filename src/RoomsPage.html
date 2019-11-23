@@ -48,11 +48,12 @@
         <div class="chatrooms_sidebar_footer">
             <!--Input Field para fazer join a uma sala (sabendo o seu nome)-->
             <div class="joinChatroom">
-                <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="10"
+                <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
                        required>
                 <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="reloadRoom()"></i>
                 </button>
                 <br>
+                <!--recebe erro quando os requisitos não são cumpridos-->
                 <div id="errorRoomMessage"></div>
             </div>
             <br>
@@ -103,6 +104,9 @@
                 <!-- Botão de enviar: -->
                 <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                     Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
+                <br>
+                <!--recebe erro quando os requisitos não são cumpridos-->
+                <div id="errorUserInputMessage"> </div>
             </div>
         </div>
     </div>

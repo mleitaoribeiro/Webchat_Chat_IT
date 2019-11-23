@@ -2,6 +2,7 @@
 USERS_REPOSITORY=/var/www/cgi-bin/usersLogin.log
 CONTENT_FILE=/tmp/http_body.tmp
 
+#função que gera os erros que são transmitidos nas response headers
 response() {
  echo "Status: ${1}"
  echo "Content-type: text/plain"
@@ -20,15 +21,17 @@ if [ "$REQUEST_METHOD" == "PUT" ]; then
  #echo -n "Body content is: "
  #cat $M_CONTENT_FILE
 
+ #coloca o body recebido nesta variável, para que ela não se perca
  NICKNAME=$(cat $CONTENT_FILE)
 
  # Create users repository file if does not exist
  if [ ! -f "$USERS_REPOSITORY" ]; then
   #echo "Creating repository file"
   echo "USERS LIST" > $USERS_REPOSITORY
-  chmod a+w+x $USERS_REPOSITORY
+  chmod a+w $USERS_REPOSITORY
  fi
 
+ #criar duas variáveis: IS_IN REPOSITORY - para ir buscar um user específico à lista, COUNT_USERS_ONLINE - vê quantas linhas existem na lista de users
  IS_IN_REPOSITORY=$(grep -w -o -i $NICKNAME $USERS_REPOSITORY | wc -l)
  COUNT_USERS_ONLINE=$(cat $USERS_REPOSITORY|wc -l)
  COUNT_USERS_ONLINE=$((COUNT_USERS_ONLINE - 1))
@@ -39,7 +42,7 @@ if [ "$REQUEST_METHOD" == "PUT" ]; then
  #echo -e "\tCOUNT USERS ONLINE " $COUNT_USERS_ONLINE
 
  # Error : reached limit of users online
- if [ $COUNT_USERS_ONLINE -eq 50 ]; then
+ if [ $COUNT_USERS_ONLINE -eq 30 ]; then
  response "503 Service Unavailable" "<p> This chat is temporarily unvailable due to excessive load.</p>"
  fi
 
@@ -52,12 +55,14 @@ if [ "$REQUEST_METHOD" == "PUT" ]; then
    response "200 OK" ""
  fi
 
+ #gera erro caso caso o nome do User já exista no usersLogin.log
  if [ $IS_IN_REPOSITORY -gt 0 ]; then
   response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> This nickname already exists. Please enter a new nickname</p>"
  fi
  exit
 fi
 
+#contorna a necessidade do brownser fazer um OPTIONS devio à CORS Policy
 if [ "$REQUEST_METHOD" == "OPTIONS" ]; then
  echo "Content-type: text/plain"
  echo "Access-Control-Allow-Origin: *"
@@ -65,3 +70,6 @@ if [ "$REQUEST_METHOD" == "OPTIONS" ]; then
  echo ""
  exit
 fi
+
+#gera erro caso o método não seja o adequado
+response "405 Method Not Allowed" ""
