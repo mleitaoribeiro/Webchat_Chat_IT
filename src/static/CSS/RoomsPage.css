@@ -101,6 +101,7 @@ img, #subjectName, #chatTitle {
 }
 .chatrooms_sidebar_header {
     border-radius: 12px;
+    font-family:Trebuchet MS, sans-serif;
 }
 
 .chatrooms_sidenav {
@@ -457,23 +458,22 @@ img, #subjectName, #chatTitle {
         position: relative;
         height: 85%;
         max-height: 85%;
-        overflow-y: auto
+        overflow-y: auto;
     }
 
     .CurrentOnlineUsers ul{
-        margin-top: 5px;
         font-size: 15px;
         color: black;
         font-family:Trebuchet MS, sans-serif;
-        text-align: left;
         list-style-type: none;
         line-height: 1.4;
     }
 
-    #userLimit {
+    #userLimit h2 {
         color:#B61919 ;
         text-align: center;
         font-family:Trebuchet MS, sans-serif;
+        margin-bottom: 11px;
     }
 
     #onlineUsersTag {
@@ -481,6 +481,7 @@ img, #subjectName, #chatTitle {
         font-weight: bold;
         color: #B61919;
         font-family:Trebuchet MS, sans-serif;
+         margin-top: 5%;
     }
 
     #onlineUsersTag span.troca1 {
@@ -506,6 +507,7 @@ img, #subjectName, #chatTitle {
         border-bottom-right-radius: 20px;
         border-top-right-radius: 0;
     }
+
     #CurrentOnlineUsers:hover {
         top: 0;
         right: 0;
@@ -540,7 +542,7 @@ img, #subjectName, #chatTitle {
         font-size: 15px;
         color: rgba(0, 0, 0, 0.9);
         font-family: Trebuchet MS, sans-serif;
-        text-align: left;
+        text-align: center;
         list-style-type: none;
         line-height: 1.4;
     }
