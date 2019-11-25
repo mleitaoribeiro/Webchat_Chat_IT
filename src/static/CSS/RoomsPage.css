@@ -262,6 +262,10 @@ img, #subjectName, #chatTitle {
     -webkit-transform: scale(1.1);
 }
 
+#removeOnHover {
+    display: none;
+}
+
 @media screen and (max-width: 700px) {
     #ChatRooms {
         text-align: center;
