@@ -262,6 +262,61 @@ img, #subjectName, #chatTitle {
     -webkit-transform: scale(1.1);
 }
 
+@media screen and (max-width: 700px) {
+    #ChatRooms {
+        text-align: center;
+        text-decoration: none;
+        background-color: #B61919;
+        opacity: 90%;
+        color: white;
+        font-family: Trebuchet MS, sans-serif;
+        position: absolute;
+        top: -421px;
+        transition: 0.3s;
+        padding: 10px;
+        width: 200px;
+        max-height: max-content;
+        border-radius: 0 0 20px 20px;
+        height: 450px;
+    }
+
+    #ChatRooms:hover {
+        top: 0;
+        left: 0;
+        border-bottom-left-radius: 0;
+        height:auto;
+    }
+
+    .chatrooms_sidebar_footer{
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        width: max-content;
+        margin-top: auto;
+        font-family: Trebuchet MS, sans-serif;
+    }
+
+    #removeOnHover {
+        margin-top:10px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #ChatRooms:hover #removeOnHover {
+        display: none;
+    }
+
+    .chatRooms_sidenav {
+        color: white;
+    }
+
+    #joinRoomButton, #createRoomButton {
+        border:white;
+
+    }
+
+}
+
 /* The side navigation menu - Fim*/
 
 #chatBoxHeader {
@@ -416,7 +471,7 @@ img, #subjectName, #chatTitle {
 @media screen and (max-width: 1200px) {
     .Wrapper {
         display: grid;
-        grid-template-columns: 1fr 10fr;
+        grid-template-columns: 1fr ;
         grid-template-rows: 1fr 8fr 5fr 1fr;
         justify-items: stretch;
         align-items: stretch;
@@ -503,9 +558,8 @@ img, #subjectName, #chatTitle {
         padding: 10px;
         width: 200px;
         max-height: max-content;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 0;
+        border-radius: 0 0 20px 20px;
+        height: 205px;
     }
 
     #CurrentOnlineUsers:hover {
