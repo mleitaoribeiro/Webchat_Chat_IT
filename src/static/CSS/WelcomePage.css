@@ -1,33 +1,36 @@
-* {
-    box-sizing: border-box;
+/*CONFIGURAÇÕES GERAIS*/
+.wrapper {
+    display: grid;
+    grid-template-rows: 13fr 1fr;
+    grid-gap: 6px;
+    justify-items: stretch;
+    align-items: stretch;
 }
-
-head{
+/* Estilo da página (head+body)*/
+head, body {
     background-color: white;
     text-align: center;
     font-family:Trebuchet MS, sans-serif;
 }
-body {
-    background-color: white;
-    text-align: center;
-    font-family:Trebuchet MS, sans-serif;
-}
 
+/* Margens automaticas para rodapé e imagens*/
 img, #subjectName, #chatTitle {
     margin: auto;
     max-width: 7%;
 }
 
+/* Tamanho do logotipo "CHAT IT!" */
 #logoGrande {
     max-width: 25%;
 }
+/*CONFIGURAÇÕES GERAIS -FIM*/
 
+/*CONFIGURAÇÕES DOS BOTÕES DE LOGIN E NICKNAME*/
+/*Estilo do input text para inserir o nickname */
 .nickNameButtonStyle {
-
     background-color: transparent;
     padding: 10px 10px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 14px;
     font-family:Trebuchet MS, sans-serif;
@@ -35,40 +38,42 @@ img, #subjectName, #chatTitle {
     border: 2px solid #B61919;
 }
 
+/*Estilo do botão login */
 .loginButtonStyle {
-
     background-color:  #B61919;
     color: white;
     padding: 10px 10px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 14px;
     font-family:Trebuchet MS, sans-serif;
     border-radius: 25px;
     border: 2px solid #B61919;
-    -webkit-transition: all .8s ease-in-out;
+    -webkit-transition: all .8s ease-in-out; /* Pré-hover */
 }
-
+/*Efeito hover quando se passa o rato por cima => inverte a cor e aumenta de tamanho*/
 .loginButton:hover {
     background-color: transparent;
     color: #B61919;
-    filter: none;
-    -webkit-transform: scale(1.05);
+    -webkit-transform: scale(1.05); /* Aumenta 1.05x face ao tamanho inicial*/
     cursor: pointer;
 }
-
+/* Quando o nickname não é válido => o texto deverá aparecer a vermelho*/
 #errorMessage {
-     color: #B61919;
-     font-size: 13px;
+    color: #B61919;
+    font-size: 13px;
+    font-family:Trebuchet MS, sans-serif;
 }
 
-
+/*Requisitos do nickname => cor diferente e font mais pequeno*/
 .nickname_message_info {
     color: grey;
     font-size:10px;
 }
+/*CONFIGURAÇÕES DOS BOTÕES DE LOGIN E NICKNAME-FIM*/
 
+/*FOOTER*/
+/*O footer é centrado e fixo na página*/
 footer {
     display: flex;
     position: fixed;
@@ -78,20 +83,20 @@ footer {
     background-color: white;
     text-align: center;
 }
+/*FOOTER - FIM*/
 
-.wrapper {
-    display: grid;
-    grid-template-rows: 13fr 1fr;
-    grid-gap: 6px;
-    justify-items: stretch;
-    align-items: stretch;
+/*BARRA CINZENTA COM ALERTAS*/
+/*Permite que os alertas/colunas que se encontram na barra cinzenta fiquem alinhados horizontalemnte*/
+* {
+    box-sizing: border-box;
 }
 
+/*Cor de fundo*/
 .ChatInfo {
     background-color:whitesmoke;
 }
 
-/* Create three equal columns that floats next to each other */
+/* Criar três colunas de igual tamanho e que flutuam lado a lado*/
 .chatInfoAnime {
     background-color:whitesmoke;
     float: left;
@@ -99,8 +104,7 @@ footer {
     padding: 10px;
 }
 
-
-/* Clear floats after the columns */
+/* Eliminar flutuação depois das três colunas */
 .ChatInfo:after {
     background-color: lightgrey;
     content: "";
@@ -108,7 +112,7 @@ footer {
     clear: both;
 }
 
-/*Efeito de zoom nos icons */
+/*Efeito de zoom nos icons e mudança de cor ao passar rato por cima */
 
 .fa-exclamation-circle, .fa-plus-circle, .fa-user-check   {
     -webkit-transition: all .8s ease-in-out;
@@ -119,15 +123,16 @@ footer {
     filter: none;
     -webkit-transform: scale(1.39);
 }
+/*BARRA CINZENTA COM ALERTAS - FIM*/
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout - faz com que as colunas fiquem umas em cima das outras em vez de lado a lado */
 @media screen and (max-width: 600px) {
     .chatInfoAnime {
         width: 100%;
     }
 }
-
-/*Cookie Consent - Início*/
+/*COOKIES ALERT*/
+/*Cookie Consent - Configurações gerais*/
 #cookieConsent {
     z-index: 999;
     min-height: 20px;
@@ -181,4 +186,4 @@ footer {
 #cookieConsent a.cookieConsentOK:hover {
     background-color:  #5f0d0c;
 }
-/*Cookie Consent - Fim*/
+/*COOKIES ALTERT - FIM*/
