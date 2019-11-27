@@ -434,14 +434,11 @@ img, #subjectName, #chatTitle {
         max-height: 85%;
         overflow-y: auto;
     }
-
-    .CurrentOnlineUsers ul{
-        font-size: 15px;
-        color: black;
-        font-family:Trebuchet MS, sans-serif;
-        list-style-type: none;
-        line-height: 1.4;
-    }
+     #userList {
+         color: black;
+         text-align: center;
+         margin-top: 10px;
+     }
 
     #userLimit h2 {
         color:#B61919 ;
@@ -555,6 +552,10 @@ img, #subjectName, #chatTitle {
             background-color: white;
         }
 
+        #chatBox {
+            margin-top: 25px;
+        }
+
         /* Barra Direita - Início */
             #CurrentOnlineUsers {
                 text-align: center;
@@ -586,12 +587,14 @@ img, #subjectName, #chatTitle {
                 color: white;
             }
 
+            /* No hover faz a troca de texto - Início*/
             #CurrentOnlineUsers span.troca1, #CurrentOnlineUsers:hover span.troca2 {
                 display: inline;
             }
             #CurrentOnlineUsers:hover span.troca1, #CurrentOnlineUsers span.troca2 {
                 display: none;
             }
+            /* No hover faz a troca de texto - Fim*/
 
             #onlineUsers {
                 border-radius: 10px;
