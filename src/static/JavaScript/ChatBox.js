@@ -46,7 +46,7 @@ function reloadRoom() {
         joinChatroom = "MainRoom";
     }
     //acede à Room pretendida através de query-string
-    request.open("GET", "https://vs280.dei.isep.ipp.pt/cgi-bin/changeRooms?room=" + joinChatroom, true);
+    request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom, true);
     request.timeout = 500;
     request.send();
     //limpa o erro criado quando está tudo bem
@@ -67,6 +67,6 @@ function sendMessage() {
             document.getElementById("errorUserInputMessage").innerHTML = this.response;
         }*/
     };
-    request.open("POST", "http://vs280.dei.isep.ipp.pt/cgi-bin/sendMessages?room=" + joinChatroom, true);
+    request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom, true);
     request.send(userTextInput);
 }

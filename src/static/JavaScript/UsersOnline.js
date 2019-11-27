@@ -9,7 +9,7 @@ function reloadUserOnline() {
         document.getElementById("listOnlineUsers").innerHTML = "Still trying ...";
         setTimeout(reloadMessage, 1000);
     };
-    request.open("GET", "http://vs280.dei.isep.ipp.pt/cgi-bin/usersOnline.txt", true);
+    request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersOnline.txt", true);
     request.timeout = 5000;
     request.send();
 }

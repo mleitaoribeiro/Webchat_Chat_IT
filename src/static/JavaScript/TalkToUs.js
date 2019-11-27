@@ -19,7 +19,7 @@ function sendEmail() {
     if (allTrue === true && emailLegit === true) {
         var corpoEmail = "Subject: " + topic + ".  Sent from: " + fname + ", at " + email + ";  The message is: '" + message + "'";
         var request = new XMLHttpRequest();
-        request.open("POST", "http://vs280.dei.isep.ipp.pt/cgi-bin/sendEmail", true);
+        request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendEmail", true);
         request.send(corpoEmail);
         alert(confirmed);
     }
