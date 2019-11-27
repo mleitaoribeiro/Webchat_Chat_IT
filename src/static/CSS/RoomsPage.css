@@ -78,189 +78,193 @@ img, #subjectName, #chatTitle {
 
 /* The side navigation menu - Início*/
 
-.chatRooms_sidebar {
-    width: auto;
-    height: auto;
-    display:inline-block;
-    border: #932D2D;
-    text-align: center;
-    text-decoration: none;
-    background-color: #e7e7e7;
-    color: black;
-    font-size: 18px;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-family:Trebuchet MS, sans-serif;
-    min-width: max-content;
-    position: relative;
-}
+    .chatRooms_sidebar {
+        width: auto;
+        height: auto;
+        display:inline-block;
+        border: #932D2D;
+        text-align: center;
+        text-decoration: none;
+        background-color: #e7e7e7;
+        color: black;
+        font-size: 18px;
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-family:Trebuchet MS, sans-serif;
+        min-width: max-content;
+        position: relative;
+    }
 
-.User_Available_Rooms{
-    display:inline-block;
-    font-family:Trebuchet MS, sans-serif;
-}
-.chatrooms_sidebar_header {
-    border-radius: 12px;
-    font-family:Trebuchet MS, sans-serif;
-}
+    .User_Available_Rooms{
+        display:inline-block;
+        font-family:Trebuchet MS, sans-serif;
+    }
+    .chatrooms_sidebar_header {
+        border-radius: 12px;
+        font-family:Trebuchet MS, sans-serif;
+    }
 
-.chatrooms_sidenav {
-    width:100%;
-    background-color: transparent;
-    color: black;
-    border:none;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    font-family:Trebuchet MS, sans-serif;
-    transition: 0.5s;
-    opacity:1;
-}
-.chatrooms_sidenav:hover {
-    width:100%;
-    background-color: transparent;
-    border: 2px solid lightgrey;
-    filter: none;
-    -webkit-transform: scale(1.3);
-}
+    .chatrooms_sidenav {
+        width:100%;
+        background-color: transparent;
+        color: black;
+        border:none;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        font-family:Trebuchet MS, sans-serif;
+        transition: 0.5s;
+        opacity:1;
+    }
+    .chatrooms_sidenav:hover {
+        width:100%;
+        background-color: transparent;
+        border: 2px solid lightgrey;
+        filter: none;
+        -webkit-transform: scale(1.3);
+    }
 
-.active .chatRooms_sidenav {
-    background-color: transparent;
-    border-color: lightgrey;
-    border-radius: 2px;
-    transform: scale(1.3);
-}
+    .active .chatRooms_sidenav {
+        background-color: transparent;
+        border-color: lightgrey;
+        border-radius: 2px;
+        transform: scale(1.3);
+    }
 
-.chatrooms_button{
-    font-family:Trebuchet MS, sans-serif;
-    font-size: 15px;
-    border: 2px solid ghostwhite;
-    background-color: ghostwhite;
-    color: black;
-    padding: 20px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    -webkit-transition: all .2s ease-in-out;
-    cursor: pointer;
-}
-.chatrooms_button:hover {
-    border: 2px solid lightgrey;
-    background-color: transparent;
-    color: black;
-    filter: none;
-    -webkit-transform: scale(1.3);
-}
-/*Criar e Entrar em salas*/
+    .chatrooms_button{
+        font-family:Trebuchet MS, sans-serif;
+        font-size: 15px;
+        border: 2px solid ghostwhite;
+        background-color: ghostwhite;
+        color: black;
+        padding: 20px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        -webkit-transition: all .2s ease-in-out;
+        cursor: pointer;
+    }
+    .chatrooms_button:hover {
+        border: 2px solid lightgrey;
+        background-color: transparent;
+        color: black;
+        filter: none;
+        -webkit-transform: scale(1.3);
+    }
+    /*Criar e Entrar em salas*/
 
-.chatrooms_sidebar_footer{
-    display: block;
-    text-align: left;
-    text-decoration: none;
-    width: max-content;
-    margin-top: 300px;
-}
+        .chatrooms_sidebar_footer{
+            display: block;
+            text-align: left;
+            text-decoration: none;
+            width: max-content;
+            margin-top: 300px;
+        }
 
-/*Entrar sala*/
+    /*Entrar sala*/
 
-.joinChatroom {
-    display: -ms-flex;
-    display:flex;
-    width: auto;
-    margin-bottom: 15px;
-}
+        .joinChatroom {
+            display: -ms-flex;
+            display:flex;
+            width: auto;
+            margin-bottom: 15px;
+        }
 
-#join_chatroom {
-    width:auto;
-    padding: 10px;
-    color:black;
-    background-color: white;
-    border: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family:Trebuchet MS, sans-serif;
-    float: left;
-}
+        #join_chatroom {
+            width:auto;
+            padding: 10px;
+            color:black;
+            background-color: white;
+            border: none;
+            display: inline-block;
+            font-size: 14px;
+            font-family:Trebuchet MS, sans-serif;
+            float: left;
+        }
 
-#join_chatroom:focus {
-    border: 2px solid #932D2D;
-}
+        #join_chatroom:focus {
+            border: 2px solid #932D2D;
+        }
 
-#joinRoomButton, #fa-sign-in-alt  {
-    padding: 10px;
-    color:white;
-    border:none;
-    background-color: #B61919;
-    min-width:50px;
-    font-family:Trebuchet MS, sans-serif;
-    opacity: 1;
-    transition: 0.3s;
-}
+        #joinRoomButton, #fa-sign-in-alt  {
+            padding: 10px;
+            color:white;
+            border:none;
+            background-color: #B61919;
+            min-width:50px;
+            font-family:Trebuchet MS, sans-serif;
+            opacity: 1;
+            transition: 0.3s;
+        }
 
-#joinRoomButton:hover {opacity: 0.6}
+        #joinRoomButton:hover {opacity: 0.6}
 
-/*Criar nova sala */
+    /*Criar nova sala */
 
-.createNewChatroom {
-    display: -ms-flex;
-    display:flex;
-    width: auto;
-    margin-bottom: 15px;
-}
+        .createNewChatroom {
+            display: -ms-flex;
+            display:flex;
+            width: auto;
+            margin-bottom: 15px;
+        }
 
-#create_new_chatroom {
-    width:auto;
-    padding: 10px;
-    color:black;
-    background-color: white;
-    border: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family:Trebuchet MS, sans-serif;
-    float: left;
-}
-#create_new_chatroom:focus {
-    border: 2px solid #932D2D;
-}
+        #create_new_chatroom {
+            width:auto;
+            padding: 10px;
+            color:black;
+            background-color: white;
+            border: none;
+            display: inline-block;
+            font-size: 14px;
+            font-family:Trebuchet MS, sans-serif;
+            float: left;
+        }
+        #create_new_chatroom:focus {
+            border: 2px solid #932D2D;
+        }
 
-#createRoomButton, #fa-plus-circle  {
-    padding: 10px;
-    color:white;
-    border:none;
-    background-color: #B61919;
-    min-width:50px;
-    font-family:Trebuchet MS, sans-serif;
-    opacity: 1;
-    transition: 0.3s;
-}
-#createRoomButton:hover {opacity: 0.6}
+        #createRoomButton, #fa-plus-circle  {
+            padding: 10px;
+            color:white;
+            border:none;
+            background-color: #B61919;
+            min-width:50px;
+            font-family:Trebuchet MS, sans-serif;
+            opacity: 1;
+            transition: 0.3s;
+        }
+        #createRoomButton:hover {opacity: 0.6}
 
-#Talktous {
-    margin-top: 2px;
-    padding-right: 4%;
-    padding-left: 3%;
-    padding-bottom: 1px;
-    border-radius: 5px;
-    border: solid #B61919;
-    color: white;
-    background-color: #B61919;
-    font-family: Trebuchet MS, sans-serif, bold;
-    font-size: 15px;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    position: relative;
-    float: left;
-    transition:all 0.5s;
-}
-#Talktous:hover {
-    opacity: 0.6;
-    filter: none;
-    -webkit-transform: scale(1.1);
-}
+        #Talktous {
+            margin-top: 2px;
+            padding-right: 4%;
+            padding-left: 3%;
+            padding-bottom: 1px;
+            border-radius: 5px;
+            border: solid #B61919;
+            color: white;
+            background-color: #B61919;
+            font-family: Trebuchet MS, sans-serif, bold;
+            font-size: 15px;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            float: left;
+            transition:all 0.5s;
+        }
+        #Talktous:hover {
+            opacity: 0.6;
+            filter: none;
+            -webkit-transform: scale(1.1);
+        }
+
+        #removeOnHover {
+            display: none;
+        }
 
 /* The side navigation menu - Fim*/
 
@@ -413,36 +417,6 @@ img, #subjectName, #chatTitle {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1200px) {
-    .Wrapper {
-        display: grid;
-        grid-template-columns: 1fr 10fr;
-        grid-template-rows: 1fr 8fr 5fr 1fr;
-        justify-items: stretch;
-        align-items: stretch;
-    }
-
-    #sendButton {
-        font-size: 14px;
-    }
-
-    #sendIcon {
-        left: 5px;
-    }
-
-    header {
-        display: grid;
-        grid-column: 1/3;
-        background-color: white;
-    }
-
-    footer {
-        display: grid;
-        grid-column: 1/3;
-        background-color: white;
-    }
-}
-
 /* Barra Direita - Início*/
 
     #CurrentOnlineUsers {
@@ -487,73 +461,174 @@ img, #subjectName, #chatTitle {
     #onlineUsersTag span.troca1 {
         display: none;
     }
-
-@media screen and (max-width: 1200px) {
-    #CurrentOnlineUsers {
-        text-align: center;
-        text-decoration: none;
-        background-color: #B61919;
-        opacity: 90%;
-        color: white;
-        font-family: Trebuchet MS, sans-serif;
-        position: absolute;
-        top: -175px;
-        right: 2px;
-        transition: 0.3s;
-        padding: 10px;
-        width: 200px;
-        max-height: max-content;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 0;
-    }
-
-    #CurrentOnlineUsers:hover {
-        top: 0;
-        right: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    #onlineUsersTag {
-        text-align: center;
-        font-weight: bold;
-        color: white;
-    }
-    #CurrentOnlineUsers span.troca1, #CurrentOnlineUsers:hover span.troca2 {
-        display: inline;
-    }
-    #CurrentOnlineUsers:hover span.troca1, #CurrentOnlineUsers span.troca2 {
-        display: none;
-    }
-
-    #onlineUsers {
-        border-radius: 10px;
-        border: solid 1px white;
-        background-color: ghostwhite;
-        height: 90px;
-        max-height: 90px;
-        margin-left: 10px;
-        margin-right: 3px;
-        overflow-y: auto;
-    }
-
-    .CurrentOnlineUsers ul {
-        margin-top: 5px;
-        font-size: 15px;
-        color: rgba(0, 0, 0, 0.9);
-        font-family: Trebuchet MS, sans-serif;
-        text-align: center;
-        list-style-type: none;
-        line-height: 1.4;
-    }
-
-    #userLimit {
-        margin-top: 5px;
-        background-color: transparent;
-        font-family: Trebuchet MS, sans-serif;
-        font-size: 15px;
-        color: white;
-    }
-}
-
 /* Barra Direita - Fim*/
+
+
+
+
+/*Responsive Design - Início*/
+
+    @media screen and (max-width: 700px) {
+        /* Barra Esquerda - Início */
+            #ChatRooms {
+                text-align: center;
+                text-decoration: none;
+                background-color: #B61919;
+                opacity: 90%;
+                color: white;
+                font-family: Trebuchet MS, sans-serif;
+                position: absolute;
+                top: -421px;
+                transition: 0.3s;
+                padding: 10px;
+                width: 200px;
+                max-height: max-content;
+                border-radius: 0 0 20px 20px;
+                height: 450px;
+            }
+
+            #ChatRooms:hover {
+                top: 0;
+                left: 0;
+                border-bottom-left-radius: 0;
+                height:auto;
+            }
+
+            .chatrooms_sidebar_footer{
+                display: block;
+                text-align: left;
+                text-decoration: none;
+                width: max-content;
+                margin-top: auto;
+                font-family: Trebuchet MS, sans-serif;
+            }
+
+            #removeOnHover {
+                margin-top:15px;
+                text-align: center;
+                font-size: 15px;
+                display: inherit;
+            }
+
+            #ChatRooms:hover #removeOnHover {
+                display: none;
+            }
+
+            .chatRooms_sidenav {
+                color: white;
+            }
+
+            #joinRoomButton, #createRoomButton {
+                border:white;
+
+            }
+        /* Barra Esquerda - Fim */
+    }
+
+    @media screen and (max-width: 1200px) {
+
+        .Wrapper {
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 8fr 5fr 1fr;
+            justify-items: stretch;
+            align-items: stretch;
+        }
+
+        #sendButton {
+            font-size: 14px;
+        }
+
+        #sendIcon {
+            left: 5px;
+        }
+
+        header {
+            display: grid;
+            grid-column: 1/3;
+            background-color: white;
+        }
+
+        footer {
+            display: grid;
+            grid-column: 1/3;
+            background-color: white;
+        }
+
+        /* Barra Direita - Início */
+            #CurrentOnlineUsers {
+                text-align: center;
+                text-decoration: none;
+                background-color: #B61919;
+                opacity: 90%;
+                color: white;
+                font-family: Trebuchet MS, sans-serif;
+                position: absolute;
+                top: -175px;
+                right: 2px;
+                transition: 0.3s;
+                padding: 10px;
+                width: 200px;
+                max-height: max-content;
+                border-radius: 0 0 20px 20px;
+                height: 205px;
+            }
+
+            #CurrentOnlineUsers:hover {
+                top: 0;
+                right: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            #onlineUsersTag {
+                text-align: center;
+                font-weight: bold;
+                color: white;
+            }
+
+            #CurrentOnlineUsers span.troca1, #CurrentOnlineUsers:hover span.troca2 {
+                display: inline;
+            }
+            #CurrentOnlineUsers:hover span.troca1, #CurrentOnlineUsers span.troca2 {
+                display: none;
+            }
+
+            #onlineUsers {
+                border-radius: 10px;
+                border: solid 1px white;
+                background-color: ghostwhite;
+                height: 90px;
+                max-height: 90px;
+                margin-left: 10px;
+                margin-right: 3px;
+                overflow-y: auto;
+            }
+
+            .CurrentOnlineUsers ul {
+                margin-top: 5px;
+                font-size: 15px;
+                color: rgba(0, 0, 0, 0.9);
+                font-family: Trebuchet MS, sans-serif;
+                text-align: center;
+                list-style-type: none;
+                line-height: 1.4;
+            }
+
+            #userLimit {
+                margin-top: 5px;
+                background-color: transparent;
+                font-family: Trebuchet MS, sans-serif;
+                font-size: 15px;
+                color: white;
+            }
+
+            #userLimit h2 {
+                color:white ;
+                text-align: center;
+                font-family:Trebuchet MS, sans-serif;
+                margin-bottom: 11px;
+            }
+        /* Barra Direita - Fim*/
+    }
+
+/*Responsive Design - Fim*/

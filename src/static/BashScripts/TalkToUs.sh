@@ -1,4 +1,5 @@
 #!/bin/bash
+# envia email para o mail "to" com o conteudo do formulario Talk To Us
 VAR_EMAIL=/var/www/cgi-bin/emailContent
 to="1191743@isep.ipp.pt"
 if [ "$REQUEST_METHOD" == "POST" ]; then
