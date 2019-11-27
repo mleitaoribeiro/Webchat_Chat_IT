@@ -1,129 +1,133 @@
-/*CONFIGURAÇÕES GERAIS*/
-.wrapper {
-    display: grid;
-    grid-template-rows: 13fr 1fr;
-    grid-gap: 6px;
-    justify-items: stretch;
-    align-items: stretch;
-}
-/* Estilo da página (head+body)*/
-head, body {
-    background-color: white;
-    text-align: center;
-    font-family:Trebuchet MS, sans-serif;
-}
+/* CONFIGURAÇÕES GERAIS - INÍCIO */
+    .wrapper {
+        display: grid;
+        grid-template-rows: 13fr 1fr;
+        grid-gap: 6px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    /* Estilo da página (head+body)*/
+    head, body {
+        background-color: white;
+        text-align: center;
+        font-family:Trebuchet MS, sans-serif;
+    }
 
-/* Margens automaticas para rodapé e imagens*/
-img, #subjectName, #chatTitle {
-    margin: auto;
-    max-width: 7%;
-}
+    /* Margens automaticas para rodapé e imagens*/
+    img, #subjectName, #chatTitle {
+        margin: auto;
+        max-width: 7%;
+    }
 
-/* Tamanho do logotipo "CHAT IT!" */
-#logoGrande {
-    max-width: 25%;
-}
-/*CONFIGURAÇÕES GERAIS -FIM*/
+    /* Tamanho do logotipo "CHAT IT!" */
+    #logoGrande {
+        max-width: 25%;
+    }
+/* CONFIGURAÇÕES GERAIS - FIM */
 
-/*CONFIGURAÇÕES DOS BOTÕES DE LOGIN E NICKNAME*/
-/*Estilo do input text para inserir o nickname */
-.nickNameButtonStyle {
-    background-color: transparent;
-    padding: 10px 10px;
-    text-align: center;
-    display: inline-block;
-    font-size: 14px;
-    font-family:Trebuchet MS, sans-serif;
-    border-radius: 25px;
-    border: 2px solid #B61919;
-}
+/* CONFIGURAÇÕES DOS BOTÕES DE LOGIN E NICKNAME - INÍCIO */
+    /*Estilo do input text para inserir o nickname */
+    .nickNameButtonStyle {
+        background-color: transparent;
+        padding: 10px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        font-family:Trebuchet MS, sans-serif;
+        border-radius: 25px;
+        border: 2px solid #B61919;
+    }
 
-/*Estilo do botão login */
-.loginButtonStyle {
-    background-color:  #B61919;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    display: inline-block;
-    font-size: 14px;
-    font-family:Trebuchet MS, sans-serif;
-    border-radius: 25px;
-    border: 2px solid #B61919;
-    -webkit-transition: all .8s ease-in-out; /* Pré-hover */
-}
-/*Efeito hover quando se passa o rato por cima => inverte a cor e aumenta de tamanho*/
-.loginButton:hover {
-    background-color: transparent;
-    color: #B61919;
-    -webkit-transform: scale(1.05); /* Aumenta 1.05x face ao tamanho inicial*/
-    cursor: pointer;
-}
-/* Quando o nickname não é válido => o texto deverá aparecer a vermelho*/
-#errorMessage {
-    color: #B61919;
-    font-size: 13px;
-    font-family:Trebuchet MS, sans-serif;
-}
+    /*Estilo do botão login */
+    .loginButtonStyle {
+        background-color:  #B61919;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        font-family:Trebuchet MS, sans-serif;
+        border-radius: 25px;
+        border: 2px solid #B61919;
+        -webkit-transition: all .8s ease-in-out; /* Pré-hover */
+    }
+    /*Efeito hover quando se passa o rato por cima => inverte a cor e aumenta de tamanho*/
+    .loginButton:hover {
+        background-color: transparent;
+        color: #B61919;
+        -webkit-transform: scale(1.05); /* Aumenta 1.05x face ao tamanho inicial*/
+        cursor: pointer;
+    }
+    /* Quando o nickname não é válido => o texto deverá aparecer a vermelho*/
+    #errorMessage {
+        color: #B61919;
+        font-size: 13px;
+        font-family:Trebuchet MS, sans-serif;
+    }
 
-/*Requisitos do nickname => cor diferente e font mais pequeno*/
-.nickname_message_info {
-    color: grey;
-    font-size:10px;
-}
+    /*Requisitos do nickname => cor diferente e font mais pequeno*/
+    .nickname_message_info {
+        color: grey;
+        font-size:10px;
+    }
 /*CONFIGURAÇÕES DOS BOTÕES DE LOGIN E NICKNAME-FIM*/
 
-/*FOOTER*/
-/*O footer é centrado e fixo na página*/
-footer {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    text-align: center;
-}
-/*FOOTER - FIM*/
+/* FOOTER - INÍCIO */
 
-/*BARRA CINZENTA COM ALERTAS*/
-/*Permite que os alertas/colunas que se encontram na barra cinzenta fiquem alinhados horizontalemnte*/
-* {
-    box-sizing: border-box;
-}
+    /*O footer é centrado e fixo na página*/
+    footer {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        text-align: center;
+    }
 
-/*Cor de fundo*/
-.ChatInfo {
-    background-color:whitesmoke;
-}
+/* FOOTER - FIM */
 
-/* Criar três colunas de igual tamanho e que flutuam lado a lado*/
-.chatInfoAnime {
-    background-color:whitesmoke;
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-}
+/* BARRA CINZENTA COM ALERTAS - INíCIO */
 
-/* Eliminar flutuação depois das três colunas */
-.ChatInfo:after {
-    background-color: lightgrey;
-    content: "";
-    display: table;
-    clear: both;
-}
+    /*Permite que os alertas/colunas que se encontram na barra cinzenta fiquem alinhados horizontalemnte*/
+    * {
+        box-sizing: border-box;
+    }
 
-/*Efeito de zoom nos icons e mudança de cor ao passar rato por cima */
+    /*Cor de fundo*/
+    .ChatInfo {
+        background-color:whitesmoke;
+    }
 
-.fa-exclamation-circle, .fa-plus-circle, .fa-user-check   {
-    -webkit-transition: all .8s ease-in-out;
-}
+    /* Criar três colunas de igual tamanho e que flutuam lado a lado*/
+    .chatInfoAnime {
+        background-color:whitesmoke;
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+    }
 
-.fa-exclamation-circle:hover, .fa-plus-circle:hover, .fa-user-check:hover  {
-    color:#B61919;
-    filter: none;
-    -webkit-transform: scale(1.39);
-}
-/*BARRA CINZENTA COM ALERTAS - FIM*/
+    /* Eliminar flutuação depois das três colunas */
+    .ChatInfo:after {
+        background-color: lightgrey;
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /*Efeito de zoom nos icons e mudança de cor ao passar rato por cima */
+
+    .fa-exclamation-circle, .fa-plus-circle, .fa-user-check   {
+        -webkit-transition: all .8s ease-in-out;
+    }
+
+    .fa-exclamation-circle:hover, .fa-plus-circle:hover, .fa-user-check:hover  {
+        color:#B61919;
+        filter: none;
+        -webkit-transform: scale(1.39);
+    }
+
+/* BARRA CINZENTA COM ALERTAS - FIM */
 
 /* Responsive layout - faz com que as colunas fiquem umas em cima das outras em vez de lado a lado */
 @media screen and (max-width: 600px) {
@@ -131,59 +135,62 @@ footer {
         width: 100%;
     }
 }
-/*COOKIES ALERT*/
-/*Cookie Consent - Configurações gerais*/
-#cookieConsent {
-    z-index: 999;
-    min-height: 20px;
-    font-family: OpenSans, arial, "sans-serif";
-    padding: 10px 20px;
-    background: rgba(0,0,0,0.6);
-    overflow: hidden;
-    position: fixed;
-    color: #FFF;
-    bottom: 0px;
-    right: 10px;
-    /*display: none;*/
-    left: 0;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-}
 
-#cookieConsent a {
-    color:#B61919;
-    text-decoration: none;
-}
+/* COOKIES ALERT - INÍCIO */
 
-#cookieConsent a:hover {
-    color:  #5f0d0c;
-    text-decoration: none;
-}
-#closeCookieConsent {
-    float: right;
-    display: inline-block;
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    margin: -10px 0 0 0;
-    font-weight: bold;
-}
-#closeCookieConsent:hover {
-    color: #5f0d0c;
-}
-#cookieConsent a.cookieConsentOK {
-    display: inline-block;
-    color: white;
-    font-size: 1.1em;
-    background: #B61919;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 2px 20px;
-    float: right;
-    border-radius: 25px;
-}
-#cookieConsent a.cookieConsentOK:hover {
-    background-color:  #5f0d0c;
-}
+    /*Cookie Consent - Configurações gerais*/
+    #cookieConsent {
+        z-index: 999;
+        min-height: 20px;
+        font-family: OpenSans, arial, "sans-serif";
+        padding: 10px 20px;
+        background: rgba(0,0,0,0.6);
+        overflow: hidden;
+        position: fixed;
+        color: #FFF;
+        bottom: 0;
+        right: 10px;
+        /*display: none;*/
+        left: 0;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #cookieConsent a {
+        color:#B61919;
+        text-decoration: none;
+    }
+
+    #cookieConsent a:hover {
+        color:  #5f0d0c;
+        text-decoration: none;
+    }
+    #closeCookieConsent {
+        float: right;
+        display: inline-block;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        margin: -10px 0 0 0;
+        font-weight: bold;
+    }
+    #closeCookieConsent:hover {
+        color: #5f0d0c;
+    }
+    #cookieConsent a.cookieConsentOK {
+        display: inline-block;
+        color: white;
+        font-size: 1.1em;
+        background: #B61919;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 2px 20px;
+        float: right;
+        border-radius: 25px;
+    }
+    #cookieConsent a.cookieConsentOK:hover {
+        background-color:  #5f0d0c;
+    }
+
 /*COOKIES ALTERT - FIM*/
