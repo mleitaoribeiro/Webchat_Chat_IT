@@ -7,7 +7,7 @@ if [ "REQUEST_METHOD" == "GET" ]; then
  echo ""
  TOTAL_USERS=$(cat $USERS_REPOSITORY | wc -l)
  while read line; do
-  echo "<li> $line <li>"
+  echo "<p> $line </p>"
  done < $USERS_REPOSITORY
  exit
 fi
