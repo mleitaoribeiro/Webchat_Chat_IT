@@ -24,7 +24,7 @@
 </head>
 
 <!--???-->
-<body bgcolor=#8fbc8f onload="reloadRoom()">
+<body bgcolor=#8fbc8f onload="reloadRoom();reloadUserOnline()">
 
     <div class="Wrapper">
 
@@ -53,7 +53,7 @@
                 <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
                            required>
-                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="reloadRoom()"></i>
+                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="changeRoom()"></i>
                     </button>
                     <br>
                     <!--recebe erro quando os requisitos não são cumpridos-->

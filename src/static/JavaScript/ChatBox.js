@@ -21,33 +21,40 @@ function blockSpecialChar(event) {
     return ((k != 58) && (k != 59) && (k != 60) && (k != 62) && (k != 124) && (k != 91) && (k != 93));
 }
 
-var joinChatroom = "MainRoom"
+// se não estivermos a aceder a nenhuma Room, cede por omissão à Main Room
+var joinChatroom = "MainRoom";
+
+// se não estivermos a aceder a nenhuma Room, cede por omissão à Main Room
+function changeRoom() {
+    joinChatroom = document.getElementById("joinChatroom").value;
+}
+
 
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
 function reloadRoom() {
-    joinChatroom = document.getElementById("joinChatroom").value;
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
+        this.status
+        /*document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'>" +
+            "</i>Invalid Room!<p>";*/
         document.getElementById("outputBox").innerHTML = this.responseText;
-        setTimeout(reloadRoom, 100);
+        setTimeout(reloadRoom, 500);
     };
     request.ontimeout = function timeoutCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
-        setTimeout(reloadRoom, 100);
+        setTimeout(reloadRoom, 500);
     };
     //gerar erro quando não são cumpridos os requsitos de acesso e quando está em overload
     request.onerror = function onError () {
-        console.log("Error")
-        /*document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'>" +
-            "</i>Invalid Room!<p>";*/
+        document.getElementById("outputBox").innerHTML = "Still trying ...";
+        setTimeout(reloadRoom, 500);
     };
-    // se não estivermos a aceder a nenhuma Room, cede por omissão à Main Room
     if (joinChatroom === "") {
         joinChatroom = "MainRoom";
     }
     //acede à Room pretendida através de query-string
     request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom, true);
-    request.timeout = 500;
+    request.timeout = 5000;
     request.send();
     //limpa o erro criado quando está tudo bem
     //document.getElementById("errorRoomMessage").innerHTML = "";
