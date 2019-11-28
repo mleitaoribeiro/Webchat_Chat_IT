@@ -4,14 +4,14 @@ function loginUser() {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function Login () {
         if (this.readyState === 4 && this.status === 200) {
-            window.location.href = "http://localhost:63342/web_chat_scomred/src/RoomsPage.html"; ///NAO ESQUECER QUE TEM SE MUDAR!!!!!!!!!!!
+            window.location.href = "http://localhost:63342/web_chat/web_chat_scomred/src/RoomsPage.html"; ///NAO ESQUECER QUE TEM SE MUDAR!!!!!!!!!!!
         }
         else {
             document.getElementById("errorMessage").innerHTML = this.response;
         }
     };
-    request.open ("PUT" , "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersLogin", true);
-    request.send(nickname);
+    request.open ("GET" , "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersLogin?nickname=" + nickname, true);
+    request.send();
 }
 
 function validateLogin(){
