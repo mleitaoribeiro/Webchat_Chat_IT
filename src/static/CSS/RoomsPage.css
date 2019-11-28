@@ -671,11 +671,12 @@ img, #subjectName, #chatTitle {
         top: 0;
         left: 0;
         border-bottom-left-radius: 0;
+        min-height: 410px;
         height:auto;
     }
 
     .User_Available_Rooms {
-        height: auto;
+        height: 201px;
     }
 
     .chatrooms_sidebar_footer{
@@ -688,7 +689,7 @@ img, #subjectName, #chatTitle {
     }
 
     #removeOnHover {
-        margin-top:15px;
+        margin-top:27px;
         text-align: center;
         font-size: 15px;
         display: inherit;
