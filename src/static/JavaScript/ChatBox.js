@@ -29,17 +29,22 @@ function changeRoom() {
     joinChatroom = document.getElementById("joinChatroom").value;
 }
 
-
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
 function reloadRoom() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
-        this.status
-        /*document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'>" +
-            "</i>Invalid Room!<p>";*/
         document.getElementById("outputBox").innerHTML = this.responseText;
         setTimeout(reloadRoom, 500);
     };
+    /*request.onreadystatechange = function status () {
+        if (joinChatroom = "") {
+            document.getElementById("errorRoomMessage").innerHTML = "";
+        }
+        else if (this.status != 200) {
+            document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'></i>Invalid Room!<p>";
+        }
+    };*/
+    //limpa o erro criado quando está tudo bem
     request.ontimeout = function timeoutCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
         setTimeout(reloadRoom, 500);
@@ -49,15 +54,10 @@ function reloadRoom() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
         setTimeout(reloadRoom, 500);
     };
-    if (joinChatroom === "") {
-        joinChatroom = "MainRoom";
-    }
     //acede à Room pretendida através de query-string
     request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom, true);
     request.timeout = 5000;
     request.send();
-    //limpa o erro criado quando está tudo bem
-    //document.getElementById("errorRoomMessage").innerHTML = "";
 
     //Fazer scroll-down a cada nova mensagem:
     var elem = document.getElementById('outputBox');
