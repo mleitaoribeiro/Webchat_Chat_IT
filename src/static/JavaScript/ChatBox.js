@@ -21,14 +21,18 @@ function blockSpecialChar(event) {
     return ((k != 58) && (k != 59) && (k != 60) && (k != 62) && (k != 124) && (k != 91) && (k != 93));
 }
 
-// se não estivermos a aceder a nenhuma Room, cede por omissão à Main Room
+// se não estivermos a aceder a nenhuma Room, acede por omissão à Main Room
 var joinChatroom = "MainRoom";
 
-// se não estivermos a aceder a nenhuma Room, cede por omissão à Main Room
+// se não estivermos a aceder a nenhuma Room, acede por omissão à Main Room
 function changeRoom() {
     joinChatroom = document.getElementById("joinChatroom").value;
+    makeRoomVisible();
 }
-
+function makeRoomVisible() {
+    //Colocar uma sala visivel
+    document.getElementById(joinChatroom).style.display = "inline-block";
+}
 
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
 function reloadRoom() {
@@ -61,7 +65,8 @@ function reloadRoom() {
 
     //Fazer scroll-down a cada nova mensagem:
     var elem = document.getElementById('outputBox');
-    elem.scrollTop = elem.scrollHeight;
+    elem.scrollTop = elem.scrollHeight
+
 }
 
 // Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput):
