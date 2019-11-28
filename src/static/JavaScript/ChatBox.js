@@ -80,6 +80,4 @@ function sendMessage() {
 
 function displayNickname() {
     document.getElementById("usernameDisplay").innerHTML = localStorage['nickname'];
-    // document.getElementById("usernameDisplay").innerHTML = "marta";
-    // document.getElementById("usernameDisplay").innerHTML = document.getElementById("nickname").value;
 }
