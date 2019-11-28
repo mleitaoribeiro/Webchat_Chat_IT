@@ -10,14 +10,14 @@ function loginUser() {
             document.getElementById("errorMessage").innerHTML = this.response;
         }
     };
-    request.open ("GET" , "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersLogin?nickname=" + nickname, true);
+    request.open ("GET" , "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersLogin?=nickname" + nickname, true);
     request.send();
 }
 
 function validateLogin(){
     var e = event || window.event;
     var key = e.keyCode || e.which;
-    if ((key >= 32) && (key <= 47) || (key >= 58) && (key <= 64) || (key >= 91) && (key <= 96) || (key > 122) && (key < 199) || (key > 199) && (key < 231) || (key > 231)) {
+    if ((key < 48) || (key >= 58) && (key <= 64) || (key >= 91) && (key <= 96) || (key > 122) && (key < 199) || (key > 199) && (key < 231) || (key > 231)) {
         if (e.preventDefault) e.preventDefault();
         e.returnValue = false;
     }
