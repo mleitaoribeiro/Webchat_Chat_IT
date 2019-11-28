@@ -1,8 +1,8 @@
 #!/bin/bash
 OUTPUT_ROOM_MESSAGES=/var/www/cgi-bin/outputRoom.log
 CONTENT_FILE=/tmp/http_body.tmp
+USERS_GENERATOR=/var/www/cgi-bin/users/user
 
-#função que gera os erros que são transmitidos nas response headers
 response() {
  echo "Status: ${1}"
  echo "Content-type: text/plain"
@@ -21,19 +21,20 @@ if [ "$REQUEST_METHOD" == "POST" ]; then
  #echo -n "Body content is: "
  #cat $M_CONTENT_FILE
 
- #coloca o body recebido nesta variável, para que ela não se perca
  MESSAGE=$(cat $CONTENT_FILE)
 
- #Verifica se existe query-string
  if [ -z "$QUERY_STRING" ]; then response "400 Bad Request" "No query-string"; fi
 
- #variável à qual é atribuida a query-string
- ROOM=${QUERY_STRING#room=}
+ #parsing the query_string to room
+ ROOM=$(echo $QUERY_STRING|cut -d "&" -f 1)
+ ROOM=${ROOM#room=}
 
- #verifica se é uma query string correcta
+ #parsing the query-string to nickname
+ NICKNAME=$(echo $QUERY_STRING|cut -d "&" -f 2)
+ NICKNAME=${NICKNAME#nickname=}
+
  if [ "$ROOM" == "$QUERY_STRING" ]; then response "400 Bad Request" "Bad query-string: $QUERY_STRING"; fi
 
- #Valida o nome do room
  case "$ROOM" in
    MainRoom|Just4Fun|YouShellNotPass|BashtardsOnly);;
    *) response "400 Bad Request" "Invalid Room: $ROOM";;
@@ -47,12 +48,15 @@ if [ "$REQUEST_METHOD" == "POST" ]; then
   chmod a+w $OUTPUT_MESSAGES
  fi
 
- #manda mensagem para o Room log correcto
  echo "Content-type: text/plain"
  echo "Access-Control-Allow-Origin: *"
  echo ""
  DATE=$(date +"%R")
- echo "<p><b>$DATE: </b>$MESSAGE</p>" >> $OUTPUT_MESSAGES
+ echo "<p><b>($NICKNAME)</b> $MESSAGE <i style='font-size: small; color: darkgray; text-align: right'> $DATE </i></p>" >> $OUTPUT_MESSAGES
+
+ #updating last modified time of the user's file
+ USER_LOGIN=${USERS_GENERATOR}.$NICKNAME
+ touch $USER_LOGIN
  exit
 fi
 

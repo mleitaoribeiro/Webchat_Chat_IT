@@ -74,6 +74,8 @@ function reloadRoom() {
 
 // Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput):
 function sendMessage() {
+    var nickname = document.getElementById("usernameDisplay").innerText;
+    console.log(nickname);
     var userTextInput = document.getElementById("userTextInput").value;
     var request = new XMLHttpRequest();
     // quando se escreve uma mensagem, gera um erro
@@ -82,7 +84,8 @@ function sendMessage() {
             document.getElementById("errorUserInputMessage").innerHTML = this.response;
         }*/
     };
-    request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom, true);
+    request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom
+        + "&nickname=" + nickname, true);
     request.send(userTextInput);
 }
 
