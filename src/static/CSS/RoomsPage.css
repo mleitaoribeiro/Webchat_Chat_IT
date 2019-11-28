@@ -126,7 +126,7 @@ img, #subjectName, #chatTitle {
     background-color: transparent;
     border: 2px solid lightgrey;
     filter: none;
-    -webkit-transform: scale(1.3);
+    -webkit-transform: scale(1.1);
 }
 
 /* Deixa ativo o style "hover" na sala que está ativa*/
