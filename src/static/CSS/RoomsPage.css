@@ -94,10 +94,11 @@
         position: relative;
     }
 
-    /* Style da div que contém os botões das salas disponíveis*/
+    /* Style geral da div que contém os botões das salas disponíveis*/
     .User_Available_Rooms{
         display:inline-block;
         font-family:Trebuchet MS, sans-serif;
+        height: 65%;
     }
 
     /* Style dos botões das salas disponíveis*/
@@ -141,7 +142,6 @@
             text-align: left;
             text-decoration: none;
             width: max-content;
-            margin-top: 300px;
         }
 
         /*Entrar na sala - Início */
@@ -165,6 +165,10 @@
                 font-size: 14px;
                 font-family:Trebuchet MS, sans-serif;
                 float: left;
+            }
+
+            #join_chatroom::placeholder {
+                padding-left: 2px;
             }
 
             /* Botão para entrar na sala */
@@ -207,6 +211,10 @@
                 font-size: 14px;
                 font-family:Trebuchet MS, sans-serif;
                 float: left;
+            }
+
+            #create_new_chatroom::placeholder {
+                padding-left: 2px;
             }
 
             /* Botão para criar a nova sala */
@@ -381,6 +389,11 @@
             text-align: -moz-left;
             text-align: left;
             display: inline-block;
+        }
+
+        /* Placeholder */
+        #userTextInput::placeholder {
+            padding-left: 2px;
         }
 
         /* Botão para enviar mensagens */
@@ -658,6 +671,10 @@
                 border-bottom-left-radius: 0;
                 height:auto;
             }
+
+             .User_Available_Rooms {
+                 height: auto;
+             }
 
             .chatrooms_sidebar_footer{
                 display: block;
