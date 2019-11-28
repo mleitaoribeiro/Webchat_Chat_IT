@@ -24,7 +24,7 @@
 </head>
 
 <!--???-->
-<body onload="reloadRoom();reloadUserOnline()">
+<body onload="reloadRoom();reloadUserOnline();displayNickname()">
 
     <div class="Wrapper">
 
@@ -38,22 +38,26 @@
                 <br>
                 <!--Botão da sala principal, onde o utilizador entra automáticamente após o login-->
                 <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> Main
-                    Room
-                </button>
-                <br>
-                <br>
+                    Room </button>
                 <!--Botão para mudar para a Room Just for Fun-->
-                <button class="chatrooms_sidenav" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
+                <button id="Just4Fun" class="chatrooms_hidden" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
                 <br>
+                <!--Botão para mudar para a BashtardsOnly-->
+                <button id="BashtardsOnly" class="chatrooms_hidden" onclick="openPage('Just For Fun', this, 'black')">Bashtards Only!</button>
                 <br>
+                <!--Botão para mudar para a You Shell Not Pass-->
+                <button id="YouShellNotPass" class="chatrooms_hidden" onclick="openPage('Just For Fun', this, 'black')">You Shell Not Pass!</button>
+                <br>
+                <!-- Display of the Username -->
+                <div id="currentUsernameDisplay">Current User:</div>
+                <div id="usernameDisplay">Loading...</div>
             </div>
-
             <div class="chatrooms_sidebar_footer">
                 <!--Input Field para fazer join a uma sala (sabendo o seu nome)-->
                 <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
                            required>
-                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="changeRoom()"></i>
+                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="changeRoom();makeRoomVisible()"></i>
                     </button>
                     <br>
                 </div>
@@ -61,16 +65,6 @@
                 <div id="errorRoomMessage" align="center"></div>
 
                 <br>
-
-                <!--Input field para criar uma nova sala (atribuindo-lhe um nome)-->
-                <div class="createNewChatroom">
-                    <input type="text" placeholder="Create a New Chat Room" id="create_new_chatroom" min="1" maxlength="10"
-                           required>
-                    <button type="submit" id="createRoomButton"><i class="fas fa-plus-circle"></i></button>
-                    <br>
-                    <br>
-                </div>
-
                 <!--Form para dar opiniões e/ou reportar problemas com o website-->
                 <div class="talkToUs">
                     <form action="TalkToUs.html">
@@ -78,6 +72,7 @@
                     </form>
                     <br>
                 </div>
+                <!--Div utilizada para mostrar texto em ecrãs mais pequenos-->
                <div id="removeOnHover">
                    <br>
                    <p><b>Chat Rooms</b></p>
