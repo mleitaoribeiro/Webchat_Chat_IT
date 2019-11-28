@@ -1,5 +1,6 @@
 #!/bin/bash
-USERS_REPOSITORY=/var/www/cgi-bin/usersLogin.log
+USERS_REPOSITORY=/var/www/cgi-bin/users
+USERS_GENERATOR=/var/www/cgi-bin/users/user
 CONTENT_FILE=/tmp/http_body.tmp
 
 #função que gera os erros que são transmitidos nas response headers
@@ -12,54 +13,39 @@ response() {
 exit
 }
 
+#request to get the login
 if [ "$REQUEST_METHOD" == "PUT" ]; then
 
- # Save Body content (available in the STDIN)
- if [ "$CONTENT_LENGTH" -ne 0 ]; then cat > $CONTENT_FILE; else response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> You must provide a nickname!</p>"; fi
+  # Save Body content (available in the STDIN)
+  if [ "$CONTENT_LENGTH" -ne 0 ]; then cat > $CONTENT_FILE; else response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> You must provide a nickname!</p>"; fi
 
- # Debug
- #echo -n "Body content is: "
- #cat $M_CONTENT_FILE
+  #variável à qual é atribuida o $CONTENT_FILE que é o nickname do utilizador
+  NICKNAME=$(cat $CONTENT_FILE)
 
- #coloca o body recebido nesta variável, para que ela não se perca
- NICKNAME=$(cat $CONTENT_FILE)
+  USER_LOGIN=${USERS_GENERATOR}.$NICKNAME
 
- # Create users repository file if does not exist
- if [ ! -f "$USERS_REPOSITORY" ]; then
-  #echo "Creating repository file"
-  echo "USERS LIST" > $USERS_REPOSITORY
-  chmod a+w $USERS_REPOSITORY
- fi
+  #criar COUNT_USERS_ONLINE - vê quantas ficheiros existem na pasta de Users
+  COUNT_USERS_ONLINE=$(ls -l $USERS_REPOSITORY|wc -l)
+  COUNT_USERS_ONLINE=$(($COUNT_USERS_ONLINE - 1))
 
- #criar duas variáveis: IS_IN REPOSITORY - para ir buscar um user específico à lista, COUNT_USERS_ONLINE - vê quantas linhas existem na lista de users
- IS_IN_REPOSITORY=$(grep -w -o -i $NICKNAME $USERS_REPOSITORY | wc -l)
- COUNT_USERS_ONLINE=$(cat $USERS_REPOSITORY|wc -l)
- COUNT_USERS_ONLINE=$((COUNT_USERS_ONLINE - 1))
+  # Error : reached limit of users online
+  if [ $COUNT_USERS_ONLINE -eq 30 ]; then
+  response "503 Service Unavailable" "<p> This chat is temporarily unvailable due to excessive load.</p>"
+  fi
 
- #echo -ne "\n\tREPOSITORY: "
- #cat $USERS_REPOSITORY
- #echo -e "\n\tIS IN REPOSITORY? " $IS_IN_REPOSITORY
- #echo -e "\tCOUNT USERS ONLINE " $COUNT_USERS_ONLINE
+  # Create USER_LOGIN file if does not exist and Nickname can be added
+  if [ ! -e $USER_LOGIN ]; then
+    echo " user is: $USER_LOGIN"
+    echo "$NICKNAME" > $USER_LOGIN
+    chmod a+w $USER_LOGIN
+    response "200 OK" ""
+  fi
 
- # Error : reached limit of users online
- if [ $COUNT_USERS_ONLINE -eq 30 ]; then
- response "503 Service Unavailable" "<p> This chat is temporarily unvailable due to excessive load.</p>"
- fi
-
- # Nickname can be added
- if [ $IS_IN_REPOSITORY -eq 0 ]; then
-   #echo -n "Nickname to be added to the file: "
-   #cat $M_CONTENT_FILE
-   echo $NICKNAME >> $USERS_REPOSITORY
-   #cat $USERS_REPOSITORY
-   response "200 OK" ""
- fi
-
- #gera erro caso caso o nome do User já exista no usersLogin.log
- if [ $IS_IN_REPOSITORY -gt 0 ]; then
-  response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> This nickname already exists. Please enter a new nickname</p>"
- fi
- exit
+  #gera erro caso caso o nome do User já exista no usersLogin.log
+  if [ -e $USER_LOGIN ]; then
+   response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> This nickname already exists. Please enter a new nickname</p>"
+  fi
+exit
 fi
 
 #contorna a necessidade do brownser fazer um OPTIONS devio à CORS Policy
@@ -68,7 +54,7 @@ if [ "$REQUEST_METHOD" == "OPTIONS" ]; then
  echo "Access-Control-Allow-Origin: *"
  echo "Access-Control-Allow-Methods: PUT, OPTIONS"
  echo ""
- exit
+exit
 fi
 
 #gera erro caso o método não seja o adequado
