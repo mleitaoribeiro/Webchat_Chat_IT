@@ -1,6 +1,7 @@
 // Função que valida nickname introduzido no #nickname e que guarda no sistema o nickname num ficheiro do servidor (userLogin.log):
 function loginUser() {
     var nickname = document.getElementById("nickname").value;
+    localStorage.setItem( 'nickname', nickname );
     var request = new XMLHttpRequest();
     request.onreadystatechange = function Login () {
         if (this.readyState === 4 && this.status === 200) {

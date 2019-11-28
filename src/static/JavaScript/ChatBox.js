@@ -34,7 +34,7 @@ function changeRoom() {
 function reloadRoom() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
-        this.status
+        this.status;
         /*document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'>" +
             "</i>Invalid Room!<p>";*/
         document.getElementById("outputBox").innerHTML = this.responseText;
@@ -76,4 +76,10 @@ function sendMessage() {
     };
     request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom, true);
     request.send(userTextInput);
+}
+
+function displayNickname() {
+    document.getElementById("usernameDisplay").innerHTML = localStorage['nickname'];
+    // document.getElementById("usernameDisplay").innerHTML = "marta";
+    // document.getElementById("usernameDisplay").innerHTML = document.getElementById("nickname").value;
 }
