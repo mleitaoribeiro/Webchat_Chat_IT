@@ -38,12 +38,13 @@ function makeRoomVisible() {
 function reloadRoom() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
-        this.status;
-        /*document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'>" +
+        /*this.status;
+        document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'>" +
             "</i>Invalid Room!<p>";*/
         document.getElementById("outputBox").innerHTML = this.responseText;
         setTimeout(reloadRoom, 500);
     };
+    // gera erro quando é introduzido um room não válido
     /*request.onreadystatechange = function status () {
         if (joinChatroom = "") {
             document.getElementById("errorRoomMessage").innerHTML = "";
@@ -52,7 +53,6 @@ function reloadRoom() {
             document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'></i>Invalid Room!<p>";
         }
     };*/
-    //limpa o erro criado quando está tudo bem
     request.ontimeout = function timeoutCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
         setTimeout(reloadRoom, 500);
@@ -70,7 +70,6 @@ function reloadRoom() {
     //Fazer scroll-down a cada nova mensagem:
     var elem = document.getElementById('outputBox');
     elem.scrollTop = elem.scrollHeight
-
 }
 
 // Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput):
