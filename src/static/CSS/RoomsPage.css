@@ -420,8 +420,15 @@ input:checked + .slider:before {
         margin-bottom:0;
         width:auto;
         display: grid;
-        grid-template-columns: 10fr 1fr;
+        grid-template-columns: 1fr 10fr 1fr;
         grid-gap: 4px;
+    }
+
+    #usernameDisplay {
+        text-align: center;
+        font-weight: bold;
+        color: #B61919;
+        padding-top: 5px;
     }
 
     /* Campo para escrever mensagens */

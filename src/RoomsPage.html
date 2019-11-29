@@ -51,15 +51,12 @@
                 <button id="YouShellNotPass" class="chatrooms_hidden"
                         onclick="setJoinChatroom('YouShellNotPass');reloadRoom()">You Shell Not Pass!</button>
                 <br>
-                <!-- Display of the Username -->
-                <div id="currentUsernameDisplay">Current User:</div>
-                <div id="usernameDisplay">Loading...</div>
             </div>
             <div class="chatrooms_sidebar_footer">
                 <!--Input Field para fazer join a uma sala (sabendo o seu nome)-->
                 <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
-                           onkeypress="validateRoom()" onfocusin="enterToSubmitRoom()"> <!-- Enter not working -->
+                           onpaste="return false" onkeypress="validateRoom()" onfocusin="enterToSubmitRoom()"> <!-- Enter not working -->
                     <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt"
                            onclick="setJoinChatroomByInput();reloadRoom();makeRoomVisible()"></i>
                     </button>
@@ -114,9 +111,11 @@
                 <div id="outputBox">Please wait...</div>
                 <!-- inputs do user: -->
                 <div id="userInput">
+                    <!-- Nickname: -->
+                    <div id="usernameDisplay">Loading...</div>
                     <!-- Scanner de texto: -->
                     <input id="userTextInput" placeholder="Type a new message..." onfocusin="enterToSend()" type="text"
-                           maxlength="140" onkeypress="return blockSpecialChar(event)">
+                           onpaste="return false" maxlength="140" onkeypress="return blockSpecialChar(event)">
                     <!-- Botão de enviar: -->
                     <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                         Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
