@@ -37,15 +37,19 @@
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <br>
                 <!--Botão da sala principal, onde o utilizador entra automáticamente após o login-->
-                <button class="chatrooms_sidenav" onclick="setJoinChatroom('MainRoom');reloadRoom()"> Main Room </button>
+                <button class="chatrooms_sidenav"
+                        onclick="setJoinChatroom('MainRoom');reloadRoom()"> Main Room </button>
                 <!--Botão para mudar para a Room Just for Fun-->
-                <button id="Just4Fun" class="chatrooms_hidden" onclick="setJoinChatroom('Just4Fun');reloadRoom()">Just For Fun</button>
+                <button id="Just4Fun" class="chatrooms_hidden"
+                        onclick="setJoinChatroom('Just4Fun');reloadRoom()">Just For Fun</button>
                 <br>
                 <!--Botão para mudar para a BashtardsOnly-->
-                <button id="BashtardsOnly" class="chatrooms_hidden" onclick="setJoinChatroom('BashtardsOnly');reloadRoom()">Bashtards Only!</button>
+                <button id="BashtardsOnly" class="chatrooms_hidden"
+                        onclick="setJoinChatroom('BashtardsOnly');reloadRoom()">Bashtards Only!</button>
                 <br>
                 <!--Botão para mudar para a You Shell Not Pass-->
-                <button id="YouShellNotPass" class="chatrooms_hidden" onclick="setJoinChatroom('YouShellNotPass');reloadRoom()">You Shell Not Pass!</button>
+                <button id="YouShellNotPass" class="chatrooms_hidden"
+                        onclick="setJoinChatroom('YouShellNotPass');reloadRoom()">You Shell Not Pass!</button>
                 <br>
                 <!-- Display of the Username -->
                 <div id="currentUsernameDisplay">Current User:</div>
@@ -55,8 +59,9 @@
                 <!--Input Field para fazer join a uma sala (sabendo o seu nome)-->
                 <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
-                           onfocusin="enterToSubmitRoom()" required> <!-- Enter to submit not working here -->
-                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="setJoinChatroomByInput();reloadRoom();makeRoomVisible()"></i>
+                           onkeypress="validateRoom()" onfocusin="enterToSubmitRoom()"> <!-- Enter not working -->
+                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt"
+                           onclick="setJoinChatroomByInput();reloadRoom();makeRoomVisible()"></i>
                     </button>
                     <br>
                 </div>
@@ -99,8 +104,8 @@
                 <!-- inputs do user: -->
                 <div id="userInput">
                     <!-- Scanner de texto: -->
-                    <input id="userTextInput" placeholder="Type a new message... " onfocusin="enterToSend()" type="text"
-                           maxlength="65" onkeypress="return blockSpecialChar(event)">
+                    <input id="userTextInput" placeholder="Type a new message..." onfocusin="enterToSend()" type="text"
+                           maxlength="140" onkeypress="return blockSpecialChar(event)">
                     <!-- Botão de enviar: -->
                     <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                         Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
@@ -133,8 +138,10 @@
         <!--Rodapé com os diferentes logos-->
         <footer class="nestedFooter">
             <div id="subjectName">SCOMRED</div>
-            <img id="switchLogo" src="https://portotechhub.com/wp-content/themes/pth/images/brand.svg" alt="Switch Logo">
-            <img id="isepLogo" src="http://www.isep.ipp.pt/images/ISEP_marca_cor.png" alt="Isep Logo">
+            <img id="switchLogo" src="https://portotechhub.com/wp-content/themes/pth/images/brand.svg"
+                 alt="Switch Logo">
+            <img id="isepLogo" src="http://www.isep.ipp.pt/images/ISEP_marca_cor.png"
+                 alt="Isep Logo">
             <img id="portoTechHubLogo" src="https://pontosdevista.pt/static/uploads/2019/06/primage-38128.png"
                  alt="Porto Tech Hub Logo">
         </footer>
