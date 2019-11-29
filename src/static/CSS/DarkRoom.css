@@ -699,6 +699,8 @@ img, #subjectName, #chatTitle {
 
 
 /*Responsive Design - Fim*/
+
+
 .switch {
     position: relative;
     display: inline-block;
@@ -734,12 +736,6 @@ img, #subjectName, #chatTitle {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-}
-#checkbox span.darkmode, #checkbox:before span.lightmode {
-    display: inline;
-}
-#checkbox:checked span.darkmode, #checkbox span.lightmode {
-    display: none;
 }
 
 input:checked + .slider {
