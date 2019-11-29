@@ -44,7 +44,6 @@
             background: ghostwhite;
         }
 
-
     /*Grid Layout e Style - Fim */
 
 
@@ -515,8 +514,9 @@ input:checked + .slider:before {
     /* Lista dos utilizadores online */
     #userList {
         color: black;
-        text-align: center;
+        text-align: left;
         margin-top: 10px;
+        padding-left:20px ;
     }
 
     /* Número de utilizadores online - Início */
@@ -583,14 +583,14 @@ input:checked + .slider:before {
             color: white;
             font-family: Trebuchet MS, sans-serif;
             position: absolute;
-            top: -175px;
+            top: -418px;
             right: 2px;
             transition: 0.3s;
             padding: 10px;
             width: 200px;
-            max-height: max-content;
             border-radius: 0 0 20px 20px;
-            height: 205px;
+            height: 450px;
+            max-height: 450px;
         }
 
         #CurrentOnlineUsers:hover {
@@ -607,20 +607,20 @@ input:checked + .slider:before {
 
         /* No hover faz a troca de texto - Início*/
 
-        #CurrentOnlineUsers span.troca1, #CurrentOnlineUsers:hover span.troca2 {
-            display: inline;
-        }
-        #CurrentOnlineUsers:hover span.troca1, #CurrentOnlineUsers span.troca2 {
-            display: none;
-        }
+            #CurrentOnlineUsers span.troca1, #CurrentOnlineUsers:hover span.troca2 {
+                display: inline;
+            }
+            #CurrentOnlineUsers:hover span.troca1, #CurrentOnlineUsers span.troca2 {
+                display: none;
+            }
 
         /* No hover faz a troca de texto - Fim*/
 
         #onlineUsers {
             border-radius: 10px;
             border: solid 1px white;
-            height: 90px;
-            max-height: 90px;
+            height: 336px;
+            max-height: 336px;
             margin-left: 10px;
             margin-right: 3px;
             overflow-y: auto;
@@ -659,14 +659,13 @@ input:checked + .slider:before {
     @media screen and (max-width: 700px) {
 
         #wrapper {
-            min-height: auto;
-            justify-items: auto;
+            min-height: unset;
+            justify-items: stretch;
             align-items: stretch;
             height: auto;
-            display: compact;
+            display: flex;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
-            width: auto;
         }
 
         #Chat {
@@ -675,8 +674,7 @@ input:checked + .slider:before {
 
         #outputBox {
             height: auto;
-            width: auto;
-            max-width: min-content;
+
         }
 
         /* Barra Esquerda - Início */

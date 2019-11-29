@@ -468,7 +468,7 @@
     .Wrapper {
         display: grid;
         grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 8fr 5fr 1fr;
+        grid-template-rows: 1fr;
         justify-items: stretch;
         align-items: stretch;
     }
@@ -587,11 +587,11 @@
     }
 
     #wrapper {
-        min-height: auto;
-        justify-items: auto;
+        min-height: unset;
+        justify-items: stretch;
         align-items: stretch;
         height: auto;
-        display: compact;
+        display: flex;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
