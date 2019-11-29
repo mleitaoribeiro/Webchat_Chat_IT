@@ -34,8 +34,14 @@ function makeRoomVisible() {
     document.getElementById(joinChatroom).style.display = "inline-block";
 }
 
+// function setJoinChatroomByInput() {
+//     joinChatroom = document.getElementById('joinChatroom').value;
+// }
+
 function setJoinChatroomByInput() {
-    joinChatroom = document.getElementById('joinChatroom').value;
+    if (document.getElementById('joinChatroom').value === 'BashtardsOnly') joinChatroom = 'BashtardsOnly';
+    else if (document.getElementById('joinChatroom').value === 'YouShellNotPass') joinChatroom = 'YouShellNotPass';
+    else if (document.getElementById('joinChatroom').value === 'Just4Fun') joinChatroom = 'Just4Fun';
 }
 
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
@@ -59,12 +65,12 @@ function reloadRoom() {
     };*/
     request.ontimeout = function timeoutCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
-        setTimeout(reloadRoom, 5000);
+        setTimeout(reloadRoom, 500);
     };
     //gerar erro quando não são cumpridos os requsitos de acesso e quando está em overload
     request.onerror = function onError () {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
-        setTimeout(reloadRoom, 5000);
+        setTimeout(reloadRoom, 500);
     };
     //acede à Room pretendida através de query-string
     request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom, true);
@@ -98,10 +104,12 @@ function displayNickname() {
 }
 
 function enterToSubmitRoom() {
-    document.getElementById("joinChatroom").onkeypress=function(e){
-        if(e.keyCode === 13){
+    var input = document.getElementById("joinChatroom");
+    input.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
             document.getElementById("joinRoomButton").click();
         }
-    }
+    });
 }
 

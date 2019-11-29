@@ -55,7 +55,7 @@
                 <!--Input Field para fazer join a uma sala (sabendo o seu nome)-->
                 <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
-                           required>
+                           onfocusin="enterToSubmitRoom()" required> <!-- Enter to submit not working here -->
                     <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="setJoinChatroomByInput();makeRoomVisible();reloadRoom()"></i>
                     </button>
                     <br>
