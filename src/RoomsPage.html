@@ -24,7 +24,7 @@
 </head>
 
 <!--???-->
-<body onload="reloadRoom();reloadUserOnline();displayNickname()">
+<body onload="setJoinChatroom('MainRoom');reloadRoom();reloadUserOnline();displayNickname()">
 
     <div class="Wrapper">
 
@@ -37,16 +37,15 @@
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <br>
                 <!--Botão da sala principal, onde o utilizador entra automáticamente após o login-->
-                <button class="chatrooms_sidenav" onclick="openPage('Main Room', this, 'black')" id="defaultOpen"> Main
-                    Room </button>
+                <button class="chatrooms_sidenav" onclick="setJoinChatroom('MainRoom');reloadRoom()"> Main Room </button>
                 <!--Botão para mudar para a Room Just for Fun-->
-                <button id="Just4Fun" class="chatrooms_hidden" onclick="openPage('Just For Fun', this, 'black')">Just For Fun</button>
+                <button id="Just4Fun" class="chatrooms_hidden" onclick="setJoinChatroom('Just4Fun');reloadRoom()">Just For Fun</button>
                 <br>
                 <!--Botão para mudar para a BashtardsOnly-->
-                <button id="BashtardsOnly" class="chatrooms_hidden" onclick="openPage('Just For Fun', this, 'black')">Bashtards Only!</button>
+                <button id="BashtardsOnly" class="chatrooms_hidden" onclick="setJoinChatroom('BashtardsOnly');reloadRoom()">Bashtards Only!</button>
                 <br>
                 <!--Botão para mudar para a You Shell Not Pass-->
-                <button id="YouShellNotPass" class="chatrooms_hidden" onclick="openPage('Just For Fun', this, 'black')">You Shell Not Pass!</button>
+                <button id="YouShellNotPass" class="chatrooms_hidden" onclick="setJoinChatroom('YouShellNotPass');reloadRoom()">You Shell Not Pass!</button>
                 <br>
                 <!-- Display of the Username -->
                 <div id="currentUsernameDisplay">Current User:</div>
@@ -57,7 +56,7 @@
                 <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
                            required>
-                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="changeRoom();makeRoomVisible()"></i>
+                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="setJoinChatroomByInput();makeRoomVisible();reloadRoom()"></i>
                     </button>
                     <br>
                 </div>
