@@ -39,9 +39,12 @@ function makeRoomVisible() {
 // }
 
 function setJoinChatroomByInput() {
-    if (document.getElementById('joinChatroom').value === 'BashtardsOnly') joinChatroom = 'BashtardsOnly';
-    else if (document.getElementById('joinChatroom').value === 'YouShellNotPass') joinChatroom = 'YouShellNotPass';
-    else if (document.getElementById('joinChatroom').value === 'Just4Fun') joinChatroom = 'Just4Fun';
+    if (document.getElementById('joinChatroom').value === "BashtardsOnly")
+        joinChatroom = 'BashtardsOnly';
+    else if (document.getElementById('joinChatroom').value === "YouShellNotPass")
+        joinChatroom = 'YouShellNotPass';
+    else if (document.getElementById('joinChatroom').value === "Just4Fun")
+        joinChatroom = 'Just4Fun';
 }
 
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
@@ -52,7 +55,7 @@ function reloadRoom() {
         document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'>" +
             "</i>Invalid Room!<p>";*/
         document.getElementById("outputBox").innerHTML = this.responseText;
-        setTimeout(reloadRoom, 5000);
+        setTimeout(reloadRoom, 300);
     };
     // gera erro quando é introduzido um room não válido
     /*request.onreadystatechange = function status () {
@@ -103,14 +106,21 @@ function displayNickname() {
     document.getElementById("usernameDisplay").innerHTML = localStorage['nickname'];
 }
 
+function validateRoom(){
+    var e = event || window.event;
+    var key = e.keyCode || e.which;
+    if ((key < 48) || (key >= 58) && (key <= 64) || (key >= 91) && (key <= 96) || (key > 122) && (key < 199) || (key > 199)) {
+        if (e.preventDefault) e.preventDefault();
+        e.returnValue = false;
+    }
+}
+
 function enterToSubmitRoom() {
-    var input = document.getElementById("joinChatroom");
-    input.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
+    document.getElementById('joinChatroom').onkeydown = function(e){
+        if(e.keyCode === 13){
             document.getElementById("joinRoomButton").click();
         }
-    });
+    };
 }
 
 function darkMode() {

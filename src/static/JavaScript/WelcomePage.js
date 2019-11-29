@@ -18,7 +18,7 @@ function loginUser() {
 function validateLogin(){
     var e = event || window.event;
     var key = e.keyCode || e.which;
-    if ((key < 48) || (key >= 58) && (key <= 64) || (key >= 91) && (key <= 96) || (key > 122) && (key < 199) || (key > 199) && (key < 231) || (key > 231)) {
+    if ((key < 48) || (key >= 58) && (key <= 64) || (key >= 91) && (key <= 96) || (key > 122) && (key < 199) || (key > 199)) {
         if (e.preventDefault) e.preventDefault();
         e.returnValue = false;
     }
