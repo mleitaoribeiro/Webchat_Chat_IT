@@ -18,7 +18,7 @@ function clearInputText() {
 function blockSpecialChar(event) {
     var k;
     document.all ? k = event.keyCode : k = event.which;
-    return ((k != 58) && (k != 59) && (k != 60) && (k != 62) && (k != 124) && (k != 91) && (k != 93));
+    return ((k !== 60) && (k !== 62) && (k !== 124) && (k !== 91) && (k !== 93));
 }
 
 // se não estivermos a aceder a nenhuma Room, acede por omissão à Main Room
@@ -46,7 +46,7 @@ function reloadRoom() {
         document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'>" +
             "</i>Invalid Room!<p>";*/
         document.getElementById("outputBox").innerHTML = this.responseText;
-        setTimeout(reloadRoom, 500);
+        setTimeout(reloadRoom, 5000);
     };
     // gera erro quando é introduzido um room não válido
     /*request.onreadystatechange = function status () {
@@ -59,21 +59,21 @@ function reloadRoom() {
     };*/
     request.ontimeout = function timeoutCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
-        setTimeout(reloadRoom, 500);
+        setTimeout(reloadRoom, 5000);
     };
     //gerar erro quando não são cumpridos os requsitos de acesso e quando está em overload
     request.onerror = function onError () {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
-        setTimeout(reloadRoom, 500);
+        setTimeout(reloadRoom, 5000);
     };
     //acede à Room pretendida através de query-string
     request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom, true);
-    request.timeout = 500;
+    request.timeout = 5000;
     request.send();
 
     //Fazer scroll-down a cada nova mensagem:
     var elem = document.getElementById('outputBox');
-    elem.scrollTop = elem.scrollHeight
+    elem.scrollTop = elem.scrollHeight;
 }
 
 // Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput):
