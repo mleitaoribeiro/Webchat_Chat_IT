@@ -12,15 +12,15 @@ response() {
 }
 
 if [ "REQUEST_METHOD" == "GET" ]; then
- #gerar pesquisa caso o repositório exista
+ #só vai contar caso o repositório exista
  if [ -d $USERS_REPOSITORY ];  then
-   cd $USERS_REPOSITORY
-   for user in $(ls $USERS_REPOSITORY); do
-   response "200 OK" "<p>${user##*.}</p>"
-  done
+  cd $USERS_REPOSITORY
+  COUNT_USERS=$(ls $USERS_REPOSITORY | wc -l)
+  echo "$COUNT_USERS"
+ response "200 OK" "<p>$COUNT_USERS</p>"
  fi
  exit
- fi
+fi
 
 #gera erro caso o método  não seja adequado
 response "405 Method Not Allowed" ""
