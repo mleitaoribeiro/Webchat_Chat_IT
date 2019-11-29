@@ -56,7 +56,7 @@
                 <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
                            onfocusin="enterToSubmitRoom()" required> <!-- Enter to submit not working here -->
-                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="setJoinChatroomByInput();makeRoomVisible();reloadRoom()"></i>
+                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt" onclick="setJoinChatroomByInput();reloadRoom();makeRoomVisible()"></i>
                     </button>
                     <br>
                 </div>
@@ -100,7 +100,7 @@
                 <div id="userInput">
                     <!-- Scanner de texto: -->
                     <input id="userTextInput" placeholder="Type a new message... " onfocusin="enterToSend()" type="text"
-                           maxlength="140" onkeypress="return blockSpecialChar(event)">
+                           maxlength="65" onkeypress="return blockSpecialChar(event)">
                     <!-- Botão de enviar: -->
                     <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                         Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
