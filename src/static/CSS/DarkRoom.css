@@ -1,27 +1,16 @@
 /* CONFIGURAÇÕES GERAIS - INÍCIO  */
 
-/* Estilo da página (head+body)*/
-head, body {
-    background-color: black;
-
-}
-
-/* Estilo do rodapé | FOOTER */
-footer {
-    display: grid;
-    grid-column: 1/4;
-    background-color: black;
-}
 
 /*Grid Layout e Style - Início */
 .Wrapper {
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
-    grid-template-rows: 15fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 5px;
     justify-items: stretch;
     align-items: stretch;
+    background-color: black;
 }
 
 .Wrapper > div{
@@ -29,32 +18,10 @@ footer {
     padding: 10px;
     font-family: sans-serif;
     font-size: 15px;
-    border-radius: 12px;
-}
-
-.Wrapper > div:nth-child(odd){
-    background: black;
-}
-
-.nestedHeader {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    font-size:24px;
-    font-family:Trebuchet MS, sans-serif;
-    color:#B61919;
-}
-
-.nestedFooter {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    border-radius: 0;
 }
 /*Grid Layout e Style- Início */
 
-/* Tamanho das imagens no footer */
-img, #subjectName, #chatTitle {
-    margin: auto;
-    max-width: 80px;
-}
 
 /* CONFIGURAÇÕES GERAIS - FIM  */
 
@@ -332,6 +299,7 @@ img, #subjectName, #chatTitle {
     border: solid 2px #B61919;
     margin-top:1%;
     background-color: black;
+    color: white;
     overflow-y: scroll;
     height: 600px;
 }
@@ -342,7 +310,7 @@ img, #subjectName, #chatTitle {
     margin-right:10px;
 }
 #outputBox::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
+    box-shadow: inset 0 0 5px white;
     border-radius: 10px;
 }
 #outputBox::-webkit-scrollbar-thumb {
@@ -699,11 +667,13 @@ img, #subjectName, #chatTitle {
 
 
 /*Responsive Design - Fim*/
+
+
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 32px;
+    height: 18px;
 }
 
 .switch input {
@@ -727,27 +697,21 @@ img, #subjectName, #chatTitle {
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 14px;
+    width: 14px;
+    left: 2px;
+    bottom: 2px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
 }
-#checkbox span.darkmode, #checkbox:before span.lightmode {
-    display: inline;
-}
-#checkbox:checked span.darkmode, #checkbox span.lightmode {
-    display: none;
-}
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: gray;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px gray;
 }
 
 input:checked + .slider:before {
