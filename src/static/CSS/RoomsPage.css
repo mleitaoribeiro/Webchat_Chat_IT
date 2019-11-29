@@ -14,7 +14,12 @@
 
 /* CONFIGURAÇÕES GERAIS - INÍCIO  */
 
+    /* Estilo da página (head+body)*/
+    head, body {
+        background-color: white;
+        height: 100%;
 
+    }
 
     /*Grid Layout e Style - Início */
         .Wrapper {
@@ -42,11 +47,6 @@
 
     /*Grid Layout e Style - Fim */
 
-    /* Tamanho das imagens no footer */
-    img, #subjectName, #chatTitle {
-        margin: auto;
-        max-width: 80px;
-    }
 
 /* CONFIGURAÇÕES GERAIS - FIM  */
 
