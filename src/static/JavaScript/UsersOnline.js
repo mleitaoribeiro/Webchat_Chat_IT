@@ -24,11 +24,11 @@ function reloadNumberOfOnlineUser() {
             setTimeout(reloadNumberOfOnlineUser, 500);
         };
         request.ontimeout = function timeoutCase() {
-            document.getElementById("numberOnlineUsers").innerHTML = "Still trying ...";
+            document.getElementById("numberOnlineUsers").innerHTML = "0";
             setTimeout(reloadNumberOfOnlineUser, 1000);
         };
         request.onerror = function onError () {
-            document.getElementById("numberOnlineUsers").innerHTML = "Still trying ...";
+            document.getElementById("numberOnlineUsers").innerHTML= "0";
             setTimeout(reloadNumberOfOnlineUser, 500);
         };
         request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/countUserOnline", true);

@@ -14,13 +14,6 @@
 
 /* CONFIGURAÇÕES GERAIS - INÍCIO  */
 
-    /* Estilo da página (head+body)*/
-    head, body {
-        background-color: white;
-        height: 100%;
-
-    }
-
     /*Grid Layout e Style - Início */
         .Wrapper {
             height: 100vh;
