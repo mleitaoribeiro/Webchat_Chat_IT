@@ -113,3 +113,23 @@ function enterToSubmitRoom() {
     });
 }
 
+function darkMode() {
+    var teste = 0;
+    if(teste % 2 == 0) {
+        var theme=document.getElementById('lightRoom');
+        theme.href="static/CSS/DarkRoom.css";
+        teste++;
+    }
+
+    else {
+        var theme=document.getElementById('lightRoom');
+        theme.href="static/CSS/RoomsPage.css";
+        teste++;
+    }
+}
+function lightMode() {
+    var theme=document.getElementById('lightRoom');
+    theme.href="static/CSS/RoomsPage.css";
+}
+
+

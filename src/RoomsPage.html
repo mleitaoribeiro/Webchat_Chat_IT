@@ -9,7 +9,7 @@
     <meta name="author" content="SWitCH - Alexandre Oliveira, Diana Dias, Elsa Almeida, Gabriel Pereira,
                                     João Cardoso, Marta Cardoso, Marta Pinheiro, Marta Ribeiro, Raquel Santos">
     <title>ChatRooms</title>
-    <link type="text/css" rel="stylesheet" href="static/CSS/RoomsPage.css"/>
+    <link id="lightRoom" type="text/css" rel="stylesheet" href="static/CSS/RoomsPage.css"/>
     <script src="static/JavaScript/ChatBox.js"></script> <!--NÃO ESQUECER QUE TEMOS DE MUDAR ISTO NO FIM-->
     <script src="static/JavaScript/UsersOnline.js"></script>
     <script src="static/JavaScript/TalkToUs.js"></script>
@@ -84,7 +84,17 @@
             <!-- caixa do chat: -->
             <div id="chatBox">
                 <div id="chatBoxHeader">
-                    <h1></h1>
+                    <!--Dark mode-->
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round" onclick="darkMode()"></span>
+
+                        </label>
+
+
+
+                    </div>
                     <img id="logoSmall" src="https://imgur.com/2OttJwN.png" alt="logo of the chat">
                     <img id="logoCHAT" src="https://imgur.com/kwy8YcJ.png" alt="logo of the chat">
                     <img id="logoIT" src="https://imgur.com/CH7uj9x.png" alt="logo of the chat">
