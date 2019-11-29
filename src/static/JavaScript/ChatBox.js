@@ -123,23 +123,16 @@ function enterToSubmitRoom() {
     };
 }
 
-function darkMode() {
-    var teste = 0;
-    if(teste % 2 == 0) {
-        var theme=document.getElementById('lightRoom');
-        theme.href="static/CSS/DarkRoom.css";
-        teste++;
-    }
-
-    else {
-        var theme=document.getElementById('lightRoom');
-        theme.href="static/CSS/RoomsPage.css";
-        teste++;
-    }
+var color = 0;
+function changeVarForColorMode() {
+    color++;
 }
-function lightMode() {
+
+function changeColorMode() {
     var theme=document.getElementById('lightRoom');
-    theme.href="static/CSS/RoomsPage.css";
+
+    if(color % 2 === 0) theme.href="static/CSS/DarkRoom.css";
+    else theme.href="static/CSS/RoomsPage.css";
 }
 
 
