@@ -26,7 +26,8 @@
         <div id="login">
             <!--Nickname do utilizador e parâmetros para o mesmo-->
             <input class="nickNameButtonStyle" type="text" placeholder="Nickname:" id="nickname"
-                   size="40" minlength="2" maxlength=12" onkeypress="validateLogin()" onfocusin="enterToSubmitNickname()" required>
+                 size="40" minlength="2" maxlength=12" onkeypress="validateLogin()" onfocusin="enterToSubmitNickname()"
+                 required>
             <!--Botão que executa o login do utilizador-->
             <button class="loginButtonStyle loginButton" type="submit" id="loginButton" onclick="loginUser()">Login
             </button>
@@ -47,8 +48,8 @@
         <br>
         <div class="chatInfoAnime" style="background-color:whitesmoke;">
             <i id="gif1" class="fas fa-exclamation-circle" style=font-size:30px;"></i>
-            <p id="chatRoomAlert">Please be mindful that when you exit Chat IT,<br>your nickname will be deleted and
-                <br> may be used by another client.</p>
+            <p id="chatRoomAlert">Please be mindful that when you exit Chat IT<br>for more than 20 minutes, your
+                nickname will be <br> deleted and may be used by another client.</p>
         </div>
         <div class="chatInfoAnime" style="background-color:whitesmoke;">
             <i class="fas fa-user-check" style=font-size:30px;"></i>
@@ -57,7 +58,7 @@
         </div>
         <div class="chatInfoAnime" style="background-color:whitesmoke;">
             <i class="fas fa-plus-circle" style=font-size:30px;"></i>
-            <p id="chatFunctionDescription">If you wish to join or create a room,<br> you can do so on the left-side
+            <p id="chatFunctionDescription">If you wish to join a room,<br> you can do so on the left-side
                 menu.</p>
         </div>
     </div>
@@ -73,7 +74,8 @@
 <!-- Cookie Consent -->
 <div id="cookieConsent" onload="hideNow(event)">
     <div id="closeCookieConsent" onClick="cookiePopUp('hide')">x</div>
-    This website is using cookies. By using our website, you agree to our <a href="TermsAndConditions.html" target="_blank"> Terms and Conditions </a> and our <a href="CookiesPolicy.html" target="_blank"> Cookie Policy </a>.
+    This website is using cookies. By using our website, you agree to our <a href="TermsAndConditions.html"
+    target="_blank"> Terms and Conditions </a> and our <a href="CookiesPolicy.html" target="_blank"> Cookie Policy </a>.
     <a class="cookieConsentOK" onClick="cookiePopUp('hide')">Okay!</a>
 </div>
 </body>
