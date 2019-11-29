@@ -1,27 +1,16 @@
 /* CONFIGURAÇÕES GERAIS - INÍCIO  */
 
-/* Estilo da página (head+body)*/
-head, body {
-    background-color: black;
-
-}
-
-/* Estilo do rodapé | FOOTER */
-footer {
-    display: grid;
-    grid-column: 1/4;
-    background-color: black;
-}
 
 /*Grid Layout e Style - Início */
 .Wrapper {
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
-    grid-template-rows: 15fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 5px;
     justify-items: stretch;
     align-items: stretch;
+    background-color: black;
 }
 
 .Wrapper > div{
@@ -29,32 +18,10 @@ footer {
     padding: 10px;
     font-family: sans-serif;
     font-size: 15px;
-    border-radius: 12px;
-}
-
-.Wrapper > div:nth-child(odd){
-    background: black;
-}
-
-.nestedHeader {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    font-size:24px;
-    font-family:Trebuchet MS, sans-serif;
-    color:#B61919;
-}
-
-.nestedFooter {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    border-radius: 0;
 }
 /*Grid Layout e Style- Início */
 
-/* Tamanho das imagens no footer */
-img, #subjectName, #chatTitle {
-    margin: auto;
-    max-width: 80px;
-}
 
 /* CONFIGURAÇÕES GERAIS - FIM  */
 
