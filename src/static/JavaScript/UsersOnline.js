@@ -7,7 +7,7 @@ function reloadUserOnline() {
     };
     request.ontimeout = function timeoutCase() {
         document.getElementById("userList").innerHTML = "Still trying ...";
-        setTimeout(reloadUserOnline, 1000);
+        setTimeout(reloadUserOnline, 500);
     };
     request.onerror = function onError () {
         document.getElementById("userList").innerHTML = "Still trying ...";
