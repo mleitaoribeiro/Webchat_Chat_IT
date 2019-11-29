@@ -55,6 +55,9 @@
     .chatrooms_hidden {
         display: none
     }
+    .chatrooms_sidebar_header {
+        font-family:Trebuchet MS, sans-serif;
+    }
 
         /* Style geral da barra lateral esquerda*/
         .chatRooms_sidebar {
