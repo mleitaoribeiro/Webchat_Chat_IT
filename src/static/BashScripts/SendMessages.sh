@@ -52,7 +52,8 @@ if [ "$REQUEST_METHOD" == "POST" ]; then
  echo "Access-Control-Allow-Origin: *"
  echo ""
  DATE=$(date +"%R")
- echo "<p><b>($NICKNAME)</b> $MESSAGE <i style='font-size: small; color: darkgray; text-align: right'> $DATE </i></p>" >> $OUTPUT_MESSAGES
+  echo "<p><b style='color:#B61919'>$NICKNAME:</b> $MESSAGE <i style='font-size: small; color: darkgray; text-align:
+  right'> $DATE </i></p>" >> $OUTPUT_MESSAGES
 
  #updating last modified time of the user's file
  USER_LOGIN=${USERS_GENERATOR}.$NICKNAME
