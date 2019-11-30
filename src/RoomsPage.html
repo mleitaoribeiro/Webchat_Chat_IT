@@ -58,12 +58,12 @@
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
                            onpaste="return false" onkeypress="validateRoom()" onfocusin="enterToSubmitRoom()"> <!-- Enter not working -->
                     <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt"
-                           onclick="setJoinChatroomByInput();reloadRoom();makeRoomVisible()"></i>
+                           onclick="enterChatRoomByInput()"></i>
                     </button>
                     <br>
-                    <!--recebe erro quando os requisitos não são cumpridos-->
-                    <div id="errorRoomMessage" align="center"></div>
                 </div>
+                <!--recebe erro quando os requisitos não são cumpridos-->
+                <div id="errorRoomMessage" align="center"></div>
                 <br>
                 <!--Form para dar opiniões e/ou reportar problemas com o website-->
                 <div class="talkToUs">
@@ -89,11 +89,7 @@
                         <label class="switch">
                             <input type="checkbox" checked>
                             <span class="slider round" onclick="changeColorMode();changeVarForColorMode()"></span>
-
                         </label>
-
-
-
                     </div>
                     <img id="logoSmall" src="https://imgur.com/2OttJwN.png" alt="logo of the chat">
                     <img id="logoCHAT" src="https://imgur.com/kwy8YcJ.png" alt="logo of the chat">
@@ -130,7 +126,6 @@
             <div id="onlineUsers" class="onlineUserList">
                <div id="userList"></div>
             </div>
-            <!--Divisão que nos mostra quantos users estão na Room e o limite da mesma-->
             <!--Divisão que nos mostra quantos users estão na Room e o limite da mesma-->
             <div id="onlineUsersTag">
                 <p>

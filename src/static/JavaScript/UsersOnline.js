@@ -17,6 +17,8 @@ function reloadUserOnline() {
     request.timeout = 5000;
     request.send();
 }
+
+// Função para reload dos users na div Online Users sincronizando-as com a pasta Users presente no servidor:
 function reloadNumberOfOnlineUser() {
         var request = new XMLHttpRequest();
         request.onload = function upDate() {
@@ -25,7 +27,7 @@ function reloadNumberOfOnlineUser() {
         };
         request.ontimeout = function timeoutCase() {
             document.getElementById("numberOnlineUsers").innerHTML = "0";
-            setTimeout(reloadNumberOfOnlineUser, 1000);
+            setTimeout(reloadNumberOfOnlineUser, 500);
         };
         request.onerror = function onError () {
             document.getElementById("numberOnlineUsers").innerHTML= "0";

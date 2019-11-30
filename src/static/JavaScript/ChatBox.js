@@ -38,45 +38,48 @@ function makeRoomVisible() {
 //     joinChatroom = document.getElementById('joinChatroom').value;
 // }
 
-function setJoinChatroomByInput() {
-    if (document.getElementById('joinChatroom').value === "BashtardsOnly")
+//função que através do input do Room do utlizador muda o Room, gera os botões de acesso a cada Room e dá erro se o Room
+//não existe
+function enterChatRoomByInput() {
+    if (document.getElementById('joinChatroom').value === "BashtardsOnly") {
         joinChatroom = 'BashtardsOnly';
-    else if (document.getElementById('joinChatroom').value === "YouShellNotPass")
+        reloadRoom();
+        makeRoomVisible()
+        document.getElementById("errorRoomMessage").innerHTML = "";
+    } else if (document.getElementById('joinChatroom').value === "YouShellNotPass") {
         joinChatroom = 'YouShellNotPass';
-    else if (document.getElementById('joinChatroom').value === "Just4Fun")
+        reloadRoom();
+        makeRoomVisible()
+        document.getElementById("errorRoomMessage").innerHTML = "";
+    }
+    else if (document.getElementById('joinChatroom').value === "Just4Fun") {
         joinChatroom = 'Just4Fun';
+        reloadRoom();
+        makeRoomVisible()
+        document.getElementById("errorRoomMessage").innerHTML = "";
+    }
+    else {
+        document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'></i> Invalid Room!</p>";
+    }
 }
 
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
 function reloadRoom() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
-        /*this.status;
-        document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'>" +
-            "</i>Invalid Room!<p>";*/
         document.getElementById("outputBox").innerHTML = this.responseText;
-        setTimeout(reloadRoom, 300);
+        setTimeout(reloadRoom, 500);
     };
-    // gera erro quando é introduzido um room não válido
-    /*request.onreadystatechange = function status () {
-        if (joinChatroom = "") {
-            document.getElementById("errorRoomMessage").innerHTML = "";
-        }
-        else if (this.status != 200) {
-            document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'></i>Invalid Room!<p>";
-        }
-    };*/
     request.ontimeout = function timeoutCase() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
         setTimeout(reloadRoom, 500);
     };
-    //gerar erro quando não são cumpridos os requsitos de acesso e quando está em overload
     request.onerror = function onError () {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
         setTimeout(reloadRoom, 500);
     };
     //acede à Room pretendida através de query-string
-    request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom, true);
+    request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom, true);//MUDAR
     request.timeout = 5000;
     request.send();
 
@@ -97,7 +100,7 @@ function sendMessage() {
             document.getElementById("errorUserInputMessage").innerHTML = this.response;
         }*/
     };
-    request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom
+    request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom //MUDAR PARA QUANDO FOR PARA O SERVIDOR
         + "&nickname=" + nickname, true);
     request.send(userTextInput);
 }
@@ -131,8 +134,8 @@ function changeVarForColorMode() {
 function changeColorMode() {
     var theme=document.getElementById('lightRoom');
 
-    if(color % 2 === 0) theme.href="static/CSS/DarkRoom.css";
-    else theme.href="static/CSS/RoomsPage.css";
+    if(color % 2 === 0) theme.href="static/CSS/DarkRoom.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
+    else theme.href="static/CSS/RoomsPage.css";//MUDAR QUANDO FOR PARA O SERVIDOR
 }
 
 
