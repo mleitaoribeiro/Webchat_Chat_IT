@@ -37,7 +37,7 @@ if [ "$REQUEST_METHOD" == "POST" ]; then
 
  case "$ROOM" in
    MainRoom|Just4Fun|YouShellNotPass|BashtardsOnly);;
-   *) response "400 Bad Request" "Invalid Room: $ROOM";;
+   *) response "404 Not Found" "Invalid Room: $ROOM";;
  esac
 
  OUTPUT_MESSAGES=${OUTPUT_ROOM_MESSAGES}.$ROOM

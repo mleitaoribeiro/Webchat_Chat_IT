@@ -9,7 +9,7 @@ if [ "$REQUEST_METHOD" == "GET" ]; then
   echo "" > $USER_LIST
   # shellcheck disable=SC2045
   for user in $(ls $USERS_REPOSITORY); do
-    echo "<p>${user##*.}</p>" >> $USER_LIST
+    echo "<p><i class='fas fa-circle' style='color:limegreen; font-size:7px;'></i> ${user##*.}</p>" >> $USER_LIST
  done
  echo "Content-type: text/plain"
  echo "Access-Control-Allow-Origin: *"
@@ -19,7 +19,8 @@ if [ "$REQUEST_METHOD" == "GET" ]; then
  exit
 fi
 
-#gera erro caso o método  não seja adequado
-response "405 Method Not Allowed" ""
+#gera erro caso o método não seja adequado
+echo "405 Method Not Allowed"
+
 
 
