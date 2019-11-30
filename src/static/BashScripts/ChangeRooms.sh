@@ -30,7 +30,7 @@ OUTPUT_MESSAGES=${OUTPUT_ROOM_MESSAGES}.$ROOM
 
 # Create OUTPUT MESSAGES file if does not exist
 if [ ! -f $OUTPUT_MESSAGES ]; then
-  echo "<b>Welcome to $ROOM!</b>" >> $OUTPUT_MESSAGES
+  echo "<b style='color: rgb(182,25,25); font-size: large'>Welcome to $ROOM!</b>" >> $OUTPUT_MESSAGES
   chmod a+w $OUTPUT_MESSAGES
 fi
 

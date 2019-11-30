@@ -15,7 +15,9 @@ exit
 if [ "$REQUEST_METHOD" == "POST" ]; then
 
  # Save Body content (available in the STDIN)
- if [ "$CONTENT_LENGTH" -ne 0 ]; then cat > $CONTENT_FILE; else response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> You must write a message!</p>"; fi
+ # shellcheck disable=SC1073
+ # shellcheck disable=SC1073
+ if [ "$CONTENT_LENGTH" -ne 0 ]; then cat > $CONTENT_FILE; else response "400 Bad Request" "<p style='font-size: small; color: #B61919'><i class='fas fa-exclamation-circle'></i> You must write a message!</p>"; fi
 
  # Debug
  #echo -n "Body content is: "
@@ -44,7 +46,7 @@ if [ "$REQUEST_METHOD" == "POST" ]; then
 
  # Create OUTPUT MESSAGES file if does not exist
  if [ ! -f $OUTPUT_MESSAGES ]; then
-  echo "<b>Welcome to Room $ROOM!</b>" >> $OUTPUT_MESSAGES
+  echo "<b style='color: rgb(182,25,25); font-size: large'>Welcome to Room $ROOM!</b>" >> $OUTPUT_MESSAGES
   chmod a+w $OUTPUT_MESSAGES
  fi
 

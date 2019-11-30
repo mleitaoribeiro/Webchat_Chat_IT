@@ -2,7 +2,7 @@
 function enterToSend() {
     var input = document.getElementById("userTextInput");
     input.addEventListener("keydown", function (event) {
-        if (event.key === "Enter" && document.getElementById("userTextInput").value !== "") {
+        if (event.key === "Enter") {
             event.preventDefault();
             document.getElementById("sendButton").click();
         }
@@ -29,6 +29,7 @@ function setJoinChatroom(room) {
     joinChatroom = room;
 }
 
+//torna visivel o Room selecionado no campo Join ChatRoom
 function makeRoomVisible() {
     //Colocar uma sala visivel
     document.getElementById(joinChatroom).style.display = "inline-block";
@@ -58,6 +59,7 @@ function enterChatRoomByInput() {
         makeRoomVisible()
         document.getElementById("errorRoomMessage").innerHTML = "";
     }
+    //gera erro se não existir o Room selecionado
     else {
         document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'></i> Invalid Room!</p>";
     }
@@ -96,9 +98,11 @@ function sendMessage() {
     var request = new XMLHttpRequest();
     // quando se escreve uma mensagem, gera um erro
     request.onreadystatechange = function sendMessage () {
-        /*if (this.readyState == 4 && this.status != 200) {
+        document.getElementById("errorUserInputMessage").innerHTML = "";
+        //gera erro se não introduzir qualquer mensagem
+        if (this.readyState === 4 && this.status !== 200) {
             document.getElementById("errorUserInputMessage").innerHTML = this.response;
-        }*/
+        }
     };
     request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom //MUDAR PARA QUANDO FOR PARA O SERVIDOR
         + "&nickname=" + nickname, true);
