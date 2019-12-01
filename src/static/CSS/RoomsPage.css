@@ -149,15 +149,13 @@
     }
 
     /* Botão para entrar na sala */
-    #joinRoomButton, #fa-sign-in-alt  {
+    #joinRoomButton  {
         padding: 10px;
         color:white;
         border:none;
         background-color: #B61919;
         min-width:50px;
         font-family:Trebuchet MS, sans-serif;
-        opacity: 1;
-        transition: 0.3s;
     }
 
     /* Efeito de "hover" no botão para entrar na sala */
@@ -734,7 +732,6 @@ input:checked + .slider:before {
 
         #joinRoomButton, #createRoomButton {
             border:white;
-
         }
 
         /* Barra Esquerda - Fim */

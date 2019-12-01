@@ -24,7 +24,7 @@
 </head>
 
 <!--???-->
-<body onload="setJoinChatroom('MainRoom');reloadRoom();reloadUserOnline();displayNickname(); reloadNumberOfOnlineUser()">
+<body onload="setJoinChatroom('MainRoom');reloadUserOnline();displayNickname(); reloadNumberOfOnlineUser()">
 
     <div class="Wrapper">
 
@@ -38,18 +38,18 @@
                 <br>
                 <!--Botão da sala principal, onde o utilizador entra automáticamente após o login-->
                 <button class="chatrooms_sidenav"
-                        onclick="setJoinChatroom('MainRoom');reloadRoom()"> Main Room </button>
+                        onclick="setJoinChatroom('MainRoom')"> Main Room </button>
                 <!--Botão para mudar para a Room Just for Fun-->
                 <button id="Just4Fun" class="chatrooms_hidden"
-                        onclick="setJoinChatroom('Just4Fun');reloadRoom()">Just For Fun</button>
+                        onclick="setJoinChatroom('Just4Fun')">Just For Fun</button>
                 <br>
                 <!--Botão para mudar para a BashtardsOnly-->
                 <button id="BashtardsOnly" class="chatrooms_hidden"
-                        onclick="setJoinChatroom('BashtardsOnly');reloadRoom()">Bashtards Only!</button>
+                        onclick="setJoinChatroom('BashtardsOnly')">Bashtards Only!</button>
                 <br>
                 <!--Botão para mudar para a You Shell Not Pass-->
                 <button id="YouShellNotPass" class="chatrooms_hidden"
-                        onclick="setJoinChatroom('YouShellNotPass');reloadRoom()">You Shell Not Pass!</button>
+                        onclick="setJoinChatroom('YouShellNotPass')">You Shell Not Pass!</button>
                 <br>
             </div>
             <div class="chatrooms_sidebar_footer">
@@ -57,9 +57,7 @@
                 <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
                            onpaste="return false" onkeypress="validateRoom()" onfocusin="enterToSubmitRoom()"> <!-- Enter not working -->
-                    <button type="submit" id="joinRoomButton"><i class="fas fa-sign-in-alt"
-                           onclick="enterChatRoomByInput()"></i>
-                    </button>
+                    <button type="submit" id="joinRoomButton" onclick="enterChatRoomByInput()"> ▷ </button>
                     <br>
                 </div>
                 <!--recebe erro quando os requisitos não são cumpridos-->

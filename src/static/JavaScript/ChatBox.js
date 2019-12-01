@@ -27,6 +27,7 @@ var joinChatroom = "MainRoom";
 // set variable joinChatroom
 function setJoinChatroom(room) {
     joinChatroom = room;
+    reloadRoom();
 }
 
 //torna visivel o Room selecionado no campo Join ChatRoom
@@ -45,18 +46,17 @@ function enterChatRoomByInput() {
     if (document.getElementById('joinChatroom').value === "BashtardsOnly") {
         joinChatroom = 'BashtardsOnly';
         reloadRoom();
-        makeRoomVisible()
+        makeRoomVisible();
         document.getElementById("errorRoomMessage").innerHTML = "";
     } else if (document.getElementById('joinChatroom').value === "YouShellNotPass") {
         joinChatroom = 'YouShellNotPass';
         reloadRoom();
-        makeRoomVisible()
+        makeRoomVisible();
         document.getElementById("errorRoomMessage").innerHTML = "";
-    }
-    else if (document.getElementById('joinChatroom').value === "Just4Fun") {
+    } else if (document.getElementById('joinChatroom').value === "Just4Fun") {
         joinChatroom = 'Just4Fun';
         reloadRoom();
-        makeRoomVisible()
+        makeRoomVisible();
         document.getElementById("errorRoomMessage").innerHTML = "";
     }
     //gera erro se não existir o Room selecionado
