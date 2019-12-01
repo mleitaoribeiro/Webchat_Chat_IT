@@ -160,7 +160,8 @@
 
     /* Efeito de "hover" no botão para entrar na sala */
     #joinRoomButton:hover {
-        opacity: 0.6 /* Coloca o botão mais claro */
+        opacity: 0.6; /* Coloca o botão mais claro */
+        border: none;
     }
 
     /*Entrar na sala - Fim */

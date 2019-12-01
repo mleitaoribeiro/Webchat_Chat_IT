@@ -123,22 +123,25 @@ function validateRoom(){
 }
 
 function enterToSubmitRoom() {
-    document.getElementById('joinChatroom').onkeydown = function(e){
-        if(e.keyCode === 13){
+    var input = document.getElementById("joinChatroom");
+    input.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
             document.getElementById("joinRoomButton").click();
         }
-    };
+    });
 }
 
 var color = 0;
 function changeVarForColorMode() {
-    color++;
+    if(color === 0) color = 1;
+    else color = 0;
 }
 
 function changeColorMode() {
     var theme=document.getElementById('lightRoom');
 
-    if(color % 2 === 0) theme.href="static/CSS/DarkRoom.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
+    if(color === 0) theme.href="static/CSS/DarkRoom.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
     else theme.href="static/CSS/RoomsPage.css";//MUDAR QUANDO FOR PARA O SERVIDOR
 }
 
