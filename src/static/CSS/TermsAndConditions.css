@@ -42,11 +42,15 @@ h3 {
     font-family:Trebuchet MS, sans-serif;
 }
 
+img, #subjectName {
+    margin: auto;
+    max-width: 7%;
+}
+
 footer {
     display: flex;
     position: fixed;
     bottom: 0;
-    height: 7%;
     left: 0;
     right: 0;
     background-color: white;

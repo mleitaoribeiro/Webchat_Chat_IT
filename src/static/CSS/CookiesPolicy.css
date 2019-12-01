@@ -53,6 +53,22 @@ footer {
     margin: 50px 80px;
 }
 
+
+img, #subjectName {
+    margin: auto;
+    max-width: 7%;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    text-align: center;
+}
+
 @media screen and (max-width: 1000px) {
     .cookiesPolicyBody {
         width: auto;
