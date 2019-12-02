@@ -489,7 +489,7 @@ input:checked + .slider:before {
         background-color: #5f0d0c;
         color: white;
         border: solid #5f0d0c;
-        -webkit-transform: scale(1.05);
+        -webkit-transform: scale(1.10);
     }
 
     /*Campo de imput para utilizador escrever a mensagem - Fim */

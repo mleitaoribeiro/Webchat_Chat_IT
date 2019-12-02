@@ -36,12 +36,13 @@ function Emojis() {
     var picker = new EmojiButton({
         position: 'top-end',
         autoHide: (false),
+        showSearch: (false)
     })
     picker.on('emoji', function (emoji) {
         input.value += emoji;
     })
-    button.addEventListener('click', function () {
-        picker.pickerVisible ? picker.hidePicker() : picker.showPicker(button);
+    button.addEventListener('click', () => {
+        picker.pickerVisible ? picker.hidePicker() : picker.showPicker(button)
     })
 }
 
