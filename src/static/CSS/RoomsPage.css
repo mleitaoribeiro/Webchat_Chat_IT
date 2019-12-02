@@ -98,7 +98,7 @@
     /* Efeito de "hover" nos botões das salas disponíveis */
     .active, .chatrooms:hover {
         width:100%;
-        background-color: white;
+        background-color: rgba(182, 25, 25, 0.40);
         border: 2px solid whitesmoke;
         border-radius: 5px;
         filter: none;
@@ -156,7 +156,13 @@
     /* Efeito de "hover" no botão para entrar na sala */
     #joinRoomButton:hover {
         opacity: 0.6; /* Coloca o botão mais claro */
+        background-color: rgba(182, 25, 25, 0.85);
         border: none;
+    }
+
+    .activeRoom {
+        background-color: rgba(182, 25, 25, 0.85);
+        color: white;
     }
 
     /*Entrar na sala - Fim */
@@ -191,7 +197,6 @@
     /* Botão para criar a nova sala */
     #createRoomButton, #fa-plus-circle  {
         padding: 10px;
-        color:white;
         border:none;
         background-color: #B61919;
         min-width:50px;
@@ -202,7 +207,7 @@
 
     /* Efeito de "hover" no botão para criar a nova sala */
     #createRoomButton:hover {
-        opacity: 0.6 /* Coloca o botão mais claro */
+        opacity: 0.6; /* Coloca o botão mais claro */
     }
 
     /*Criar nova sala - Fim */
@@ -338,7 +343,7 @@ input:checked + .slider:before {
     /* Logo Texto IT - Define Tamanhos  */
     #logoIT {
         max-height: 30px;
-        margin-bottom: 9px;
+        margin-top: 1px;
         margin-left: -3px;
     }
 

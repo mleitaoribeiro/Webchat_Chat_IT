@@ -32,6 +32,15 @@ var joinChatroom = "MainRoom";
 function setJoinChatroom(room) {
     joinChatroom = room;
     reloadRoom();
+    activeRoomButton();
+}
+
+function activeRoomButton() {
+    document.getElementById('MainRoom').classList.remove("activeRoom");
+    document.getElementById('Just4Fun').classList.remove("activeRoom");
+    document.getElementById('BashtardsOnly').classList.remove("activeRoom");
+    document.getElementById('YouShellNotPass').classList.remove("activeRoom");
+    document.getElementById(joinChatroom).classList.add("activeRoom");
 }
 
 // Javascript para a funcionalidade dos emojis (open source: https://github.com/joeattardi/emoji-button)
@@ -41,7 +50,7 @@ function Emojis() {
     var picker = new EmojiButton({
         position: 'top-end',
         autoHide: (false),
-        showSearch: (false)
+        showSearch: (false),
     })
     picker.on('emoji', function (emoji) {
         input.value += emoji;
@@ -83,7 +92,7 @@ function enterChatRoomByInput() {
     //gera erro se não existir o Room selecionado
     else {
         document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'></i> Invalid Room!</p>";
-    } clearRoomInputText();
+    } clearRoomInputText(); activeRoomButton();
 }
 
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
