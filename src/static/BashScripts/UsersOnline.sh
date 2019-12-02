@@ -1,6 +1,7 @@
 #!/bin/bash
+DATE=$(date +%s%N)
 USERS_REPOSITORY=/var/www/cgi-bin/users
-USER_LIST=/var/www/cgi-bin/userOnline.log
+USER_LIST=/var/www/cgi-bin/userOnline.$DATE.log
 
 if [ "$REQUEST_METHOD" == "GET" ]; then
  #gerar pesquisa caso o repositório exista
@@ -15,6 +16,7 @@ if [ "$REQUEST_METHOD" == "GET" ]; then
  echo "Access-Control-Allow-Origin: *"
  echo ""
  echo "$(cat $USER_LIST)"
+ rm $USER_LIST
  fi
  exit
 fi
