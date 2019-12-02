@@ -29,6 +29,21 @@ function setJoinChatroom(room) {
     joinChatroom = room;
     reloadRoom();
 }
+// Javascript para a funcionalidade dos emojis (open source: https://github.com/joeattardi/emoji-button)
+function Emojis() {
+    var input = document.querySelector("#userTextInput");
+    var button = document.querySelector("#emojiButton");
+    var picker = new EmojiButton({
+        position: 'top-end',
+        autoHide: (false),
+    })
+    picker.on('emoji', function (emoji) {
+        input.value += emoji;
+    })
+    button.addEventListener('click', function () {
+        picker.pickerVisible ? picker.hidePicker() : picker.showPicker(button);
+    })
+}
 
 //torna visivel o Room selecionado no campo Join ChatRoom
 function makeRoomVisible() {

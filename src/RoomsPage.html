@@ -26,7 +26,7 @@
 </head>
 
 <!--???-->
-<body onload="setJoinChatroom('MainRoom');reloadUserOnline();displayNickname(); reloadNumberOfOnlineUser()">
+<body onload="setJoinChatroom('MainRoom');reloadUserOnline();displayNickname(); reloadNumberOfOnlineUser(); Emojis()">
 
     <div class="Wrapper">
 
@@ -110,23 +110,9 @@
                     <input id="userTextInput" placeholder="Type a new message..." onfocusin="enterToSend()" type="text"
                            onpaste="return false" maxlength="140" onkeypress="return blockSpecialChar(event)">
                     <!--Botão de emojis: -->
-                    <button id="emojiButton"></button>
+                    <button id="emojiButton"><i class="fas fa-smile"></i></button>
+                    <!--Script dos emojis open source-->
                     <script src="https://cdn.jsdelivr.net/npm/emoji-button@latest/dist/index.min.js"></script>
-                    <script>
-                        var input = document.querySelector("#userTextInput");
-                        var button = document.querySelector("#emojiButton");
-                        var picker = new EmojiButton({
-                            position: 'top-end',
-                            autoHide: (false)
-                        })
-                        picker.on('emoji', function(emoji){
-                            input.value += emoji;
-                        })
-                        button.addEventListener('click', function(){
-                            picker.pickerVisible ? picker.hidePicker() : picker.showPicker(input);
-                        })
-                    </script>
-
                     <!-- Botão de enviar: -->
                     <button id="sendButton" type="submit" class="sendButton" onclick="sendMessage(); clearInputText()">
                         Send<i class="fas fa-paper-plane" id="sendIcon"></i></button>
