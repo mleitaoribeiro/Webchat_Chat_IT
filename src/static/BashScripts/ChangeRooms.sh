@@ -1,5 +1,6 @@
 #!/bin/bash
 OUTPUT_ROOM_MESSAGES=/var/www/cgi-bin/outputRoom.log
+USERS_GENERATOR=/var/www/cgi-bin/users/user
 
 #função que gera os erros que são transmitidos nas response headers
 response() {
@@ -14,11 +15,18 @@ exit
 #Verifica se existe query-string
 if [ -z "$QUERY_STRING" ]; then response "400 Bad Request" "No query-string"; fi
 
-#variável à qual é atribuida a query-string
-ROOM=${QUERY_STRING#room=}
+#parsing the query_string to room
+ROOM=$(echo $QUERY_STRING|cut -d "&" -f 1)
+ROOM=${ROOM#room=}
 
-#verifica se é uma query string correcta
-if [ "$ROOM" == "$QUERY_STRING" ]; then response "400 Bad Request" "Bad query-string: $QUERY_STRING"; fi
+#parsing the query-string to nickname
+NICKNAME=$(echo $QUERY_STRING|cut -d "&" -f 2)
+NICKNAME=${NICKNAME#nickname=}
+
+USER_LOGIN=${USERS_GENERATOR}.$NICKNAME
+
+#Se o nickname não existir na pasta Users, gera um erro
+if [ ! -e $USER_LOGIN ]; then response "403 Forbidden" ""; fi
 
 #Valida o nome do room
 case "$ROOM" in

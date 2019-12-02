@@ -97,9 +97,15 @@ function enterChatRoomByInput() {
 
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
 function reloadRoom() {
+    var nickname = document.getElementById("usernameDisplay").innerText;
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
-        document.getElementById("outputBox").innerHTML = this.responseText;
+        if (this.status === 403 && nickname !== "Loading...") {
+            window.location.href = "http://localhost:63342/web_chat_scomred/src/WelcomePage.html"; //MUDAR QUANDO FOR PARA O SERVIDOR
+        }
+        else {
+            document.getElementById("outputBox").innerHTML = this.responseText;
+        }
         setTimeout(reloadRoom, 500);
     };
     request.ontimeout = function timeoutCase() {
@@ -111,7 +117,8 @@ function reloadRoom() {
         setTimeout(reloadRoom, 500);
     };
     //acede à Room pretendida através de query-string
-    request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom, true);//MUDAR
+    request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom
+        + "&nickname=" + nickname, true); //MUDAR QUANDO FOR PARA O SERVIDOR
     request.timeout = 5000;
     request.send();
 
@@ -134,8 +141,8 @@ function sendMessage() {
             document.getElementById("errorUserInputMessage").innerHTML = this.response;
         }
     };
-    request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom //MUDAR PARA QUANDO FOR PARA O SERVIDOR
-        + "&nickname=" + nickname, true);
+    request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom
+        + "&nickname=" + nickname, true); //MUDAR PARA QUANDO FOR PARA O SERVIDOR
     request.send(userTextInput);
 }
 
@@ -173,7 +180,7 @@ function changeColorMode() {
     var theme=document.getElementById('lightRoom');
 
     if(color === 0) theme.href="static/CSS/DarkRoom.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
-    else theme.href="static/CSS/RoomsPage.css";//MUDAR QUANDO FOR PARA O SERVIDOR
+    else theme.href="static/CSS/RoomsPage.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
 }
 
 function sideNav() {

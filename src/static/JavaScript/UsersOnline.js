@@ -13,7 +13,7 @@ function reloadUserOnline() {
         document.getElementById("userList").innerHTML = "Still trying ...";
         setTimeout(reloadUserOnline, 500);
     };
-    request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersOnline", true);
+    request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersOnline", true); //MUDAR QUANDO FOR PARA O SERVIDOR
     request.timeout = 5000;
     request.send();
 }
@@ -33,7 +33,7 @@ function reloadNumberOfOnlineUser() {
             document.getElementById("numberOnlineUsers").innerHTML= "0";
             setTimeout(reloadNumberOfOnlineUser, 500);
         };
-        request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/countUserOnline", true);
+        request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/countUserOnline", true); //MUDAR QUANDO FOR PARA O SERVIDOR
         request.timeout = 5000;
         request.send();
 }

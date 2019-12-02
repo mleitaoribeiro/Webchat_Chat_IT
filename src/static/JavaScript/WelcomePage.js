@@ -19,7 +19,7 @@ function loginUser() {
         document.getElementById("errorMessage").innerHTML = "Still trying ...";
         setTimeout(reloadRoom, 500);
     };
-    request.open ("PUT" , "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersLogin", true);
+    request.open ("PUT" , "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersLogin", true); //MUDAR QUANDO FOR PARA O SERVIDOR
     request.timeout = 5000;
     request.send(nickname);
 }

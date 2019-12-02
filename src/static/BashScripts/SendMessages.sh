@@ -35,8 +35,6 @@ if [ "$REQUEST_METHOD" == "POST" ]; then
  NICKNAME=$(echo $QUERY_STRING|cut -d "&" -f 2)
  NICKNAME=${NICKNAME#nickname=}
 
- if [ "$ROOM" == "$QUERY_STRING" ]; then response "400 Bad Request" "Bad query-string: $QUERY_STRING"; fi
-
  case "$ROOM" in
    MainRoom|Just4Fun|YouShellNotPass|BashtardsOnly);;
    *) response "404 Not Found" "Invalid Room: $ROOM";;
