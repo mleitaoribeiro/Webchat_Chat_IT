@@ -160,6 +160,10 @@
         border: none;
     }
 
+    .chatrooms:focus {
+        outline: none;
+    }
+
     .activeRoom {
         background-color: rgba(182, 25, 25, 0.85);
         color: white;
