@@ -26,7 +26,7 @@
 </head>
 
 <!--???-->
-<body onload="setJoinChatroom('MainRoom');reloadUserOnline();displayNickname(); reloadNumberOfOnlineUser(); Emojis()">
+<body onload="setJoinChatroom('MainRoom');reloadUserOnline();displayNickname(); reloadNumberOfOnlineUser(); Emojis();sideNav()">
 
     <div class="Wrapper">
 
@@ -39,18 +39,18 @@
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <br>
                 <!--Botão da sala principal, onde o utilizador entra automáticamente após o login-->
-                <button class="chatrooms_sidenav"
+                <button class="chatrooms"
                         onclick="setJoinChatroom('MainRoom')"> Main Room </button>
                 <!--Botão para mudar para a Room Just for Fun-->
-                <button id="Just4Fun" class="chatrooms_hidden"
+                <button id="Just4Fun" class="chatrooms"
                         onclick="setJoinChatroom('Just4Fun')">Just For Fun</button>
                 <br>
                 <!--Botão para mudar para a BashtardsOnly-->
-                <button id="BashtardsOnly" class="chatrooms_hidden"
+                <button id="BashtardsOnly" class="chatrooms"
                         onclick="setJoinChatroom('BashtardsOnly')">Bashtards Only!</button>
                 <br>
                 <!--Botão para mudar para a You Shell Not Pass-->
-                <button id="YouShellNotPass" class="chatrooms_hidden"
+                <button id="YouShellNotPass" class="chatrooms"
                         onclick="setJoinChatroom('YouShellNotPass')">You Shell Not Pass!</button>
                 <br>
             </div>

@@ -45,7 +45,9 @@
 /*-----------------------------------------------------------------------------------------------------*/
 
 /* THE SIDE NAVIGATION MENU | Barra Esquerda - Início*/
-    .chatrooms_hidden {
+
+    /*Ocultar salas privadas -> activadas com javascript*/
+     #Just4Fun, #BashtardsOnly, #YouShellNotPass {
         display: none
     }
     .chatrooms_sidebar_header {
@@ -78,7 +80,7 @@
     }
 
     /* Style dos botões das salas disponíveis*/
-    .chatrooms_sidenav, .chatrooms_hidden{
+    .chatrooms{
         width:100%;
         background-color: transparent;
         color: black;
@@ -94,22 +96,15 @@
     }
 
     /* Efeito de "hover" nos botões das salas disponíveis */
-    .chatrooms_sidenav:hover, .chatrooms_hidden:hover {
+    .active, .chatrooms:hover {
         width:100%;
-        background-color: transparent;
+        background-color: white;
         border: 2px solid whitesmoke;
         border-radius: 5px;
         filter: none;
         -webkit-transform: scale(1.1);
     }
 
-    /* Deixa ativo o style "hover" na sala que está ativa*/
-    .active .chatRooms_sidenav, .active .chatrooms_hidden {
-        background-color: transparent;
-        border-color: whitesmoke;
-        border-radius: 5px;
-        transform: scale(1.1);
-    }
 
     /* | Criar e Entrar em salas | Botão Talk to US | - Início*/
 
@@ -746,7 +741,7 @@ input:checked + .slider:before {
             display: none;
         }
 
-        .chatRooms_sidenav, .chatrooms_hidden {
+        .chatRooms_sidenav, .chatrooms {
             color: white;
         }
 
