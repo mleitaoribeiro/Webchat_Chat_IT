@@ -14,6 +14,10 @@ function clearInputText() {
     document.getElementById("userTextInput").value = "";
 }
 
+function clearRoomInputText() {
+    document.getElementById("joinChatroom").value = "";
+}
+
 // Restrição de certos caractéres na caixa de input do utilizador (#userTextInput):
 function blockSpecialChar(event) {
     var k;
@@ -29,6 +33,7 @@ function setJoinChatroom(room) {
     joinChatroom = room;
     reloadRoom();
 }
+
 // Javascript para a funcionalidade dos emojis (open source: https://github.com/joeattardi/emoji-button)
 function Emojis() {
     var input = document.querySelector("#userTextInput");
@@ -78,7 +83,7 @@ function enterChatRoomByInput() {
     //gera erro se não existir o Room selecionado
     else {
         document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'></i> Invalid Room!</p>";
-    }
+    } clearRoomInputText();
 }
 
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
@@ -144,6 +149,7 @@ function enterToSubmitRoom() {
         if (event.key === "Enter") {
             event.preventDefault();
             document.getElementById("joinRoomButton").click();
+            clearRoomInputText();
         }
     });
 }
@@ -161,4 +167,25 @@ function changeColorMode() {
     else theme.href="static/CSS/RoomsPage.css";//MUDAR QUANDO FOR PARA O SERVIDOR
 }
 
+function sideNav() {
+    // Get the container element
+    var btnContainer = document.getElementById(joinChatroom);
 
+    // Get all buttons with class="btn" inside the container
+    var btns = btnContainer.getElementsByClassName('chatrooms');
+
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName(" active");
+
+            // If there's no active class
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace(" active", "");
+            }
+
+            // Add the active class to the current/clicked button
+            this.className += " active";
+        });
+    }
+}

@@ -26,7 +26,8 @@
 </head>
 
 <!--???-->
-<body onload="setJoinChatroom('MainRoom');reloadUserOnline();displayNickname(); reloadNumberOfOnlineUser(); Emojis();sideNav()">
+<body onload="setJoinChatroom('MainRoom'); reloadUserOnline(); displayNickname();
+        reloadNumberOfOnlineUser(); Emojis(); sideNav()">
 
     <div class="Wrapper">
 
@@ -39,7 +40,7 @@
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                 <br>
                 <!--Botão da sala principal, onde o utilizador entra automáticamente após o login-->
-                <button class="chatrooms"
+                <button id="MainRoom" class="chatrooms"
                         onclick="setJoinChatroom('MainRoom')"> Main Room </button>
                 <!--Botão para mudar para a Room Just for Fun-->
                 <button id="Just4Fun" class="chatrooms"
@@ -59,7 +60,8 @@
                 <div class="joinChatroom">
                     <input type="text" placeholder="Join a Private Chat Room" id="joinChatroom" min="1" maxlength="20"
                            onpaste="return false" onkeypress="validateRoom()" onfocusin="enterToSubmitRoom()">
-                    <button type="submit" id="joinRoomButton" onclick="enterChatRoomByInput()"> ▷ </button>
+                    <button type="submit" id="joinRoomButton"
+                            onclick="enterChatRoomByInput();clearInputText();"> ▷ </button>
                     <br>
                 </div>
                 <!--recebe erro quando os requisitos não são cumpridos-->
@@ -134,7 +136,7 @@
             <div id="onlineUsersTag">
                 <p>
                     <span class="troca1">Online Users</span>
-                    <span class="troca2"><i class="fas fa-user"></i><span id="numberOnlineUsers"></span>/30</span>
+                    <span class="troca2"><i class="fas fa-user"></i>&nbsp<span id="numberOnlineUsers"></span>/30</span>
                 </p>
             </div>
         </div>

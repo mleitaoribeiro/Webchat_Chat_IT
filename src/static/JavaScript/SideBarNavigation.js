@@ -2,7 +2,7 @@
 
 function sideNav() {
     // Get the container element
-    var btnContainer = document.getElementById("User_Available_Rooms");
+    var btnContainer = document.getElementById(joinChatroom);
 
 // Get all buttons with class="btn" inside the container
     var btns = btnContainer.getElementsByClassName("chatrooms");
