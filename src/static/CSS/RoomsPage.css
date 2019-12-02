@@ -372,6 +372,7 @@ input:checked + .slider:before {
     /* Style geral da outputbox */
     #outputBox {
         text-align: left;
+        padding: 5px;
         border-radius: 10px;
         border: solid 2px #B61919;
         margin-top:1%;
