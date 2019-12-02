@@ -666,23 +666,25 @@ input:checked + .slider:before {
 
     @media screen and (max-width: 700px) {
 
-        #wrapper {
-            min-height: unset;
+        .Wrapper {
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr;
             justify-items: stretch;
             align-items: stretch;
-            height: auto;
-            display: flex;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
         }
 
-        #Chat {
-            height: auto;
+        #sendButton {
+            font-size: 14px;
         }
 
-        #outputBox {
-            height: auto;
+        #sendIcon {
+            left: 5px;
+        }
 
+        #chatBox {
+            margin-top: 25px;
+            width: auto;
         }
 
         /* Barra Esquerda - Início */
