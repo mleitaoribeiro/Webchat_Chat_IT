@@ -76,12 +76,13 @@
     .User_Available_Rooms{
         display:inline-block;
         font-family:Trebuchet MS, sans-serif;
-        height: 65%;
+        height: 60%;
     }
 
     /* Style dos botões das salas disponíveis*/
     .chatrooms{
-        width:100%;
+        width: 100%;
+        max-width:100%;
         background-color: transparent;
         color: black;
         border:none;
@@ -89,19 +90,21 @@
         text-align: center;
         text-decoration: none;
         font-size: 18px;
+        border-radius: 10px;
         font-family:Trebuchet MS, sans-serif;
         transition: 0.5s;
-        opacity:1;
         cursor: pointer;
     }
 
     /* Efeito de "hover" nos botões das salas disponíveis */
-    .active, .chatrooms:hover {
-        width:100%;
-        background-color: rgba(182, 25, 25, 0.40);
+    .activeRoom {
+        background-color: rgba(182, 25, 25, 0.85);
         border: 2px solid whitesmoke;
-        border-radius: 5px;
-        filter: none;
+        border-radius: 10px;
+        color: white;
+}
+    .active, .chatrooms:hover {
+        background-color: rgba(182, 25, 25, 0.40);
         -webkit-transform: scale(1.1);
     }
 
@@ -110,8 +113,9 @@
 
     /* Style geral da Div que contém Entrar ou Criar rooms e Botão Talk to Us */
     .chatrooms_sidebar_footer{
+        text-align: center;
+        align-content: center;
         display: block;
-        text-align: left;
         text-decoration: none;
         width: max-content;
     }
@@ -162,11 +166,7 @@
 
     .chatrooms:focus {
         outline: none;
-    }
-
-    .activeRoom {
-        background-color: rgba(182, 25, 25, 0.85);
-        color: white;
+        border-radius: 10px;
     }
 
     /*Entrar na sala - Fim */
@@ -364,8 +364,8 @@ input:checked + .slider:before {
         opacity: 0.8;
         transition: 0.3s;
         display: inline-block;
-        margin-top: 15px;
-        margin-left: 12px;
+        margin-top: 5px;
+        margin-left: 10px;
     }
 
     /* Efeito "hover" do botão para sair do chat */
@@ -380,14 +380,13 @@ input:checked + .slider:before {
 
     /* Style geral da outputbox */
     #outputBox {
+        height: 84vh;
         text-align: left;
         padding: 5px;
         border-radius: 10px;
         border: solid 2px #B61919;
-        margin-top:1%;
         background-color:white;
         overflow-y: scroll;
-        height: 600px;
     }
 
     /* Scrollbar da outputBox - Início */
@@ -495,6 +494,10 @@ input:checked + .slider:before {
         color: white;
         border: solid #5f0d0c;
         -webkit-transform: scale(1.10);
+    }
+
+    #errorUserInputMessage {
+        margin-top: -20px;
     }
 
     /*Campo de imput para utilizador escrever a mensagem - Fim */
