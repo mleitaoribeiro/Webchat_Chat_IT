@@ -150,6 +150,7 @@ function sendMessage() {
     request.open("POST", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/sendMessages?room=" + joinChatroom
         + "&nickname=" + nickname, true); //MUDAR PARA QUANDO FOR PARA O SERVIDOR
     request.send(userTextInput);
+    scrollDown();
 }
 
 function displayNickname() {
