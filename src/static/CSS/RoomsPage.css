@@ -197,6 +197,7 @@
         text-align: center;
         position: relative;
         float: left;
+        left: 25%;
         transition:all 0.5s; /* Tempo de transição */
     }
 
@@ -529,7 +530,7 @@ input:checked + .slider:before {
         font-size: 17px;
         color: #B61919;
         font-family:Trebuchet MS, sans-serif;
-        margin-top: 5%;
+        margin-top: 8%;
         position:absolute;
         top: 90%;
         left: 37%
