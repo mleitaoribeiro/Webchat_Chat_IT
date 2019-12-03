@@ -33,6 +33,7 @@ function setJoinChatroom(room) {
     joinChatroom = room;
     reloadRoom();
     activeRoomButton();
+    scrollDown();
 }
 
 function activeRoomButton() {
@@ -92,7 +93,7 @@ function enterChatRoomByInput() {
     //gera erro se não existir o Room selecionado
     else {
         document.getElementById("errorRoomMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'></i> Invalid Room!</p>";
-    } clearRoomInputText(); activeRoomButton();
+    } clearRoomInputText(); activeRoomButton(); scrollDown();
 }
 
 // Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
@@ -121,10 +122,15 @@ function reloadRoom() {
         + "&nickname=" + nickname, true); //MUDAR QUANDO FOR PARA O SERVIDOR
     request.timeout = 5000;
     request.send();
+}
 
-    //Fazer scroll-down a cada nova mensagem:
-    var elem = document.getElementById('outputBox');
-    elem.scrollTop = elem.scrollHeight;
+function scrollDown() {
+    setTimeout(
+        function actualScrollDown() {
+            //Fazer scroll-down a cada nova mensagem:
+            var elem = document.getElementById('outputBox');
+            elem.scrollTop = elem.scrollHeight;}
+        , 600);
 }
 
 // Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput):
