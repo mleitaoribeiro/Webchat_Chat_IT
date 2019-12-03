@@ -13,35 +13,34 @@ response() {
 exit
 }
 
-#request to get the login
+#recebe o pedido de login e envia uma http response a informar se é um login válido
 if [ "$REQUEST_METHOD" == "PUT" ]; then
 
-  # Save Body content (available in the STDIN)
+  # Salva o Body que é transmitido no http request realizado e que está disponível no stdin
   if [ "$CONTENT_LENGTH" -ne 0 ]; then cat > $CONTENT_FILE; else response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> You must provide a nickname!</p>"; fi
 
-  #variável à qual é atribuida o $CONTENT_FILE que é o nickname do utilizador
+  #variável à qual é atribuida o $CONTENT_FILE que representa o nickname do user
   NICKNAME=$(cat $CONTENT_FILE)
 
   USER_LOGIN=${USERS_GENERATOR}.$NICKNAME
 
-  #criar COUNT_USERS_ONLINE - vê quantas ficheiros existem na pasta de Users
+  #vê quantos ficheiros existem na pasta de Users
   COUNT_USERS_ONLINE=$(ls -l $USERS_REPOSITORY|wc -l)
   COUNT_USERS_ONLINE=$(($COUNT_USERS_ONLINE - 1))
 
-  # Error : reached limit of users online
+  # envia uma resposta com um erro a avisar que não são permitidos mais users online
   if [ $COUNT_USERS_ONLINE -eq 30 ]; then
   response "503 Service Unavailable" "<p> This chat is temporarily unavailable due to excessive load.</p>"
   fi
 
-  # Create USER_LOGIN file if does not exist and Nickname can be added
+  # se não existir um ficheiro com o nome do user, o nickname é validado e acrescentado à pasta users
   if [ ! -e $USER_LOGIN ]; then
-    echo " user is: $USER_LOGIN"
     echo "$NICKNAME" > $USER_LOGIN
     chmod a+w $USER_LOGIN
     response "200 OK" ""
   fi
 
-  #gera erro caso caso o nome do User já exista no usersLogin.log
+  #gera erro caso o nome do User já exista na pasta users
   if [ -e $USER_LOGIN ]; then
    response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> This nickname already exists. Please enter a new nickname!</p>"
   fi

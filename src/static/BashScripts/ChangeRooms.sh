@@ -15,11 +15,11 @@ exit
 #Verifica se existe query-string
 if [ -z "$QUERY_STRING" ]; then response "400 Bad Request" "No query-string"; fi
 
-#parsing the query_string to room
+#retira o Room da Query-String
 ROOM=$(echo $QUERY_STRING|cut -d "&" -f 1)
 ROOM=${ROOM#room=}
 
-#parsing the query-string to nickname
+#retira o Nickname da Query-String
 NICKNAME=$(echo $QUERY_STRING|cut -d "&" -f 2)
 NICKNAME=${NICKNAME#nickname=}
 
@@ -36,9 +36,10 @@ esac
 
 OUTPUT_MESSAGES=${OUTPUT_ROOM_MESSAGES}.$ROOM
 
-# Create OUTPUT MESSAGES file if does not exist
+# Cria o ficheiro outputRoom.$ROOM.log se ele não existir
 if [ ! -f $OUTPUT_MESSAGES ]; then
   echo "<b style='color: rgb(182,25,25); font-size: large'>Welcome to $ROOM!</b>" >> $OUTPUT_MESSAGES
+  #e dá-lhe permissões de escrita
   chmod a+w $OUTPUT_MESSAGES
 fi
 
