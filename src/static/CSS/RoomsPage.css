@@ -488,10 +488,28 @@ input:checked + .slider:before {
     #onlineUsers {
         border-radius: 10px;
         background-color: white;
-        position: relative;
-        height: 85%;
-        max-height: 85%;
+        position: absolute;
+        margin-left: 5px;
+        width: 90%;
+        height: 81%;
         overflow-y: auto;
+    }
+
+    /* Scrollbar da Div que contém a lista de utilizadores online */
+    #onlineUsers::-webkit-scrollbar {
+        width: 15px;
+        margin-right:10px;
+    }
+    #onlineUsers::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px whitesmoke;
+        border-radius: 10px;
+    }
+    #onlineUsers::-webkit-scrollbar-thumb {
+        background: #B61919;
+        border-radius: 10px;
+    }
+    #onlineUsers::-webkit-scrollbar-thumb:hover {
+        background: #5f0d0c;
     }
 
     /* Lista dos utilizadores online */
@@ -508,9 +526,13 @@ input:checked + .slider:before {
     #onlineUsersTag {
         text-align: center;
         font-weight: bold;
+        font-size: 17px;
         color: #B61919;
         font-family:Trebuchet MS, sans-serif;
         margin-top: 5%;
+        position:absolute;
+        top: 90%;
+        left: 37%
     }
 
     /* Em ecrã normais/maiores oculta o primeiro texto "Online Users" */
