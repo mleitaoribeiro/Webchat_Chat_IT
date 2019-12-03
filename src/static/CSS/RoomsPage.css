@@ -118,6 +118,8 @@
         display: block;
         text-decoration: none;
         width: max-content;
+        margin-bottom: 0px;
+        margin-top: 45%;
     }
 
     /*Entrar na sala - Início */
@@ -127,23 +129,24 @@
         display: -ms-flex;
         display:flex;
         width: auto;
-        margin-bottom: 15px;
+        font-family:Trebuchet MS, sans-serif;
+        font-size: 14px;
     }
 
     /*Caixa de input para entrar na sala*/
-    #join_chatroom {
+    .chatroom_input {
         width:auto;
         padding: 10px;
         color:black;
         background-color: white;
-        border: none;
         display: inline-block;
-        font-size: 14px;
-        font-family:Trebuchet MS, sans-serif;
         float: left;
+        border: 2px solid #B61919;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
     }
 
-    #join_chatroom::placeholder {
+    .chatroom_input::placeholder {
         padding-left: 2px;
     }
 
@@ -155,6 +158,8 @@
         background-color: #B61919;
         min-width:50px;
         font-family:Trebuchet MS, sans-serif;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
     }
 
     /* Efeito de "hover" no botão para entrar na sala */
@@ -171,50 +176,7 @@
 
     /*Entrar na sala - Fim */
 
-    /*Criar nova sala - Início */
 
-    /* Style geral da caixa de input e botão para criar nova sala*/
-    .createNewChatroom {
-        display: -ms-flex;
-        display:flex;
-        width: auto;
-        margin-bottom: 15px;
-    }
-
-    /* Caixa de input para criar nova sala */
-    #create_new_chatroom {
-        width:auto;
-        padding: 10px;
-        color:black;
-        background-color: white;
-        border: none;
-        display: inline-block;
-        font-size: 14px;
-        font-family:Trebuchet MS, sans-serif;
-        float: left;
-    }
-
-    #create_new_chatroom::placeholder {
-        padding-left: 2px;
-    }
-
-    /* Botão para criar a nova sala */
-    #createRoomButton, #fa-plus-circle  {
-        padding: 10px;
-        border:none;
-        background-color: #B61919;
-        min-width:50px;
-        font-family:Trebuchet MS, sans-serif;
-        opacity: 1;
-        transition: 0.3s;
-    }
-
-    /* Efeito de "hover" no botão para criar a nova sala */
-    #createRoomButton:hover {
-        opacity: 0.6; /* Coloca o botão mais claro */
-    }
-
-    /*Criar nova sala - Fim */
 
     /* Botão Talk to Us - Início*/
 
