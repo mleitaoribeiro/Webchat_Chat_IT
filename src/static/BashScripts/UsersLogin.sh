@@ -30,7 +30,7 @@ if [ "$REQUEST_METHOD" == "PUT" ]; then
 
   # Error : reached limit of users online
   if [ $COUNT_USERS_ONLINE -eq 30 ]; then
-  response "503 Service Unavailable" "<p> This chat is temporarily unvailable due to excessive load.</p>"
+  response "503 Service Unavailable" "<p> This chat is temporarily unavailable due to excessive load.</p>"
   fi
 
   # Create USER_LOGIN file if does not exist and Nickname can be added
@@ -43,7 +43,7 @@ if [ "$REQUEST_METHOD" == "PUT" ]; then
 
   #gera erro caso caso o nome do User já exista no usersLogin.log
   if [ -e $USER_LOGIN ]; then
-   response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> This nickname already exists. Please enter a new nickname</p>"
+   response "400 Bad Request" "<p><i class='fas fa-exclamation-circle'></i> This nickname already exists. Please enter a new nickname!</p>"
   fi
 exit
 fi
