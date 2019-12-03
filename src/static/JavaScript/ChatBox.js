@@ -170,16 +170,17 @@ function enterToSubmitRoom() {
     });
 }
 
-var color = 0;
+var color = "white";
+
 function changeVarForColorMode() {
-    if(color === 0) color = 1;
-    else color = 0;
+    if(color === "white") color = "black";
+    else color = "white";
 }
 
 function changeColorMode() {
     var theme=document.getElementById('lightRoom');
 
-    if(color === 0) theme.href="static/CSS/DarkRoom.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
+    if(color === "white") theme.href="static/CSS/DarkRoom.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
     else theme.href="static/CSS/RoomsPage.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
 }
 
