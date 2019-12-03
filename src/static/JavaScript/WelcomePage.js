@@ -1,4 +1,4 @@
-// Função que valida nickname introduzido no #nickname e que guarda no sistema o nickname num ficheiro do servidor (userLogin.log):
+// Função que envia o nickname introduzido no Login e o envia para validação no servidor
 function loginUser() {
     var nickname = document.getElementById("nickname").value;
     if(nickname.length > 1) {
@@ -6,7 +6,7 @@ function loginUser() {
         var request = new XMLHttpRequest();
         request.onreadystatechange = function login () {
             if (this.readyState === 4 && this.status === 200) {
-                window.location.href = "http://localhost:63342/web_chat_scomred/src/RoomsPage.html"; ///NAO ESQUECER QUE TEM SE MUDAR!!!!!!!!!!!
+                window.location.href = "../../ChatRoomPage.html"; ///NAO ESQUECER QUE TEM SE MUDAR!!!!!!!!!!!
             }
             else {
                 document.getElementById("errorMessage").innerHTML = this.response;
