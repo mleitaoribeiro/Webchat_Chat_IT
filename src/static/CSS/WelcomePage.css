@@ -141,13 +141,14 @@
     /*Cookie Consent - Configurações gerais*/
     #cookieConsent {
         z-index: 999;
+        width: 100%;
         min-height: 20px;
         font-family: OpenSans, arial, "sans-serif";
         padding: 10px 20px;
-        background: rgba(0,0,0,0.6);
+        background: rgba(0,0,0,0.8);
         overflow: hidden;
         position: fixed;
-        color: #FFF;
+        color: rgba(255, 255, 255, 0.9);
         bottom: 0;
         right: 10px;
         /*display: none;*/
@@ -158,12 +159,12 @@
     }
 
     #cookieConsent a {
-        color:#B61919;
+        color: #b62f3d;
         text-decoration: none;
     }
 
     #cookieConsent a:hover {
-        color:  #5f0d0c;
+        color: #b66269;
         text-decoration: none;
     }
     #closeCookieConsent {
@@ -176,7 +177,7 @@
         font-weight: bold;
     }
     #closeCookieConsent:hover {
-        color: #5f0d0c;
+        color: #b66269;
     }
     #cookieConsent a.cookieConsentOK {
         display: inline-block;
@@ -189,8 +190,9 @@
         float: right;
         border-radius: 25px;
     }
-    #cookieConsent a.cookieConsentOK:hover {
-        background-color:  #5f0d0c;
-    }
+
+#cookieConsent a.cookieConsentOK:hover {
+    background: #b66269;
+}
 
 /*COOKIES ALTERT - FIM*/
