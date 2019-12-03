@@ -130,7 +130,7 @@ function scrollDown() {
             //Fazer scroll-down a cada nova mensagem:
             var elem = document.getElementById('outputBox');
             elem.scrollTop = elem.scrollHeight;}
-        , 600);
+        , 800);
 }
 
 // Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput):
