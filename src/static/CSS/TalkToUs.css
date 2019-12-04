@@ -1,7 +1,10 @@
+
+
+/* Estilo da página (body)*/
 body{
     font-family:Trebuchet MS, sans-serif;
 }
-
+/* Estilo do texto dos imputs */
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -12,6 +15,7 @@ input[type=text], select {
     box-sizing: border-box;
 }
 
+/* Estilo do campo email*/
 #email {
     width: 100%;
     padding: 12px 20px;
@@ -21,18 +25,18 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
+/* Estilo do paragrafo2*/
 h2 {
     text-align: center;
     font-max-size: large;
     font-family:Trebuchet MS, sans-serif;
 }
-
+/* Estilo do paragrafo3*/
 h3 {
     text-align: center;
     font-family:Trebuchet MS, sans-serif;
 }
-
+/* Estilo do botao submit*/
 input[type=submit] {
     align-content: center;
     width: 10%;
@@ -44,13 +48,13 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
-
+/* Estilo do hover do botao submit*/
 input[type=submit]:hover {
     background-color: #FF2626;
     color: white;
     border: #B61919;
     }
-
+/* Estilo da divisao que inclui o formulario*/
 #mainDiv {
     margin-left: 4%;
     margin-right: 4%;
@@ -58,15 +62,18 @@ input[type=submit]:hover {
     background-color: whitesmoke;
     padding: 20px;
 }
+
+/* Estilo do nome da UC no rodape*/
 img, #subjectName {
     margin: auto;
     max-width: 7%;
 }
+/* Estilo da caixa dos TermsAndConditions*/
 input[id=TermsAndConditions] {
     width: 20px;
     height: 20px;
 }
-
+/* Estilo do rodape*/
 footer {
     display: flex;
     position: fixed;
