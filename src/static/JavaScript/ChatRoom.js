@@ -200,5 +200,5 @@ function changeColorMode() {
     var theme=document.getElementById('lightRoom');
 
     if(color === "white") theme.href="static/CSS/DarkRoom.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
-    else theme.href="static/CSS/RoomsPage.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
+    else theme.href="static/CSS/ChatRoomsPage.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
 }

@@ -1,17 +1,18 @@
+/* Estilo da UC Scomred*/
 #subjectName{
     color: black;
 }
-
+/* Estilo do body*/
 body{
     background-color: whitesmoke;
     text-align: center;
     font-family:Trebuchet MS, sans-serif;
 }
-
+/* Estilo do logo Chat It*/
 #logoGrande {
     max-width: 18%;
 }
-
+/* Estilo da caixa dos termos*/
 #termsAndConditions {
     color: black;
     border-radius: 25px;
@@ -24,29 +25,33 @@ body{
     font-family:Trebuchet MS, sans-serif;
     position: relative;
 }
+/* Estilo do paragrafo2*/
 h2 {
     text-align: center;
     color: black;
     font-family:Trebuchet MS, sans-serif;
 }
-
+/* Estilo do paragrafo1*/
 h1 {
     text-align: center;
     color: #B61919;
     font-family:Trebuchet MS, sans-serif;
 }
-
+/* Estilo do paragrafo3*/
 h3 {
     text-align: justify;
     color: black;
     font-family:Trebuchet MS, sans-serif;
 }
-
+/* Estilo da imagem do rodape*/
 img, #subjectName {
     margin: auto;
     max-width: 7%;
+    color: #B61919;
+    font-size: 18px;
+    font-weight: bold;
 }
-
+/* Estilo do rodape*/
 footer {
     display: flex;
     position: fixed;
