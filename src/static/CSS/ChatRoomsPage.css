@@ -52,6 +52,7 @@
     }
     .chatrooms_sidebar_header {
         font-family:Trebuchet MS, sans-serif;
+        margin-bottom: 3vh;
     }
 
         /* Style geral da barra lateral esquerda*/
@@ -94,6 +95,8 @@
         font-family:Trebuchet MS, sans-serif;
         transition: 0.5s;
         cursor: pointer;
+        position: relative;
+        margin-bottom: 2vh;
     }
 
     /* Efeito de "hover" nos botões das salas disponíveis */
@@ -285,6 +288,25 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+#changemode{
+    background-color:#B61919 ;
+    color: white;
+    display: none;
+    width: max-content;
+    font-size: 12px;
+    font-family:Trebuchet MS, sans-serif;
+}
+.switch:hover #changemode{
+    position: absolute;
+    display: block;
+    size: auto;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    border-radius: 8px;
+
+}
+
 
     /*Botão para trocar de tema - Dark Mode | Light Mode - Fim */
 

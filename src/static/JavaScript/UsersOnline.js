@@ -1,4 +1,4 @@
-// Função para reload das mensagens na outputBox sincronizando-as com o ficheiro outputBox presente no servidor:
+// Função que atualiza os users nos Online Users sincronizando-as com a pasta Users presente no servidor
 function reloadUserOnline() {
     var request = new XMLHttpRequest();
     request.onload = function upDate() {
@@ -18,7 +18,8 @@ function reloadUserOnline() {
     request.send();
 }
 
-// Função para reload dos users na div Online Users sincronizando-as com a pasta Users presente no servidor:
+// Função que atualiza o número de users presente na pasta Users no servidor e apresenta essa informação no final da
+// secção dos Online Users
 function reloadNumberOfOnlineUser() {
         var request = new XMLHttpRequest();
         request.onload = function upDate() {

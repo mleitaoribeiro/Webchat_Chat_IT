@@ -1,4 +1,4 @@
-// Função que envia o nickname introduzido no Login e o envia para validação no servidor
+// Função que envia o nickname introduzido no Login e o envia para validação no servidor:
 function loginUser() {
     var nickname = document.getElementById("nickname").value;
     if(nickname.length > 1) {
@@ -26,6 +26,7 @@ function loginUser() {
     }
 }
 
+// Função que impede determinados caractéres no campo de input para o nickname:
 function validateLogin(){
     var e = event || window.event;
     var key = e.keyCode || e.which;
@@ -35,6 +36,7 @@ function validateLogin(){
     }
 }
 
+// Função que permite fazer login pressionando a tecla Enter após um nickname válido ser introduzido:
 function enterToSubmitNickname() {
     var input = document.getElementById("nickname");
     input.addEventListener("keydown", function (event) {
