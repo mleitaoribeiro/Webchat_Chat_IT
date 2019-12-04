@@ -1,4 +1,4 @@
-//função que me envia um email para com o conteúdo recebido no formulário Talk to Us
+//função que me envia um email para com o conteúdo recebido no formulário Talk to Us.
 function sendEmail() {
     var confirmed = "Form sent. We'll get back at you as soon as possible."
     var noField = "It looks like you forgot something."
