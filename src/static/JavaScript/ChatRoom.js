@@ -130,7 +130,7 @@ function scrollDown() {
             //Fazer scroll-down a cada nova mensagem:
             var elem = document.getElementById('outputBox');
             elem.scrollTop = elem.scrollHeight;}
-        , 600);
+        , 900);
 }
 
 // Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput)
@@ -180,8 +180,14 @@ function enterToSubmitRoom() {
 var color = "white";
 
 function changeVarForColorMode() {
-    if(color === "white") color = "black";
-    else color = "white";
+    if(color === "white"){
+        color = "black";
+        document.getElementById("changemode").innerText = "Change to lightmode";
+    }
+    else {
+        color = "white";
+        document.getElementById("changemode").innerText = "Change to darkmode";
+    }
 }
 
 function changeColorMode() {
@@ -189,27 +195,4 @@ function changeColorMode() {
 
     if(color === "white") theme.href="static/CSS/DarkRoom.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
     else theme.href="static/CSS/RoomsPage.css"; //MUDAR QUANDO FOR PARA O SERVIDOR
-}
-
-function sideNav() {
-    // Get the container element
-    var btnContainer = document.getElementById(joinChatroom);
-
-    // Get all buttons with class="btn" inside the container
-    var btns = btnContainer.getElementsByClassName('chatrooms');
-
-    // Loop through the buttons and add the active class to the current/clicked button
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-            var current = document.getElementsByClassName(" active");
-
-            // If there's no active class
-            if (current.length > 0) {
-                current[0].className = current[0].className.replace(" active", "");
-            }
-
-            // Add the active class to the current/clicked button
-            this.className += " active";
-        });
-    }
 }

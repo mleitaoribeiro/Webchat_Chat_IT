@@ -1,26 +1,31 @@
 /* CONFIGURAÇÕES GERAIS - INÍCIO  */
 
-
 /*Grid Layout e Style - Início */
+
 .Wrapper {
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
     grid-template-rows: 1fr;
-    grid-gap: 0;
+    grid-gap: 5px;
     justify-items: stretch;
     align-items: stretch;
-    background-color: 	#101010;
+    background-color: #101010;
 }
 
 .Wrapper > div{
-    background: 	#101010;
+    background: #101010;
     padding: 10px;
     font-family: sans-serif;
     font-size: 15px;
     border-radius: 0;
 }
-/*Grid Layout e Style- Início */
+
+.Wrapper > div:nth-child(odd){
+    background: #101010;
+}
+
+/*Grid Layout e Style - Fim */
 
 
 /* CONFIGURAÇÕES GERAIS - FIM  */
@@ -33,7 +38,9 @@
 #Just4Fun, #BashtardsOnly, #YouShellNotPass {
     display: none
 }
-
+.chatrooms_sidebar_header {
+    font-family:Trebuchet MS, sans-serif;
+}
 
 /* Style geral da barra lateral esquerda*/
 .chatRooms_sidebar {
@@ -43,7 +50,7 @@
     border: #932D2D;
     text-align: center;
     text-decoration: none;
-    background-color: 	#101010;
+    background-color: #101010;
     color: #B61919;
     font-size: 18px;
     padding: 3px 10px;
@@ -57,12 +64,13 @@
 .User_Available_Rooms{
     display:inline-block;
     font-family:Trebuchet MS, sans-serif;
-    height: 65%;
+    height: 60%;
 }
 
 /* Style dos botões das salas disponíveis*/
-.chatrooms, .chatrooms{
-    width:100%;
+.chatrooms{
+    width: 100%;
+    max-width:100%;
     background-color: transparent;
     color: white;
     border:none;
@@ -70,38 +78,37 @@
     text-align: center;
     text-decoration: none;
     font-size: 18px;
+    border-radius: 10px;
     font-family:Trebuchet MS, sans-serif;
     transition: 0.5s;
-    opacity:1;
     cursor: pointer;
 }
 
 /* Efeito de "hover" nos botões das salas disponíveis */
-.chatrooms:hover, .chatrooms:hover {
-    width:100%;
-    background-color: transparent;
-    border: 2px solid 	#101010;
-    border-radius: 5px;
-    filter: none;
+.activeRoom {
+    background-color: rgba(182, 25, 25, 0.85);
+    border: 2px solid #101010;
+    border-radius: 10px;
+    color: #101010;
+}
+.active, .chatrooms:hover {
+    background-color: rgba(182, 25, 25, 0.40);
     -webkit-transform: scale(1.1);
 }
 
-/* Deixa ativo o style "hover" na sala que está ativa*/
-.active .chatRooms_sidenav, .active .chatrooms {
-    background-color: transparent;
-    border-color: 	#101010;
-    border-radius: 5px;
-    transform: scale(1.1);
-}
 
 /* | Criar e Entrar em salas | Botão Talk to US | - Início*/
 
 /* Style geral da Div que contém Entrar ou Criar rooms e Botão Talk to Us */
 .chatrooms_sidebar_footer{
+    text-align: center;
+    align-content: center;
     display: block;
-    text-align: left;
     text-decoration: none;
     width: max-content;
+    margin-bottom: 0px;
+    margin-top: 45%;
+    background-color: #101010;
 }
 
 /*Entrar na sala - Início */
@@ -111,88 +118,54 @@
     display: -ms-flex;
     display:flex;
     width: auto;
-    margin-bottom: 15px;
+    font-family:Trebuchet MS, sans-serif;
+    font-size: 14px;
 }
 
 /*Caixa de input para entrar na sala*/
-#join_chatroom {
+.chatroom_input {
     width:auto;
     padding: 10px;
-    border: none;
+    color:white;
+    background-color: #101010;
     display: inline-block;
-    font-size: 14px;
-    font-family:Trebuchet MS, sans-serif;
     float: left;
+    border: 2px solid #B61919;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
-#join_chatroom::placeholder {
+.chatroom_input::placeholder {
     padding-left: 2px;
 }
 
 /* Botão para entrar na sala */
-#joinRoomButton, #fa-sign-in-alt  {
+#joinRoomButton  {
     padding: 10px;
-    color: black;
+    color:black;
     border:none;
     background-color: #B61919;
     min-width:50px;
     font-family:Trebuchet MS, sans-serif;
-    opacity: 1;
-    transition: 0.3s;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* Efeito de "hover" no botão para entrar na sala */
 #joinRoomButton:hover {
-    opacity: 0.6 /* Coloca o botão mais claro */
+    opacity: 0.6; /* Coloca o botão mais claro */
+    background-color: rgba(182, 25, 25, 0.85);
+    border: none;
+}
+
+.chatrooms:focus {
+    outline: none;
+    border-radius: 10px;
 }
 
 /*Entrar na sala - Fim */
 
-/*Criar nova sala - Início */
 
-/* Style geral da caixa de input e botão para criar nova sala*/
-.createNewChatroom {
-    display: -ms-flex;
-    display:flex;
-    width: auto;
-    margin-bottom: 15px;
-}
-
-/* Caixa de input para criar nova sala */
-#create_new_chatroom {
-    width:auto;
-    padding: 10px;
-    color:white;
-    background-color: 	#101010;
-    border: none;
-    display: inline-block;
-    font-size: 14px;
-    font-family:Trebuchet MS, sans-serif;
-    float: left;
-}
-
-#create_new_chatroom::placeholder {
-    padding-left: 2px;
-}
-
-/* Botão para criar a nova sala */
-#createRoomButton, #fa-plus-circle  {
-    padding: 10px;
-    color: black;
-    border:none;
-    background-color: #B61919;
-    min-width:50px;
-    font-family:Trebuchet MS, sans-serif;
-    opacity: 1;
-    transition: 0.3s;
-}
-
-/* Efeito de "hover" no botão para criar a nova sala */
-#createRoomButton:hover {
-    opacity: 0.6 /* Coloca o botão mais claro */
-}
-
-/*Criar nova sala - Fim */
 
 /* Botão Talk to Us - Início*/
 
@@ -213,6 +186,7 @@
     text-align: center;
     position: relative;
     float: left;
+    left: 25%;
     transition:all 0.5s; /* Tempo de transição */
 }
 
@@ -240,6 +214,87 @@
 
 /* Topo do chatBox - Início  */
 
+/*Botão para trocar de tema - Dark Mode | Light Mode - Início */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 18px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #101010;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #B61919;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #B61919;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+ #changemode{
+    background-color: gray;
+    color: #101010;
+    display: none;
+     width: max-content;
+     font-size: 12px;
+     font-family:Trebuchet MS, sans-serif;
+}
+.switch:hover #changemode{
+    position: absolute;
+    display: block;
+    size: auto;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    border-radius: 8px;
+
+}
+
+/*Botão para trocar de tema - Dark Mode | Light Mode - Fim */
+
 /*Style geral do top da Chatbox - Divide o topo em várias colunas */
 #chatBoxHeader {
     display: grid;
@@ -262,7 +317,7 @@
 /* Logo Texto IT - Define Tamanhos  */
 #logoIT {
     max-height: 30px;
-    margin-bottom: 9px;
+    margin-top: 1px;
     margin-left: -3px;
 }
 
@@ -279,8 +334,8 @@
     opacity: 0.8;
     transition: 0.3s;
     display: inline-block;
-    margin-top: 15px;
-    margin-left: 12px;
+    margin-top: 5px;
+    margin-left: 10px;
 }
 
 /* Efeito "hover" do botão para sair do chat */
@@ -295,14 +350,14 @@
 
 /* Style geral da outputbox */
 #outputBox {
+    height: 84vh;
     text-align: left;
+    padding: 5px;
     border-radius: 10px;
     border: solid 2px #B61919;
-    margin-top:1%;
-    background-color: 	#101010;
-    color: white;
+    background-color:#101010;
     overflow-y: scroll;
-    height: 600px;
+    color: white;
 }
 
 /* Scrollbar da outputBox - Início */
@@ -311,7 +366,7 @@
     margin-right:10px;
 }
 #outputBox::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
+    box-shadow: inset 0 0 5px #101010;
     border-radius: 10px;
 }
 #outputBox::-webkit-scrollbar-thumb {
@@ -334,10 +389,11 @@
     margin-bottom:0;
     width:auto;
     display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-columns: 1fr 24fr 1fr 3fr;
     grid-gap: 4px;
-
+    background-color: #101010;
 }
+
 #usernameDisplay {
     text-align: center;
     font-weight: bold;
@@ -355,8 +411,7 @@
     text-align: -moz-left;
     text-align: left;
     display: inline-block;
-    background-color: 	#101010;
-    color: white;
+    background-color: #101010;
 }
 
 /* Placeholder */
@@ -395,6 +450,29 @@
     left: 12px;
 }
 
+/* Style do botão de emojis e da janela associada */
+#emojiButton {
+    border-radius: 5px;
+    border: solid #B61919;
+    background-color: #B61919;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    transition:all 0.5s;
+}
+
+/* Efeito hover do botão de emojis */
+#emojiButton:hover {
+    background-color: #5f0d0c;
+    color: black;
+    border: solid #5f0d0c;
+    -webkit-transform: scale(1.10);
+}
+
+#errorUserInputMessage {
+    margin-top: -20px;
+}
+
 /*Campo de imput para utilizador escrever a mensagem - Fim */
 
 /* CHATBOX - FIM */
@@ -420,19 +498,37 @@
 /* Style geral da Div que contém a lista dos utilizadores online */
 #onlineUsers {
     border-radius: 10px;
-    border: solid 2px #B61919;
-    background-color: 	#101010;
-    position: relative;
-    height: 85%;
-    max-height: 85%;
+    background-color: #101010;
+    position: absolute;
+    margin-left: 5px;
+    width: 90%;
+    height: 81%;
     overflow-y: auto;
+}
+
+/* Scrollbar da Div que contém a lista de utilizadores online */
+#onlineUsers::-webkit-scrollbar {
+    width: 15px;
+    margin-right:10px;
+}
+#onlineUsers::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #101010;
+    border-radius: 10px;
+}
+#onlineUsers::-webkit-scrollbar-thumb {
+    background: #B61919;
+    border-radius: 10px;
+}
+#onlineUsers::-webkit-scrollbar-thumb:hover {
+    background: #5f0d0c;
 }
 
 /* Lista dos utilizadores online */
 #userList {
     color: white;
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
+    padding-left:20px ;
 }
 
 /* Número de utilizadores online - Início */
@@ -441,9 +537,13 @@
 #onlineUsersTag {
     text-align: center;
     font-weight: bold;
+    font-size: 17px;
     color: #B61919;
     font-family:Trebuchet MS, sans-serif;
-    margin-top: 5%;
+    margin-top: 8%;
+    position:absolute;
+    top: 90%;
+    left: 37%
 }
 
 /* Em ecrã normais/maiores oculta o primeiro texto "Online Users" */
@@ -470,7 +570,7 @@
 
     .Wrapper {
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr 8fr ;
         grid-template-rows: 1fr;
         justify-items: stretch;
         align-items: stretch;
@@ -484,23 +584,20 @@
         left: 5px;
     }
 
-    header {
-        display: grid;
-        grid-column: 1/3;
-        background-color: 	#101010;
-    }
-
-    footer {
-        display: grid;
-        grid-column: 1/3;
-        background-color: 	#101010;
-    }
-
     #chatBox {
         margin-top: 25px;
+        width: auto;
     }
 
     /* Barra Direita - Início */
+
+    .CurrentOnlineUsers {
+        align-content: center;
+    }
+
+    .onlineUserList {
+        align-content: center;
+    }
 
     #CurrentOnlineUsers {
         text-align: center;
@@ -510,14 +607,15 @@
         color: black;
         font-family: Trebuchet MS, sans-serif;
         position: absolute;
-        top: -175px;
+        top: -418px;
         right: 2px;
         transition: 0.3s;
-        padding: 10px;
+        padding:0;
         width: 200px;
-        max-height: max-content;
         border-radius: 0 0 20px 20px;
-        height: 205px;
+        height: 445px;
+        max-height: 450px;
+        align-content: center;
     }
 
     #CurrentOnlineUsers:hover {
@@ -527,6 +625,7 @@
     }
 
     #onlineUsersTag {
+        align-content: center;
         text-align: center;
         font-weight: bold;
         color: black;
@@ -545,22 +644,13 @@
 
     #onlineUsers {
         border-radius: 10px;
-        border: solid 1px 	#101010;
-        height: 90px;
-        max-height: 90px;
+        border: solid 1px #101010;
+        height: 347px;
+        max-height: 347px;
         margin-left: 10px;
         margin-right: 3px;
         overflow-y: auto;
-    }
-
-    .CurrentOnlineUsers ul {
-        margin-top: 5px;
-        font-size: 15px;
-        color: white;
-        font-family: Trebuchet MS, sans-serif;
-        text-align: center;
-        list-style-type: none;
-        line-height: 1.4;
+        align-content: center;
     }
 
     #userLimit {
@@ -569,10 +659,11 @@
         font-family: Trebuchet MS, sans-serif;
         font-size: 15px;
         color: black;
+        align-content: center;
     }
 
     #userLimit h2 {
-        color: black;
+        color:black ;
         text-align: center;
         font-family:Trebuchet MS, sans-serif;
         margin-bottom: 11px;
@@ -585,26 +676,25 @@
 
 @media screen and (max-width: 700px) {
 
-    .nestedFooter {
-        display: none;
-    }
-
-    #wrapper {
-        min-height: unset;
+    .Wrapper {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr;
         justify-items: stretch;
         align-items: stretch;
-        height: auto;
-        display: flex;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
     }
 
-    #Chat {
-        height: auto;
+    #sendButton {
+        font-size: 14px;
     }
 
-    #outputBox {
-        height: auto;
+    #sendIcon {
+        left: 5px;
+    }
+
+    #chatBox {
+        margin-top: 25px;
+        width: auto;
     }
 
     /* Barra Esquerda - Início */
@@ -622,20 +712,21 @@
         color: black;
         font-family: Trebuchet MS, sans-serif;
         position: absolute;
-        top: -421px;
+        top: -455px;
         transition: 0.3s;
         padding: 10px;
-        width: 200px;
+        width: 100px;
         max-height: max-content;
         border-radius: 0 0 20px 20px;
-        height: 450px;
+        height: 480px;
+        align-content: center;
     }
 
     #ChatRooms:hover {
         top: 0;
         left: 0;
         border-bottom-left-radius: 0;
-        min-height: 410px;
+        min-height: 480px;
         height:auto;
     }
 
@@ -645,18 +736,22 @@
 
     .chatrooms_sidebar_footer{
         display: block;
-        text-align: left;
+        text-align: center;
         text-decoration: none;
-        width: max-content;
-        margin-top: auto;
+        margin-top: 80px;
         font-family: Trebuchet MS, sans-serif;
+        min-width: min-content;
+        align-content: center;
+        background-color: #B61919;
     }
 
     #removeOnHover {
-        margin-top:27px;
+        margin-top:-12px;
         text-align: center;
-        font-size: 15px;
-        display: inherit;
+        align-content: center;
+        font-size: 18px;
+        position: absolute;
+        display: block;
     }
 
     #ChatRooms:hover #removeOnHover {
@@ -664,77 +759,14 @@
     }
 
     .chatRooms_sidenav, .chatrooms {
-        color: black;
+        color: #101010;
     }
 
     #joinRoomButton, #createRoomButton {
-        border: black;
-
+        border:black;
     }
 
     /* Barra Esquerda - Fim */
 }
 
-
 /*Responsive Design - Fim*/
-
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 32px;
-    height: 18px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #707070;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-input:checked + .slider {
-    background-color: gray;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px gray;
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
