@@ -61,6 +61,9 @@ input[type=submit]:hover {
 img, #subjectName {
     margin: auto;
     max-width: 7%;
+    color: #B61919;
+    font-size: 18px;
+    font-weight: bold;
 }
 input[id=TermsAndConditions] {
     width: 20px;

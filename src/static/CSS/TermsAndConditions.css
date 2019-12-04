@@ -45,6 +45,9 @@ h3 {
 img, #subjectName {
     margin: auto;
     max-width: 7%;
+    color: #B61919;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 footer {
