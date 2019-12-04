@@ -6,7 +6,7 @@ function loginUser() {
         var request = new XMLHttpRequest();
         request.onreadystatechange = function login () {
             if (this.readyState === 4 && this.status === 200) {
-                window.location.href = "../../ChatRoomPage.html"; ///NAO ESQUECER QUE TEM SE MUDAR!!!!!!!!!!!
+                window.location.href = "ChatRoomPage.html"; ///NAO ESQUECER QUE TEM SE MUDAR!!!!!!!!!!!
             }
             else {
                 document.getElementById("errorMessage").innerHTML = this.response;
