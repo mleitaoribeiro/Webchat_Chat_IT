@@ -52,6 +52,7 @@
     }
     .chatrooms_sidebar_header {
         font-family:Trebuchet MS, sans-serif;
+        margin-bottom: 3vh;
     }
 
         /* Style geral da barra lateral esquerda*/
@@ -94,6 +95,8 @@
         font-family:Trebuchet MS, sans-serif;
         transition: 0.5s;
         cursor: pointer;
+        position: relative;
+        margin-bottom: 2vh;
     }
 
     /* Efeito de "hover" nos botões das salas disponíveis */
