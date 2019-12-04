@@ -14,6 +14,7 @@ function clearInputText() {
     document.getElementById("userTextInput").value = "";
 }
 
+// Função que limpa a caixa de texto onde se introduz o nome da room, após este ser utilizado:
 function clearRoomInputText() {
     document.getElementById("joinChatroom").value = "";
 }
@@ -25,10 +26,10 @@ function blockSpecialChar(event) {
     return ((k !== 60) && (k !== 62) && (k !== 124) && (k !== 91) && (k !== 93));
 }
 
-// se não estivermos a aceder a nenhuma Room, acede por omissão à Main Room
+// Se não estivermos a aceder a nenhuma Room, acede por omissão á Main Room:
 var joinChatroom = "MainRoom";
 
-// set variable joinChatroom
+// Função que chama outras funções necessárias para quando se entra numa nova chatroom :
 function setJoinChatroom(room) {
     joinChatroom = room;
     reloadRoom();
@@ -36,6 +37,7 @@ function setJoinChatroom(room) {
     scrollDown();
 }
 
+// Função que gere o aparecimento e desaparecimento dos botões com os nomes das rooms:
 function activeRoomButton() {
     document.getElementById('MainRoom').classList.remove("activeRoom");
     document.getElementById('Just4Fun').classList.remove("activeRoom");
@@ -44,7 +46,7 @@ function activeRoomButton() {
     document.getElementById(joinChatroom).classList.add("activeRoom");
 }
 
-// Javascript para a funcionalidade dos emojis (open source: https://github.com/joeattardi/emoji-button)
+// Javascript para a funcionalidade dos emojis (open source: https://github.com/joeattardi/emoji-button):
 function Emojis() {
     var input = document.querySelector("#userTextInput");
     var button = document.querySelector("#emojiButton");
@@ -52,6 +54,8 @@ function Emojis() {
         position: 'top-end',
         autoHide: (false),
         showSearch: (false),
+        showPreview: (false),
+        showRecents: (false)
     })
     picker.on('emoji', function (emoji) {
         input.value += emoji;
@@ -61,18 +65,14 @@ function Emojis() {
     })
 }
 
-//torna visivel o Room selecionado no campo Join ChatRoom
+//torna visivel o Room selecionado no campo Join ChatRoom:
 function makeRoomVisible() {
     //Colocar uma sala visivel
     document.getElementById(joinChatroom).style.display = "inline-block";
 }
 
-// function setJoinChatroomByInput() {
-//     joinChatroom = document.getElementById('joinChatroom').value;
-// }
-
 //função que através do input do Room do utlizador muda o Room, gera os botões de acesso a cada Room e dá erro se o Room
-//não existe
+//não existir :
 function enterChatRoomByInput() {
     if (document.getElementById('joinChatroom').value === "BashtardsOnly") {
         joinChatroom = 'BashtardsOnly';
@@ -96,7 +96,7 @@ function enterChatRoomByInput() {
     } clearRoomInputText(); activeRoomButton(); scrollDown();
 }
 
-// Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada
+// Função para reload das mensagens na outputBox do MainRoom ou de uma Room selecionada:
 function reloadRoom() {
     var nickname = document.getElementById("usernameDisplay").innerText;
     var request = new XMLHttpRequest();
@@ -117,13 +117,14 @@ function reloadRoom() {
         document.getElementById("outputBox").innerHTML = "Still trying ...";
         setTimeout(reloadRoom, 500);
     };
-    //acede à Room pretendida através de query-string
+    //acede à Room pretendida através de query-string:
     request.open("GET", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/changeRooms?room=" + joinChatroom
         + "&nickname=" + nickname, true); //MUDAR QUANDO FOR PARA O SERVIDOR
     request.timeout = 5000;
     request.send();
 }
 
+//Função para o scrolldown da outputBox:
 function scrollDown() {
     setTimeout(
         function actualScrollDown() {
@@ -131,7 +132,7 @@ function scrollDown() {
             var elem = document.getElementById('outputBox');
             elem.scrollTop = elem.scrollHeight;}
         , 900);
-}
+    }
 
 // Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput)
 function sendMessage() {
@@ -139,10 +140,10 @@ function sendMessage() {
     console.log(nickname);
     var userTextInput = document.getElementById("userTextInput").value;
     var request = new XMLHttpRequest();
-    // quando se escreve uma mensagem, gera um erro
+    // quando se escreve uma mensagem, gera um erro:
     request.onreadystatechange = function sendMessage () {
         document.getElementById("errorUserInputMessage").innerHTML = "";
-        //gera erro se não introduzir qualquer mensagem
+        //gera erro se não introduzir qualquer mensagem:
         if (this.readyState === 4 && this.status !== 200) {
             document.getElementById("errorUserInputMessage").innerHTML = this.response;
         }
@@ -153,10 +154,12 @@ function sendMessage() {
     scrollDown();
 }
 
+// Função que permite o display do nickname do presente utilizador.
 function displayNickname() {
     document.getElementById("usernameDisplay").innerHTML = localStorage['nickname'];
 }
 
+// Função que valida os caractéres que podem ser utilizados para o nome da room onde se pretende entrar:
 function validateRoom(){
     var e = event || window.event;
     var key = e.keyCode || e.which;
@@ -166,6 +169,7 @@ function validateRoom(){
     }
 }
 
+// Função que faz submit ao nome da room introduzido através do Enter:
 function enterToSubmitRoom() {
     var input = document.getElementById("joinChatroom");
     input.addEventListener("keydown", function (event) {
@@ -177,6 +181,7 @@ function enterToSubmitRoom() {
     });
 }
 
+// Funções utilizadas para o Darkmode:
 var color = "white";
 
 function changeVarForColorMode() {
@@ -190,6 +195,7 @@ function changeVarForColorMode() {
     }
 }
 
+// Função utilizada para alterar o Lightmode para Darkmode e vice-versa:
 function changeColorMode() {
     var theme=document.getElementById('lightRoom');
 
