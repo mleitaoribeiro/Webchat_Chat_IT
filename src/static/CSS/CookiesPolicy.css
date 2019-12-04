@@ -1,83 +1,54 @@
-* {
-    box-sizing: border-box;
-}
 
-head, body{
-    background-color: white;
-    text-align: center;
-    font-family:Trebuchet MS, sans-serif;
-}
+/* Style geral de todos os conteúdos da página - define como são a largura e altura dos conteúdos são calculados */
+    * {
+        box-sizing: border-box;
+    }
 
-img {
-    margin: auto;
-    max-width: 10%;
-}
+/* Style geral dos conteúdos */
+    head, body{
+        background-color: white;
+        text-align: center;
+        font-family:Trebuchet MS, sans-serif;
+    }
 
-header {
-    display: flex;
-    position: relative;
-    top:0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    text-align: center;
-}
+/* Tamanho de todas as imagens da página */
+    img {
+        margin: auto;
+        max-width: 10%;
+    }
 
-footer {
-    display: flex;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    text-align: center;
-}
+/*Style geral do header - logo Chat IT */
+    header {
+        display: flex;
+        position: relative;
+        top:0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        text-align: center;
+    }
 
-#logoGrande {
-    max-width: 15%;
-}
+/*Style geral do footer - logos marcas */
+    footer {
+        display: flex;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        text-align: center;
+    }
 
-.cookiesPolicyBody {
-    width: auto;
-    height: auto;
-    display:inline-block;
-    text-align: left;
-    text-decoration: none;
-    background-color: #e7e7e7;
-    color: black;
-    font-size: 18px;
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-family:Trebuchet MS, sans-serif;
-    position: relative;
-    margin: 50px 80px;
-}
+/*Largura máxima do logo Chat IT */
+    #logoGrande {
+        max-width: 15%;
+    }
 
-
-img, #subjectName {
-    margin: auto;
-    max-width: 7%;
-    color: #B61919;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-footer {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    text-align: center;
-}
-
-@media screen and (max-width: 1000px) {
+/* Cria uma caixa em torno do conteúdo da Cookies Policy */
     .cookiesPolicyBody {
         width: auto;
         height: auto;
-        display: inline-block;
-        border: #932D2D;
+        display:inline-block;
         text-align: left;
         text-decoration: none;
         background-color: #e7e7e7;
@@ -85,10 +56,40 @@ footer {
         font-size: 18px;
         padding: 5px 10px;
         border-radius: 12px;
-        font-family: Trebuchet MS, sans-serif;
+        font-family:Trebuchet MS, sans-serif;
         position: relative;
-        margin: 0;
+        margin: 50px 80px;
     }
-}
+
+
+/*Style do "logo" SCOMRED*/
+    img, #subjectName {
+        margin: auto;
+        max-width: 7%;
+        color: #B61919;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+/*Responive Design - faz a página adaptar-se a diferentes tamanhos de ecrã - larguras inferiores a 1000px */
+    @media screen and (max-width: 1000px) {
+        .cookiesPolicyBody {
+            width: auto;
+            height: auto;
+            display: inline-block;
+            border: #932D2D;
+            text-align: left;
+            text-decoration: none;
+            background-color: #e7e7e7;
+            color: black;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-family: Trebuchet MS, sans-serif;
+            position: relative;
+            margin: 0;
+        }
+    }
 
 
