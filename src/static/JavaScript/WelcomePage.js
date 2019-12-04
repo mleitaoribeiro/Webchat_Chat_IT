@@ -2,13 +2,12 @@
 function loginUser() {
     var nickname = document.getElementById("nickname").value;
     if(nickname.length > 1) {
-        localStorage.setItem( 'nickname', nickname );
+        localStorage.setItem('nickname', nickname);
         var request = new XMLHttpRequest();
-        request.onreadystatechange = function login () {
+        request.onreadystatechange = function login() {
             if (this.readyState === 4 && this.status === 200) {
                 window.location.href = "ChatRoomPage.html"; ///NAO ESQUECER QUE TEM SE MUDAR!!!!!!!!!!!
-            }
-            else {
+            } else {
                 document.getElementById("errorMessage").innerHTML = this.response;
             }
             setTimeout(reloadRoom, 500);
@@ -17,14 +16,14 @@ function loginUser() {
             document.getElementById("errorMessage").innerHTML = "Still trying ...";
             setTimeout(reloadRoom, 500);
         };
-        request.onerror = function onError () {
+        request.onerror = function onError() {
             document.getElementById("errorMessage").innerHTML = "Still trying ...";
             setTimeout(reloadRoom, 500);
         };
-        request.open ("PUT" , "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersLogin", true); //MUDAR QUANDO FOR PARA O SERVIDOR
+        request.open("PUT", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersLogin", true); //MUDAR QUANDO FOR PARA O SERVIDOR
         request.timeout = 5000;
         request.send(nickname);
-    }
+    } else document.getElementById("errorMessage").innerHTML = "You must provide a valid nickname.";
 }
 
 // Função que impede determinados caractéres no campo de input para o nickname:
@@ -41,7 +40,7 @@ function validateLogin(){
 function enterToSubmitNickname() {
     var input = document.getElementById("nickname");
     input.addEventListener("keydown", function (event) {
-        if (event.key === "Enter" && document.getElementById("nickname").value.length > 1) {
+        if (event.key === "Enter") {
             event.preventDefault();
             document.getElementById("loginButton").click();
         }
