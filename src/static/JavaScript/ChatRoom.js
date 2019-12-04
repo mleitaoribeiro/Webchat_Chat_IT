@@ -133,7 +133,7 @@ function scrollDown() {
         , 600);
 }
 
-// Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput):
+// Função que envia as mensagens para o servidor (ficheiro do room escolhido) a partir da caixa de input (#userTextInput)
 function sendMessage() {
     var nickname = document.getElementById("usernameDisplay").innerText;
     console.log(nickname);

@@ -1,3 +1,4 @@
+
 function sendEmail() {
     var confirmed = "Form sent. We'll get back at you as soon as possible."
     var noField = "It looks like you forgot something."
@@ -24,6 +25,7 @@ function sendEmail() {
         alert(confirmed);
     }
 }
+
 
 function confirmEmail(mail) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
