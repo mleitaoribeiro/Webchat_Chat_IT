@@ -23,7 +23,7 @@ function loginUser() {
         request.open("PUT", "https://vs-gate.dei.isep.ipp.pt:26280/cgi-bin/usersLogin", true); //MUDAR QUANDO FOR PARA O SERVIDOR
         request.timeout = 5000;
         request.send(nickname);
-    } else document.getElementById("errorMessage").innerHTML = "You must provide a valid nickname.";
+    } else document.getElementById("errorMessage").innerHTML = "<p><i class='fas fa-exclamation-circle'></i> You must provide a nickname!</p>";
 }
 
 // Função que impede determinados caractéres no campo de input para o nickname:
