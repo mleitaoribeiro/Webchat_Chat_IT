@@ -180,8 +180,14 @@ function enterToSubmitRoom() {
 var color = "white";
 
 function changeVarForColorMode() {
-    if(color === "white") color = "black";
-    else color = "white";
+    if(color === "white"){
+        color = "black";
+        document.getElementById("changemode").innerText = "Change to lightmode";
+    }
+    else {
+        color = "white";
+        document.getElementById("changemode").innerText = "Change to darkmode";
+    }
 }
 
 function changeColorMode() {

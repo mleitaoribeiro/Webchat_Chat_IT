@@ -285,6 +285,25 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+#changemode{
+    background-color:#B61919 ;
+    color: white;
+    display: none;
+    width: max-content;
+    font-size: 12px;
+    font-family:Trebuchet MS, sans-serif;
+}
+.switch:hover #changemode{
+    position: absolute;
+    display: block;
+    size: auto;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    border-radius: 8px;
+
+}
+
 
     /*Botão para trocar de tema - Dark Mode | Light Mode - Fim */
 
