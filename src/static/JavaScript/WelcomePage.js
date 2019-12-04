@@ -11,6 +11,7 @@ function loginUser() {
             else {
                 document.getElementById("errorMessage").innerHTML = this.response;
             }
+            setTimeout(reloadRoom, 500);
         };
         request.ontimeout = function timeoutCase() {
             document.getElementById("errorMessage").innerHTML = "Still trying ...";
